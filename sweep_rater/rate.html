@@ -1,0 +1,578 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rate</title>
+  <style>
+    :root {
+      --bg:#0e1014; --panel:#151821; --panel-2:#1d2230; --border:#2a3145;
+      --fg:#e6e9f2; --fg-dim:#9aa3b8; --accent:#7aa2ff;
+      --star:#f5c350; --star-empty:#3a4159;
+      --good:#6dd58c;
+    }
+    * { box-sizing:border-box; }
+    html, body { margin:0; padding:0; background:var(--bg); color:var(--fg);
+                 font-family:-apple-system,"SF Pro Text",Inter,system-ui,sans-serif; }
+    body { min-height:100vh; display:flex; flex-direction:column; }
+
+    header { display:flex; align-items:center; gap:1rem; padding:.8rem 1.2rem;
+             border-bottom:1px solid var(--border); background:var(--panel); }
+    header .folder { font-family:ui-monospace,Menlo,monospace; color:var(--fg-dim); font-size:.85rem; }
+    header .stats { color:var(--fg-dim); font-size:.9rem; font-variant-numeric:tabular-nums; }
+    header .spacer { flex:1; }
+    header label.filter-toggle { display:flex; align-items:center; gap:.35rem;
+                                 color:var(--fg-dim); font-size:.85rem; cursor:pointer; }
+    header .refresh-btn { background:transparent; border:1px solid var(--border);
+                          color:var(--fg-dim); border-radius:6px; padding:.3rem .7rem;
+                          cursor:pointer; font-size:.85rem; }
+    header .refresh-btn:hover { color:var(--fg); }
+
+    main { flex:1; display:flex; flex-direction:column; gap:1rem; padding:1rem;
+           max-width:920px; width:100%; margin:0 auto; }
+
+    .card { background:var(--panel); border:1px solid var(--border); border-radius:12px;
+            padding:1rem 1.2rem; }
+
+    #waveform { background:var(--panel-2); border-radius:8px; min-height:128px;
+                cursor:pointer; padding:.25rem; }
+
+    .player { display:flex; align-items:center; gap:1rem; margin-top:.8rem; color:var(--fg-dim);
+              font-variant-numeric:tabular-nums; }
+    .player button { background:var(--accent); color:#0e1014; font-weight:700;
+                     border:0; border-radius:6px; padding:.4rem .9rem; cursor:pointer; }
+    .player button:disabled { opacity:.5; cursor:default; }
+
+    .filename { font-family:ui-monospace,Menlo,monospace; font-size:.95rem;
+                color:var(--fg); word-break:break-all; }
+
+    .chips { display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.6rem; }
+    .chip { background:var(--panel-2); border:1px solid var(--border);
+            padding:.15rem .55rem; border-radius:999px; font-size:.8rem;
+            color:var(--fg-dim); font-family:ui-monospace,Menlo,monospace; }
+    .chip strong { color:var(--fg); font-weight:600; }
+    .chips-empty { color:var(--fg-dim); font-size:.8rem; font-style:italic; margin-top:.6rem; }
+
+    .rating-row { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
+    .stars { display:inline-flex; gap:.25rem; }
+    .stars button { background:none; border:0; padding:0; font-size:1.8rem; cursor:pointer;
+                    color:var(--star-empty); line-height:1; }
+    .stars button.on { color:var(--star); }
+    .stars button:hover { filter:brightness(1.2); }
+    .clear-btn { background:transparent; border:1px solid var(--border); color:var(--fg-dim);
+                 border-radius:6px; padding:.3rem .6rem; cursor:pointer; font-size:.85rem; }
+    .clear-btn:hover { color:var(--fg); border-color:var(--fg-dim); }
+    .saved-indicator { color:var(--good); font-size:.85rem; opacity:0; transition:opacity .2s; }
+    .saved-indicator.on { opacity:1; }
+
+    .notes { width:100%; background:var(--panel-2); border:1px solid var(--border);
+             border-radius:8px; color:var(--fg); padding:.5rem .7rem; font:inherit;
+             resize:vertical; margin-top:.8rem; min-height:2.4rem; }
+    .notes:focus { outline:1px solid var(--accent); }
+
+    nav.btn-row { display:flex; gap:.5rem; margin-top:1rem; flex-wrap:wrap; }
+    nav.btn-row button { background:var(--panel-2); color:var(--fg); border:1px solid var(--border);
+                         border-radius:8px; padding:.5rem .9rem; cursor:pointer; font-size:.95rem; }
+    nav.btn-row button:hover { border-color:var(--fg-dim); }
+
+    footer { text-align:center; color:var(--fg-dim); font-size:.8rem; padding:1rem;
+             border-top:1px solid var(--border); }
+    footer kbd { background:var(--panel-2); border:1px solid var(--border); border-radius:4px;
+                 padding:1px 5px; font-family:ui-monospace,Menlo,monospace; color:var(--fg); }
+
+    .empty { text-align:center; color:var(--fg-dim); padding:3rem 1rem; }
+
+    .hist { display:flex; gap:.3rem; margin-top:.6rem; flex-wrap:wrap; }
+    .hist-bin { background:var(--panel-2); border:1px solid var(--border); border-radius:4px;
+                padding:.15rem .4rem; font-size:.75rem; color:var(--fg-dim);
+                font-family:ui-monospace,Menlo,monospace; }
+    .hist-bin.has { color:var(--star); }
+
+    /* "All previously rated" section */
+    .section-title { font-size:.95rem; color:var(--fg-dim); margin:0 0 .8rem 0; font-weight:600; }
+    .section-title .right { float:right; font-weight:400; }
+    .section-title .right label { margin-right:.6rem; cursor:pointer; }
+    .section-title .right select { background:var(--panel-2); color:var(--fg);
+                                   border:1px solid var(--border); border-radius:4px;
+                                   padding:.2rem .4rem; font:inherit; font-size:.85rem; }
+
+    .rated-row { display:grid; grid-template-columns:88px 1fr auto;
+                 gap:.6rem; align-items:center; padding:.5rem 0;
+                 border-bottom:1px solid var(--border); }
+    .rated-row:last-child { border-bottom:0; }
+    .rated-row .stars-display { color:var(--star); font-size:1rem; letter-spacing:1px;
+                                font-family:ui-monospace,Menlo,monospace; }
+    .rated-row .stars-display .off { color:var(--star-empty); }
+    .rated-row .label { min-width:0; }
+    .rated-row .label .fn { font-family:ui-monospace,Menlo,monospace; font-size:.85rem;
+                            color:var(--fg); overflow:hidden; text-overflow:ellipsis;
+                            white-space:nowrap; }
+    .rated-row .label .folder { font-size:.75rem; color:var(--fg-dim); margin-top:.15rem;
+                                font-family:ui-monospace,Menlo,monospace; }
+    .rated-row .label .notes { font-size:.8rem; color:var(--fg-dim); font-style:italic; margin-top:.15rem; }
+    .rated-row audio { height:32px; }
+    .rated-row.current { background:var(--panel-2); border-radius:6px; padding-left:.4rem; padding-right:.4rem; }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="folder" id="folder">…</div>
+  <div class="spacer"></div>
+  <label class="filter-toggle">
+    <input type="checkbox" id="unrated-only"> only unrated (current)
+  </label>
+  <button class="refresh-btn" id="refresh-btn" title="re-read folder + DB">↻ refresh</button>
+  <div class="stats" id="stats">…</div>
+</header>
+
+<main>
+  <!-- ============ Main player (current folder) ============ -->
+  <div class="card" id="player-card">
+    <h2 class="section-title" style="margin-bottom:.4rem">current folder</h2>
+    <div class="filename" id="filename">…</div>
+    <div class="chips" id="chips"></div>
+    <div id="waveform"></div>
+    <div class="player">
+      <button id="play-btn">play</button>
+      <span id="time">00:00 / 00:00</span>
+      <span class="spacer" style="flex:1"></span>
+      <span style="font-size:.85rem;">clip <strong id="pos">1 / 1</strong></span>
+    </div>
+
+    <div class="rating-row">
+      <strong>rating:</strong>
+      <span class="stars" id="stars"></span>
+      <button class="clear-btn" id="clear-btn">clear</button>
+      <span class="saved-indicator" id="saved-indicator">saved ✓</span>
+    </div>
+    <textarea class="notes" id="notes" placeholder="optional notes…"></textarea>
+    <div class="hist" id="hist"></div>
+
+    <nav class="btn-row">
+      <button id="prev-btn">← prev</button>
+      <button id="next-btn">next →</button>
+      <button id="random-btn">random</button>
+      <button id="unrated-btn">next unrated</button>
+    </nav>
+  </div>
+
+  <div class="card" id="empty-card" style="display:none">
+    <div class="empty">No clips for the current filter.</div>
+  </div>
+
+  <!-- ============ All previously rated, across folders ============ -->
+  <div class="card" id="rated-card">
+    <h2 class="section-title">
+      all previously rated <span style="color:var(--fg-dim);font-weight:400" id="rated-count"></span>
+      <span class="right">
+        <label>sort
+          <select id="sort-mode">
+            <option value="rating-desc">rating ↓</option>
+            <option value="rating-asc">rating ↑</option>
+            <option value="ts-desc">newest first</option>
+            <option value="ts-asc">oldest first</option>
+            <option value="path">by path</option>
+          </select>
+        </label>
+      </span>
+    </h2>
+    <div id="rated-list"></div>
+  </div>
+</main>
+
+<footer>
+  <kbd>←</kbd> <kbd>→</kbd> prev/next ·
+  <kbd>space</kbd> play ·
+  <kbd>0</kbd>–<kbd>5</kbd> rate ·
+  <kbd>c</kbd> clear ·
+  <kbd>r</kbd> random ·
+  <kbd>u</kbd> next unrated
+</footer>
+
+<script src="https://unpkg.com/wavesurfer.js@7.8.6/dist/wavesurfer.min.js"></script>
+<script>
+"use strict";
+
+const state = {
+  folder:       "",      // absolute path of current folder, for display
+  relFolder:    "",      // repo-relative folder for building ratings keys
+  files:        [],      // [{filename, params}] from /api/files
+  ratings:      {},      // {repo-rel-path: {rating, notes, ts}}  (CENTRAL)
+  order:        [],      // indices into files; current playback order
+  pos:          0,
+  ws:           null,
+  unratedOnly:  false,
+  sortMode:     "rating-desc",
+};
+
+const $ = (id) => document.getElementById(id);
+
+function fmtTime(sec) {
+  if (!isFinite(sec)) return "00:00";
+  const m = Math.floor(sec / 60), s = Math.floor(sec % 60);
+  return String(m).padStart(2,"0") + ":" + String(s).padStart(2,"0");
+}
+
+function joinPath(folder, filename) {
+  if (!folder || folder === ".") return filename;
+  return folder.replace(/\/$/,"") + "/" + filename;
+}
+
+function currentFile() {
+  if (!state.order.length) return null;
+  return state.files[state.order[state.pos]];
+}
+function currentKey() {
+  const f = currentFile();
+  return f ? joinPath(state.relFolder, f.filename) : null;
+}
+
+function recomputeOrder() {
+  const all = state.files.map((_, i) => i);
+  state.order = state.unratedOnly
+    ? all.filter(i => !(joinPath(state.relFolder, state.files[i].filename) in state.ratings))
+    : all;
+  if (state.pos >= state.order.length) state.pos = Math.max(0, state.order.length - 1);
+}
+
+function flashSaved() {
+  const el = $("saved-indicator");
+  el.classList.add("on");
+  clearTimeout(flashSaved._t);
+  flashSaved._t = setTimeout(() => el.classList.remove("on"), 800);
+}
+
+function render() {
+  renderMain();
+  renderRated();
+  updateStats();
+}
+
+function renderMain() {
+  const f = currentFile();
+  if (!f) {
+    $("player-card").style.display = "none";
+    $("empty-card").style.display = "block";
+    return;
+  }
+  $("player-card").style.display = "block";
+  $("empty-card").style.display = "none";
+
+  $("filename").textContent = f.filename;
+
+  const chips = $("chips");
+  chips.innerHTML = "";
+  const entries = Object.entries(f.params || {});
+  if (entries.length === 0) {
+    const span = document.createElement("span");
+    span.className = "chips-empty";
+    span.textContent = "(no recognized params in filename)";
+    chips.appendChild(span);
+  } else {
+    for (const [k, v] of entries) {
+      const c = document.createElement("span");
+      c.className = "chip";
+      c.innerHTML = `${k}=<strong>${v}</strong>`;
+      chips.appendChild(c);
+    }
+  }
+
+  $("waveform").innerHTML = "";
+  if (state.ws) state.ws.destroy();
+  state.ws = WaveSurfer.create({
+    container: "#waveform",
+    waveColor:"#3a4159", progressColor:"#7aa2ff", cursorColor:"#e6e9f2",
+    height:110, barWidth:2, barRadius:1, barGap:1, normalize:true,
+  });
+  state.ws.load(`/audio/${encodeURIComponent(f.filename)}`);
+  state.ws.on("ready", () => {
+    $("time").textContent = `00:00 / ${fmtTime(state.ws.getDuration())}`;
+    $("play-btn").disabled = false;
+    $("play-btn").textContent = "play";
+    try {
+      const m = state.ws.getMediaElement && state.ws.getMediaElement();
+      if (m) m.loop = true;
+    } catch (_) { /* ignore */ }
+    const r = state.ws.play();
+    if (r && typeof r.catch === "function") r.catch(() => {});
+  });
+  // Track last reported time. When native looping wraps (t suddenly jumps
+  // backward), force WaveSurfer to sync its progress cursor to the new time.
+  let lastT = 0;
+  state.ws.on("timeupdate", (t) => {
+    if (t < lastT - 0.5) {
+      // Wrap-around: native media.loop=true rewound. Re-sync the cursor.
+      try { state.ws.setTime(0); } catch (_) {}
+    }
+    lastT = t;
+    $("time").textContent = `${fmtTime(t)} / ${fmtTime(state.ws.getDuration())}`;
+  });
+  state.ws.on("play",  () => $("play-btn").textContent = "pause");
+  state.ws.on("pause", () => $("play-btn").textContent = "play");
+  $("play-btn").disabled = true;
+
+  const key = currentKey();
+  const r = state.ratings[key];
+  drawStars(r ? r.rating : 0);
+  $("notes").value = r ? (r.notes || "") : "";
+
+  $("pos").textContent = `${state.pos + 1} / ${state.order.length}`;
+}
+
+function drawStars(n) {
+  const wrap = $("stars");
+  wrap.innerHTML = "";
+  for (let i = 1; i <= 5; i++) {
+    const b = document.createElement("button");
+    b.textContent = "★";
+    b.className = (i <= n) ? "on" : "";
+    b.title = `rate ${i}`;
+    b.addEventListener("click", () => setRating(i));
+    wrap.appendChild(b);
+  }
+}
+
+function updateStats() {
+  const total = state.files.length;
+  // Rated in *current* folder = ratings whose key starts with current relFolder
+  const prefix = state.relFolder && state.relFolder !== "."
+    ? state.relFolder.replace(/\/$/,"") + "/"
+    : "";
+  let inFolder = 0;
+  for (const k in state.ratings) {
+    if (prefix ? k.startsWith(prefix) : true) {
+      // For root-folder case, "inFolder" doesn't make sense; only count direct children.
+      const tail = prefix ? k.slice(prefix.length) : k;
+      if (!tail.includes("/")) inFolder++;
+    }
+  }
+  $("stats").textContent = `${inFolder}/${total} rated in folder · ${Object.keys(state.ratings).length} total · ${state.order.length} shown`;
+
+  // Histogram across current folder.
+  const counts = {0:0,1:0,2:0,3:0,4:0,5:0};
+  let unrated = 0;
+  for (const f of state.files) {
+    const r = state.ratings[joinPath(state.relFolder, f.filename)];
+    if (r) counts[r.rating]++;
+    else unrated++;
+  }
+  const hist = $("hist");
+  hist.innerHTML = "";
+  for (const k of [5,4,3,2,1,0]) {
+    const span = document.createElement("span");
+    span.className = "hist-bin" + (counts[k] ? " has" : "");
+    span.textContent = `${k}★:${counts[k]}`;
+    hist.appendChild(span);
+  }
+  const u = document.createElement("span");
+  u.className = "hist-bin";
+  u.textContent = `unrated:${unrated}`;
+  hist.appendChild(u);
+}
+
+// ─── "All previously rated" section ────────────────────────────────────
+function renderRated() {
+  const rows = Object.entries(state.ratings).map(([key, r]) => ({key, ...r}));
+  $("rated-count").textContent = `(${rows.length})`;
+
+  const sortMode = state.sortMode;
+  rows.sort((a, b) => {
+    if (sortMode === "rating-desc") return b.rating - a.rating || (a.ts < b.ts ? 1 : -1);
+    if (sortMode === "rating-asc")  return a.rating - b.rating || (a.ts < b.ts ? -1 : 1);
+    if (sortMode === "ts-desc")     return a.ts < b.ts ? 1 : -1;
+    if (sortMode === "ts-asc")      return a.ts < b.ts ? -1 : 1;
+    if (sortMode === "path")        return a.key.localeCompare(b.key);
+    return 0;
+  });
+
+  const list = $("rated-list");
+  list.innerHTML = "";
+  if (rows.length === 0) {
+    const e = document.createElement("div");
+    e.className = "empty";
+    e.style.padding = "1rem";
+    e.textContent = "Nothing rated yet across any folder.";
+    list.appendChild(e);
+    return;
+  }
+
+  const curKey = currentKey();
+  for (const r of rows) {
+    const row = document.createElement("div");
+    row.className = "rated-row" + (r.key === curKey ? " current" : "");
+
+    const stars = document.createElement("div");
+    stars.className = "stars-display";
+    let s = "";
+    for (let i = 1; i <= 5; i++) s += i <= r.rating ? "★" : "<span class='off'>★</span>";
+    stars.innerHTML = s;
+
+    const label = document.createElement("div");
+    label.className = "label";
+    const slash = r.key.lastIndexOf("/");
+    const folder = slash !== -1 ? r.key.slice(0, slash) : "";
+    const fn     = slash !== -1 ? r.key.slice(slash + 1) : r.key;
+    label.innerHTML = `<div class="fn" title="${escapeHtml(r.key)}">${escapeHtml(fn)}</div>
+                       <div class="folder">${escapeHtml(folder || ".")}</div>` +
+                      (r.notes ? `<div class="notes">${escapeHtml(r.notes)}</div>` : "");
+
+    const audio = document.createElement("audio");
+    audio.controls = true;
+    audio.preload = "none";
+    audio.src = `/audio_at?p=${encodeURIComponent(r.key)}`;
+    // Pause WaveSurfer when this audio plays, so they don't overlap.
+    audio.addEventListener("play", () => { if (state.ws) state.ws.pause(); });
+
+    row.appendChild(stars);
+    row.appendChild(label);
+    row.appendChild(audio);
+    list.appendChild(row);
+  }
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;","\"":"&quot;","'":"&#39;"
+  }[c]));
+}
+
+// ─── Server I/O ────────────────────────────────────────────────────────
+async function postRating(path, rating, notes) {
+  const r = await fetch("/api/rating", {
+    method: "POST",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({path, rating, notes}),
+  });
+  if (!r.ok) throw new Error("rating save failed: " + r.status);
+  return r.json();
+}
+
+async function setRating(n) {
+  const f = currentFile();
+  if (!f) return;
+  const key = currentKey();
+  const notes = $("notes").value;
+  await postRating(key, n, notes);
+  state.ratings[key] = {rating:n, notes, ts:new Date().toISOString()};
+  drawStars(n);
+  flashSaved();
+  renderRated();
+  updateStats();
+  setTimeout(() => goNextUnrated(), 350);
+}
+
+async function clearRating() {
+  const f = currentFile();
+  if (!f) return;
+  const key = currentKey();
+  await postRating(key, null, "");
+  delete state.ratings[key];
+  $("notes").value = "";
+  drawStars(0);
+  flashSaved();
+  renderRated();
+  updateStats();
+}
+
+async function saveNotes() {
+  const f = currentFile();
+  if (!f) return;
+  const key = currentKey();
+  const cur = state.ratings[key];
+  if (!cur) return;
+  const notes = $("notes").value;
+  await postRating(key, cur.rating, notes);
+  cur.notes = notes;
+  flashSaved();
+  renderRated();
+}
+
+// ─── Navigation ────────────────────────────────────────────────────────
+function go(delta) {
+  if (!state.order.length) return;
+  state.pos = (state.pos + delta + state.order.length) % state.order.length;
+  render();
+}
+function goRandom() {
+  if (!state.order.length) return;
+  state.pos = Math.floor(Math.random() * state.order.length);
+  render();
+}
+function goNextUnrated() {
+  if (!state.order.length) return;
+  const start = state.pos;
+  for (let step = 1; step <= state.order.length; step++) {
+    const i = (start + step) % state.order.length;
+    const k = joinPath(state.relFolder, state.files[state.order[i]].filename);
+    if (!(k in state.ratings)) { state.pos = i; render(); return; }
+  }
+}
+function togglePlay() { if (state.ws) state.ws.playPause(); }
+
+async function refresh() {
+  const prevKey = currentKey();
+  await loadData();
+  if (prevKey) {
+    const idx = state.order.findIndex(i => joinPath(state.relFolder, state.files[i].filename) === prevKey);
+    if (idx !== -1) state.pos = idx;
+  }
+  render();
+}
+
+async function loadData() {
+  const [filesResp, ratings] = await Promise.all([
+    fetch("/api/files").then(r => r.json()),
+    fetch("/api/ratings").then(r => r.json()),
+  ]);
+  state.folder    = filesResp.folder || "";
+  state.relFolder = filesResp.rel_folder || "";
+  state.files     = filesResp.files || [];
+  state.ratings   = ratings || {};
+  $("folder").textContent = state.folder;
+  recomputeOrder();
+}
+
+function bindControls() {
+  $("prev-btn").onclick    = () => go(-1);
+  $("next-btn").onclick    = () => go(+1);
+  $("random-btn").onclick  = goRandom;
+  $("unrated-btn").onclick = goNextUnrated;
+  $("play-btn").onclick    = togglePlay;
+  $("clear-btn").onclick   = clearRating;
+  $("refresh-btn").onclick = refresh;
+
+  $("notes").addEventListener("blur", saveNotes);
+  $("unrated-only").addEventListener("change", e => {
+    state.unratedOnly = e.target.checked;
+    recomputeOrder();
+    render();
+  });
+  $("sort-mode").addEventListener("change", e => {
+    state.sortMode = e.target.value;
+    renderRated();
+  });
+
+  document.addEventListener("keydown", e => {
+    if (e.target.tagName === "TEXTAREA" || e.target.tagName === "INPUT" || e.target.tagName === "SELECT") return;
+    if      (e.key === "ArrowLeft"  || e.key === "j") { e.preventDefault(); go(-1); }
+    else if (e.key === "ArrowRight" || e.key === "k") { e.preventDefault(); go(+1); }
+    else if (e.key === " ")                           { e.preventDefault(); togglePlay(); }
+    else if (e.key === "r")                           { goRandom(); }
+    else if (e.key === "u")                           { goNextUnrated(); }
+    else if (e.key === "c")                           { clearRating(); }
+    else if (/^[0-5]$/.test(e.key))                   { setRating(parseInt(e.key, 10)); }
+  });
+}
+
+async function boot() {
+  await loadData();
+  bindControls();
+  render();
+}
+boot().catch(err => {
+  document.body.innerHTML = `<pre style="color:#ff7a7a;padding:2rem">${err.stack || err}</pre>`;
+});
+</script>
+</body>
+</html>

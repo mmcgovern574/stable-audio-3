@@ -1,0 +1,48 @@
+# First 30s of each MP3 · 44100 Hz stereo s16 · order = LC_ALL=C sorted filenames
+# idx<TAB>relative_wav<TAB>source_mp3
+001	output/crushed_keyz_stems30/ckz_ck_001.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/1. cKz! No tE VAYAS Fsharpmin 105 bpm @crushed_keyz 1.mp3
+002	output/crushed_keyz_stems30/ckz_ck_002.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/10. cKz! JUNGLE C#min 140 bpm @crushed_keyz.mp3
+003	output/crushed_keyz_stems30/ckz_ck_003.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/11. cKz! CANOPY Amin 125 bpm @crushed_keyz.mp3
+004	output/crushed_keyz_stems30/ckz_ck_004.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/12. cKz! WUNNA C#min 125 bpm @crushed_keyz.mp3
+005	output/crushed_keyz_stems30/ckz_ck_005.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/14. cKz! dESERT RAiN Bmin 160 @crushed_key.mp3
+006	output/crushed_keyz_stems30/ckz_ck_006.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda.mp3
+007	output/crushed_keyz_stems30/ckz_ck_007.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/16. cKz! Rent Free Cmin 140 bpm @crushed_keyz @justryda_.mp3
+008	output/crushed_keyz_stems30/ckz_ck_008.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/17. cKz! Pressure F#min 130 bpm @crushed_keyz 1.mp3
+009	output/crushed_keyz_stems30/ckz_ck_009.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/18. cKz! 3AM Cmin 161 bpm @crushed_keyz @prodkxvi.mp3
+010	output/crushed_keyz_stems30/ckz_ck_010.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/19. cKz! DreamDoor Emin 140 bpm @crushed_keyz x @bass._charity.mp3
+011	output/crushed_keyz_stems30/ckz_ck_011.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/2. cKz! ICE Dmin 135 bpm @crushed_keyz.mp3
+012	output/crushed_keyz_stems30/ckz_ck_012.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/21. cKz! Panda Cmin 90 bpm @crushed_keyz.mp3
+013	output/crushed_keyz_stems30/ckz_ck_013.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/22. cKz! Coupe C#min 180 bpm @crushed_keyz x @vicheatitup.mp3
+014	output/crushed_keyz_stems30/ckz_ck_014.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/23. cKz! Wants Gmin 170 bpm @crushed_keyz @justryda_.mp3
+015	output/crushed_keyz_stems30/ckz_ck_015.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/24. cKz! JuPitER Cmin 120 bpm @crushed_keyz.mp3
+016	output/crushed_keyz_stems30/ckz_ck_016.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/25. cKz! CoSmoS Dmin 132 bpm @crushed_keyz.mp3
+017	output/crushed_keyz_stems30/ckz_ck_017.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/26. cKz! BANDS A#min 150 bpm @crushed_keyz.mp3
+018	output/crushed_keyz_stems30/ckz_ck_018.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/27. cKz! CAROUSEL G#min 160 bpm @crushed_keyz.mp3
+019	output/crushed_keyz_stems30/ckz_ck_019.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/28. cKz!  LABYRiNTH Bmin 140 bpm @crushed_keyz.mp3
+020	output/crushed_keyz_stems30/ckz_ck_020.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/29. cKz! Act Up Amaj 180 bpm @crushed_keyz @incepshun_.mp3
+021	output/crushed_keyz_stems30/ckz_ck_021.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/3. cKz! Soulful Shadows Cmin 95 @crushed_key.mp3
+022	output/crushed_keyz_stems30/ckz_ck_022.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/30. cKz! Cry Now Laugh Later A#min 142 bpm @crushed_keyz.mp3
+023	output/crushed_keyz_stems30/ckz_ck_023.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/31. cKz! CONFINED 180 bpm Emin @crushed_keyz.mp3
+024	output/crushed_keyz_stems30/ckz_ck_024.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/32. cKz! Coldhearted Emaj 95 bpm @crushed_keyz @dcosounds.mp3
+025	output/crushed_keyz_stems30/ckz_ck_025.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/4. cKz! Emotions Cmin 155 bpm @crushed_keyz x @justryda.mp3
+026	output/crushed_keyz_stems30/ckz_ck_026.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/5. cKz! Depths Cmin 140 bpm @crushed_keyz x @justryda.mp3
+027	output/crushed_keyz_stems30/ckz_ck_027.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/6. cKz! LowKey Cmin 100 bpm @crushed_keyz x @justryda.mp3
+028	output/crushed_keyz_stems30/ckz_ck_028.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/6. cKz! Nasty - Reggaeton Bmin 170 bpm @crushed_keyz.mp3
+029	output/crushed_keyz_stems30/ckz_ck_029.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/7. cKz! ICEBERG 124bpm @crushed_keyz - crushedkeyz@gmail.com.mp3
+030	output/crushed_keyz_stems30/ckz_ck_030.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/8. cKz! BreakUp NAV starter D#min 190 bpm @crushed_keyz @bass._charity.mp3
+031	output/crushed_keyz_stems30/ckz_ck_031.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/9. cKz! Steppa Fmin 110 bpm @crushed_keyz.mp3
+032	output/crushed_keyz_stems30/ckz_ck_032.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! AzUL Fmin 140 bpm @crushed_keyz.mp3
+033	output/crushed_keyz_stems30/ckz_ck_033.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! Azkaban Gmin 110 bpm @crushed_keyz.mp3
+034	output/crushed_keyz_stems30/ckz_ck_034.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! DiMELO Amin 90 bpm @crushed_keyz.mp3
+035	output/crushed_keyz_stems30/ckz_ck_035.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! El Yunque Fsharpmin 90 bpm @crushed_keyz.mp3
+036	output/crushed_keyz_stems30/ckz_ck_036.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! FlaMEnCO Bmin 125 bpm @crushed_keyz.mp3
+037	output/crushed_keyz_stems30/ckz_ck_037.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! LATE NiGHTs F#min 135 bpm @crushed_keyz1.mp3
+038	output/crushed_keyz_stems30/ckz_ck_038.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! MYKE TOWERS Fmin 125 bpm @crushed_keyz.mp3
+039	output/crushed_keyz_stems30/ckz_ck_039.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! Mars C#min 125 bpm @crushed_keyz.mp3
+040	output/crushed_keyz_stems30/ckz_ck_040.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! POWER Dmin 125 bpm @crushed_keyz @itsbynu.mp3
+041	output/crushed_keyz_stems30/ckz_ck_041.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! SPRAY Dmin 180 bpm @crushed_keyz.mp3
+042	output/crushed_keyz_stems30/ckz_ck_042.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! SUBiENDO Emin 90 bpm @crushed_keyz 1.mp3
+043	output/crushed_keyz_stems30/ckz_ck_043.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! Scenic Cmin 110 bpm @crushed_keyz.mp3
+044	output/crushed_keyz_stems30/ckz_ck_044.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! StarLight 95 Amin @crushed_keyz x @dudeclayy.mp3
+045	output/crushed_keyz_stems30/ckz_ck_045.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! TrapSoul Dsharp min 90 bpm @crushed_keyz @itsbynu.mp3
+046	output/crushed_keyz_stems30/ckz_ck_046.wav	/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Crushed_keyz_melody_loops/cKz! dAYS OFF Gmin 150 bpm @crushed_keyz @officialnickystix.mp3

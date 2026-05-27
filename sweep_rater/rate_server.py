@@ -1,0 +1,278 @@
+#!/usr/bin/env python3
+"""Tiny HTTP server for rating audio files. Stdlib only.
+
+Now uses a single central ratings DB: `sweep_rater/ratings.json` (keyed by
+repo-relative path) so ratings survive across folders and the UI can show
+everything you've ever rated.
+
+Usage:
+    python sweep_rater/rate_server.py --folder ./eval_out
+    python sweep_rater/rate_server.py --folder ./favorites
+    python sweep_rater/rate_server.py --folder ./sweep_rater/campaigns/cfg_v1
+
+Endpoints:
+    GET  /                         — rate.html
+    GET  /api/files                — wavs in --folder, with filename + params
+    GET  /api/ratings              — full central ratings dict (path → rating info)
+    GET  /audio/<filename>         — wav from --folder (current campaign)
+    GET  /audio_at?p=<rel_path>    — wav at arbitrary repo-relative path (safe)
+    POST /api/rating               — {path, rating, notes} → upsert into ratings.json
+"""
+from __future__ import annotations
+
+import argparse
+import json
+import re
+import sys
+import threading
+import webbrowser
+from datetime import datetime
+from http.server import BaseHTTPRequestHandler, HTTPServer
+from pathlib import Path
+from urllib.parse import unquote, urlparse, parse_qs
+
+SCRIPT_DIR = Path(__file__).resolve().parent
+REPO_ROOT  = SCRIPT_DIR.parent
+HTML_PATH  = SCRIPT_DIR / "rate.html"
+RATINGS_DB = SCRIPT_DIR / "ratings.json"   # central, repo-wide
+
+KNOWN_PARAMS = ("cfg", "strength", "steps", "seed", "duration", "rank", "lr")
+_PARAM_RE = re.compile(
+    r"(?:^|[_\W])(" + "|".join(KNOWN_PARAMS) + r")(-?\d+(?:\.\d+)?)(?=[_\W]|$)",
+    flags=re.IGNORECASE,
+)
+
+
+def parse_filename_params(filename: str) -> dict:
+    stem = Path(filename).stem
+    out = {}
+    for m in _PARAM_RE.finditer(stem):
+        key = m.group(1).lower()
+        val = m.group(2)
+        try:
+            out[key] = float(val) if "." in val else int(val)
+        except ValueError:
+            pass
+    return out
+
+
+def list_wavs(folder: Path) -> list[dict]:
+    if not folder.is_dir():
+        return []
+    out = []
+    for p in sorted(folder.iterdir()):
+        if p.suffix.lower() != ".wav" or p.name.startswith("."):
+            continue
+        out.append({"filename": p.name, "params": parse_filename_params(p.name)})
+    return out
+
+
+def load_ratings() -> dict:
+    if not RATINGS_DB.exists():
+        return {}
+    try:
+        return json.loads(RATINGS_DB.read_text())
+    except json.JSONDecodeError:
+        return {}
+
+
+def save_ratings(data: dict) -> None:
+    tmp = RATINGS_DB.with_suffix(".tmp")
+    tmp.write_text(json.dumps(data, indent=2, sort_keys=True))
+    tmp.replace(RATINGS_DB)
+
+
+def migrate_legacy_ratings() -> int:
+    """Pull in any leftover per-folder ratings.json files into the central DB.
+
+    Walks the repo for any sibling ratings.json files (i.e. NOT the central
+    one), merges their entries into the central ratings.json keyed by
+    `<rel_folder>/<filename>`. Leaves the old files in place so users can
+    confirm migration; just prints a one-time notice.
+    """
+    central_resolved = RATINGS_DB.resolve()
+    merged = load_ratings()
+    moved = 0
+    for path in REPO_ROOT.rglob("ratings.json"):
+        if path.resolve() == central_resolved:
+            continue
+        try:
+            data = json.loads(path.read_text())
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(data, dict):
+            continue
+        try:
+            rel_folder = path.parent.resolve().relative_to(REPO_ROOT.resolve())
+        except ValueError:
+            continue
+        for filename, entry in data.items():
+            # Old format: {filename: {rating, notes, ts}}
+            if not isinstance(entry, dict) or "rating" not in entry:
+                continue
+            key = str(rel_folder / filename) if str(rel_folder) != "." else filename
+            if key not in merged:
+                merged[key] = entry
+                moved += 1
+    if moved:
+        save_ratings(merged)
+        print(f"Migrated {moved} legacy per-folder ratings into {RATINGS_DB.name}")
+    return moved
+
+
+class Handler(BaseHTTPRequestHandler):
+    folder: Path = Path()  # set by main()
+
+    def log_message(self, fmt, *args):
+        pass
+
+    # ── helpers ─────────────────────────────────────────────────────────
+    def _send(self, status: int, ctype: str, body: bytes):
+        self.send_response(status)
+        self.send_header("Content-Type", ctype)
+        self.send_header("Content-Length", str(len(body)))
+        self.send_header("Cache-Control", "no-store")
+        self.end_headers()
+        try:
+            self.wfile.write(body)
+        except BrokenPipeError:
+            pass
+
+    def _send_json(self, data, status: int = 200):
+        self._send(status, "application/json", json.dumps(data).encode())
+
+    def _send_404(self, msg: str = "not found"):
+        self._send(404, "text/plain", msg.encode())
+
+    def _serve_audio(self, abs_path: Path) -> None:
+        """Serve a wav file, guarding against path traversal outside REPO_ROOT."""
+        try:
+            resolved = abs_path.resolve()
+            resolved.relative_to(REPO_ROOT.resolve())
+        except (ValueError, OSError):
+            return self._send_404("invalid path")
+        if not resolved.is_file() or resolved.suffix.lower() != ".wav":
+            return self._send_404(f"no such audio")
+        self._send(200, "audio/wav", resolved.read_bytes())
+
+    @staticmethod
+    def _rel(folder: Path) -> str:
+        """Return folder path relative to REPO_ROOT (or absolute if outside)."""
+        try:
+            return str(folder.resolve().relative_to(REPO_ROOT.resolve()))
+        except ValueError:
+            return str(folder)
+
+    # ── GET ─────────────────────────────────────────────────────────────
+    def do_GET(self):
+        url = urlparse(self.path)
+        path = url.path
+
+        if path in ("/", "/index.html"):
+            if not HTML_PATH.exists():
+                return self._send_404("rate.html missing")
+            return self._send(200, "text/html; charset=utf-8", HTML_PATH.read_bytes())
+
+        if path == "/api/files":
+            return self._send_json({
+                "folder":     str(self.folder),
+                "rel_folder": self._rel(self.folder),
+                "files":      list_wavs(self.folder),
+            })
+
+        if path == "/api/ratings":
+            return self._send_json(load_ratings())
+
+        if path.startswith("/audio/"):
+            filename = unquote(path[len("/audio/"):])
+            return self._serve_audio(self.folder / filename)
+
+        if path == "/audio_at":
+            qs = parse_qs(url.query or "")
+            rel = (qs.get("p") or [""])[0]
+            if not rel:
+                return self._send_404("missing p")
+            return self._serve_audio(REPO_ROOT / rel)
+
+        return self._send_404()
+
+    # ── POST ────────────────────────────────────────────────────────────
+    def do_POST(self):
+        if self.path != "/api/rating":
+            return self._send_404()
+        length = int(self.headers.get("Content-Length") or 0)
+        try:
+            payload = json.loads(self.rfile.read(length).decode())
+        except (json.JSONDecodeError, UnicodeDecodeError):
+            return self._send_json({"error": "invalid json"}, status=400)
+
+        key = payload.get("path")
+        if not isinstance(key, str) or not key:
+            return self._send_json({"error": "path required"}, status=400)
+
+        ratings = load_ratings()
+        rating = payload.get("rating")
+        if rating is None:
+            ratings.pop(key, None)
+        else:
+            if not (isinstance(rating, int) and 0 <= rating <= 5):
+                return self._send_json({"error": "rating must be int 0..5 or null"}, status=400)
+            ratings[key] = {
+                "rating": rating,
+                "notes":  payload.get("notes") or "",
+                "ts":     datetime.now().isoformat(timespec="seconds"),
+            }
+        save_ratings(ratings)
+        return self._send_json({"ok": True})
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument("--folder", required=True, type=Path,
+                   help="Folder of .wav files for the active rating session.")
+    p.add_argument("--port", type=int, default=8765)
+    p.add_argument("--no-browser", action="store_true")
+    args = p.parse_args()
+
+    folder = args.folder.resolve()
+    if not folder.is_dir():
+        sys.exit(f"Not a directory: {folder}")
+
+    Handler.folder = folder
+    migrate_legacy_ratings()
+
+    # Pick an available port; bump if --port is busy.
+    addr = ("127.0.0.1", args.port)
+    server = None
+    last_err = None
+    for port in range(args.port, args.port + 10):
+        try:
+            server = HTTPServer(("127.0.0.1", port), Handler)
+            addr = ("127.0.0.1", port)
+            break
+        except OSError as e:
+            last_err = e
+            continue
+    if server is None:
+        sys.exit(f"Couldn't bind any port in {args.port}..{args.port+9}: {last_err}")
+
+    url = f"http://{addr[0]}:{addr[1]}/"
+    n_wavs = len(list_wavs(folder))
+    n_rated = len(load_ratings())
+    print(f"Folder:    {folder}")
+    print(f"Wavs:      {n_wavs}")
+    print(f"DB:        {RATINGS_DB}  ({n_rated} clips rated overall)")
+    print(f"URL:       {url}")
+    print("Press Ctrl+C to stop.")
+
+    if not args.no_browser:
+        threading.Timer(0.4, lambda: webbrowser.open(url)).start()
+    try:
+        server.serve_forever()
+    except KeyboardInterrupt:
+        print("\nStopped.")
+
+
+if __name__ == "__main__":
+    main()

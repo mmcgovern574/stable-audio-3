@@ -168,3 +168,38 @@ wandb/*
 .DS_Store
 *.safetensors
 .claude
+
+# ── ML / LoRA training artifacts (too big for git) ───────────────────────
+*.ckpt
+*.pt
+*.pth
+lora_out/
+lora_checkpoints/
+
+# ── Audio outputs from generation / eval / sweeps ────────────────────────
+# (keep config + code under sweep_rater/, exclude only the generated wavs)
+sweep_rater/campaigns/**/*.wav
+sweep_rater/campaigns/**/*.flac
+sweep_rater/campaigns/**/*.mp3
+sweep_rater/campaigns/**/manifest.json
+sweep_rater/campaigns/**/.tmp
+eval_out/
+gen_out/
+sweep_out/
+favorites/
+demo_cfg_*.wav
+
+# ── Training data and prepared latents (regenerate; don't ship) ──────────
+data/crushed_keyz_lora/
+data/*_lora/
+data/*_latents/
+data/*.zip
+data/*.tar*
+
+# ── Local HF cache (already lives in ~/.cache; don't duplicate) ──────────
+hf_cache/
+
+# ── Logs ─────────────────────────────────────────────────────────────────
+lora_train.log
+*.logdata/crushed_keyz_lora.zip
+data/*.zip

@@ -37,10 +37,13 @@ class StableAudioModel:
         elif device is None:
             device = "cpu"
 
-        if not torch.cuda.is_available():
+        on_gpu = torch.cuda.is_available() or (
+            hasattr(torch.backends, "mps") and torch.backends.mps.is_available()
+        )
+        if not on_gpu:
             if model_name in ("medium", "medium-base"):
                 print(
-                    f"Warning: You are loading the {model_name} model without a GPU. This model is not designed to run on cpu"
+                    f"Warning: You are loading the {model_name} model without a GPU. This model is not designed to run on CPU."
                 )
             model_half = False
 
@@ -473,10 +476,13 @@ class AutoencoderModel:
             else:
                 device = "cpu"
 
-        if not torch.cuda.is_available():
+        on_gpu = torch.cuda.is_available() or (
+            hasattr(torch.backends, "mps") and torch.backends.mps.is_available()
+        )
+        if not on_gpu:
             if model_name == "same-l":
                 print(
-                    f"Warning: You are loading the {model_name} model without a GPU. This model is not designed to run on cpu"
+                    f"Warning: You are loading the {model_name} model without a GPU. This model is not designed to run on CPU."
                 )
 
         if model_name not in ae_models:

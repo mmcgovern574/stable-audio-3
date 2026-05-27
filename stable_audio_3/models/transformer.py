@@ -11,6 +11,8 @@ from torch import nn, einsum
 from torch.amp import autocast
 from torch.nn.utils.parametrizations import weight_norm
 from typing import Callable, Literal, Optional
+
+from .._device import AUTOCAST_DEVICE
 try:
     from torch.nn.attention.flex_attention import flex_attention, create_block_mask
     flex_attention_available = True
@@ -87,7 +89,7 @@ def _left_pad_to_match(emb, target_len):
         return emb[:, -target_len:, :]
     return emb
 
-if flex_attention_available:
+if flex_attention_available and torch.cuda.is_available():
     try:
         torch._dynamo.config.cache_size_limit = 5000
         flex_attention_compiled = torch.compile(flex_attention, dynamic=False, mode="max-autotune-no-cudagraphs")
@@ -95,7 +97,11 @@ if flex_attention_available:
         logging.debug(f"Could not compile flex_attention, using uncompiled version: {e}")
         flex_attention_compiled = flex_attention
 else:
+    # flex_attention's compiled kernels are CUDA-only. On MPS/CPU, fall through
+    # to the SDPA path in apply_attn() by leaving these unset.
     flex_attention_compiled = None
+    if flex_attention_available:
+        logging.debug("flex_attention available but no CUDA — using SDPA fallback.")
 
 
 # Cache band block_masks for sliding-window attention fallback (flex_attention path).
@@ -167,11 +173,11 @@ def checkpoint(function, *args, **kwargs):
         import functools
         # Get current autocast state
         if torch.is_autocast_enabled():
-            dtype = torch.get_autocast_dtype('cuda')
+            dtype = torch.get_autocast_dtype(AUTOCAST_DEVICE)
             def get_contexts():
                 return (
-                    autocast('cuda', dtype=dtype),
-                    autocast('cuda', dtype=dtype),
+                    autocast(AUTOCAST_DEVICE, dtype=dtype),
+                    autocast(AUTOCAST_DEVICE, dtype=dtype),
                 )
             kwargs["context_fn"] = get_contexts
     return torch.utils.checkpoint.checkpoint(function, *args, **kwargs)
@@ -273,7 +279,7 @@ class RotaryEmbedding(nn.Module):
         t = torch.arange(seq_len, device = device)
         return self.forward(t)
 
-    @autocast("cuda", enabled = False)
+    @autocast(AUTOCAST_DEVICE, enabled = False)
     def forward(self, t):
         device = self.inv_freq.device
 
@@ -299,7 +305,7 @@ def rotate_half(x):
     return torch.cat((-x2, x1), dim = -1)
 
 
-@autocast("cuda", enabled = False)
+@autocast(AUTOCAST_DEVICE, enabled = False)
 def apply_rotary_pos_emb(t, freqs, scale = 1):
     out_dtype = t.dtype
 
@@ -606,6 +612,11 @@ class Attention(nn.Module):
         flash_attn_varlen_available = flash_attn_varlen_func is not None and index_first_axis is not None
 
         if causal and (flex_attention_block_mask is not None or flex_attention_score_mod is not None):
+            flex_attention_block_mask = None
+            flex_attention_score_mod = None
+
+        # Force SDPA fallback on machines without a compiled flex_attention (MPS/CPU).
+        if flex_attention_compiled is None:
             flex_attention_block_mask = None
             flex_attention_score_mod = None
 

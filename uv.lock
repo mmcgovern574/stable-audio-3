@@ -2895,6 +2895,7 @@ dependencies = [
 [package.optional-dependencies]
 lora = [
     { name = "dill" },
+    { name = "matplotlib" },
     { name = "pytorch-lightning" },
 ]
 ui = [
@@ -2917,6 +2918,7 @@ requires-dist = [
     { name = "einops-exts", specifier = ">=0.0.4" },
     { name = "gradio", marker = "extra == 'ui'", specifier = "==6.3.0" },
     { name = "huggingface-hub", specifier = ">=1.7.1" },
+    { name = "matplotlib", marker = "extra == 'lora'", specifier = ">=3.10.8" },
     { name = "matplotlib", marker = "extra == 'ui'", specifier = ">=3.10.8" },
     { name = "numpy", specifier = ">=2.2.6" },
     { name = "packaging", specifier = ">=26.0" },

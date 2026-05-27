@@ -18,6 +18,7 @@ from ..models.diffusion import ConditionedDiffusionModelWrapper
 from ..models.inpainting import random_inpaint_mask, MaskType
 from ..models.lora import add_lora, get_lora_params, get_lora_state_dict, LoRAParametrization, get_lora_layers, save_lora_safetensors, resolve_adapter_type, prepare_dora_state_dict, cast_base_to_precision
 from .utils import create_optimizer_from_config, create_scheduler_from_config, log_audio, log_image, log_metric, get_rank, create_augmented_padding_mask, compute_masked_loss, compute_normalized_mse, resize_padding_mask, StaggeredLogger, compute_per_elem_trim, trim_and_concat
+from .._device import AUTOCAST_DEVICE, safe_empty_cache
 from time import time
 
 class Profiler:
@@ -273,7 +274,7 @@ class DiffusionCondTrainingWrapper(pl.LightningModule):
             self.diffusion.pretransform.to(self.device)
 
             if not self.pre_encoded:
-                with torch.cuda.amp.autocast(), torch.set_grad_enabled(self.diffusion.pretransform.enable_grad):
+                with torch.amp.autocast(AUTOCAST_DEVICE), torch.set_grad_enabled(self.diffusion.pretransform.enable_grad):
                     self.diffusion.pretransform.train(self.diffusion.pretransform.enable_grad)
                     diffusion_input = self.diffusion.pretransform.encode(diffusion_input)
                     p.tick("pretransform")
@@ -515,7 +516,7 @@ class DiffusionCondTrainingWrapper(pl.LightningModule):
 
         diffusion_input = reals
 
-        with torch.amp.autocast("cuda"), torch.no_grad():
+        with torch.amp.autocast(AUTOCAST_DEVICE), torch.no_grad():
             conditioning = self.diffusion.conditioner(metadata, self.device)
 
         # Create batch tensor of padding masks from the metadata
@@ -528,7 +529,7 @@ class DiffusionCondTrainingWrapper(pl.LightningModule):
             self.diffusion.pretransform.to(self.device)
 
             if not self.pre_encoded:
-                with torch.amp.autocast("cuda"), torch.no_grad():
+                with torch.amp.autocast(AUTOCAST_DEVICE), torch.no_grad():
                     self.diffusion.pretransform.train(self.diffusion.pretransform.enable_grad)
                     diffusion_input = self.diffusion.pretransform.encode(diffusion_input)
                     padding_masks = resize_padding_mask(padding_masks, diffusion_input.shape[-1])
@@ -575,7 +576,7 @@ class DiffusionCondTrainingWrapper(pl.LightningModule):
             elif self.diffusion_objective in ["rectified_flow", "rf_denoiser"]:
                 targets = noise - diffusion_input
 
-            with torch.amp.autocast("cuda"), torch.no_grad():
+            with torch.amp.autocast(AUTOCAST_DEVICE), torch.no_grad():
                 output = self.diffusion(noised_inputs, t, cond=conditioning, cfg_dropout_prob = 0, **extra_args)
 
                 mse_loss_full = compute_normalized_mse(output, targets, loss_mask, self.loss_normalization, self.loss_norm_eps)
@@ -734,7 +735,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
             if is_rank_zero:
                 print(f"Generating prompt demos for cfg scale {cfg_scale}")
 
-            with torch.amp.autocast("cuda"):
+            with torch.amp.autocast(AUTOCAST_DEVICE):
                 fakes = sample_diffusion(
                     model=model,
                     noise=noise,
@@ -767,7 +768,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
         all_context_masks = [context_mask] * len(self.demo_cfg_scales)
 
         del noise, conditioning, cond_inputs, inpaint_mask, inpaint_masked_input
-        torch.cuda.empty_cache()
+        safe_empty_cache()
 
         return all_audio, all_context_masks
 
@@ -862,7 +863,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
             if is_rank_zero:
                 print(f"Generating inpaint demos for cfg scale {cfg_scale}")
 
-            with torch.amp.autocast("cuda"):
+            with torch.amp.autocast(AUTOCAST_DEVICE):
                 fakes = sample_diffusion(
                     model=model,
                     noise=noise,
@@ -888,7 +889,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
             all_context_masks.append(context_mask)
 
         del noise, conditioning, cond_inputs, mask, masked_input, padding_masks, demo_reals
-        torch.cuda.empty_cache()
+        safe_empty_cache()
 
         return all_audio, all_context_masks
 
@@ -906,10 +907,10 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
         try:
             # Generate both types of demos, freeing intermediates between phases
             prompt_audio, prompt_masks = self._generate_prompt_demos(module, trainer, is_rank_zero)
-            torch.cuda.empty_cache()
+            safe_empty_cache()
 
             inpaint_audio, inpaint_masks = self._generate_inpaint_demos(module, trainer, is_rank_zero)
-            torch.cuda.empty_cache()
+            safe_empty_cache()
 
             # Combine per cfg scale (prompt_audio and inpaint_audio have one entry per cfg scale)
             if is_rank_zero:
@@ -1139,5 +1140,5 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
             raise e
         finally:
             gc.collect()
-            torch.cuda.empty_cache()
+            safe_empty_cache()
             module.train()            

@@ -26,11 +26,21 @@ Usage:
   uv run python scripts/train_lora.py --model medium-base --data_dir ./my_data --steps 500 --rank 8
 """
 
-# Disable HuggingFace progress bars BEFORE any imports
-# This must be at the very top to take effect
+# Show HuggingFace download progress by default — silence is a debugging
+# nightmare on a slow first run.  Opt out with:
+#   HF_HUB_DISABLE_PROGRESS_BARS=1 uv run python scripts/train_lora.py ...
 import os
 
-os.environ["HF_HUB_DISABLE_PROGRESS_BARS"] = "1"
+os.environ.setdefault("HF_HUB_DISABLE_PROGRESS_BARS", "0")
+
+# Use the legacy HuggingFace downloader by default.  The newer chunked
+# downloader (`hf-xet`) has two known issues: its tqdm bar can render once
+# at startup and never refresh again (so a working download looks frozen),
+# and the download itself can stall mid-transfer with no recovery.  The
+# legacy downloader is slightly slower at peak but has a working progress
+# bar and resumes partial downloads cleanly.  Opt back in with:
+#   HF_HUB_DISABLE_XET=0 uv run python scripts/train_lora.py ...
+os.environ.setdefault("HF_HUB_DISABLE_XET", "1")
 
 import argparse
 import itertools
@@ -55,9 +65,10 @@ from stable_audio_3.training.diffusion import (
     DiffusionCondTrainingWrapper,
     DiffusionCondInpaintDemoCallback,
 )
+from stable_audio_3._device import AUTOCAST_DEVICE
 
 
-def load_model(model_name: str, device: torch.device):
+def load_model(model_name: str, device: torch.device, base_dtype: torch.dtype):
     if model_name not in base_models:
         raise ValueError(
             f"LoRA training requires a base model. Got '{model_name}', valid: {list(base_models)}"
@@ -68,13 +79,29 @@ def load_model(model_name: str, device: torch.device):
         model_config = json.load(f)
     model = create_diffusion_cond_from_config(model_config)
     copy_state_dict(model, load_file(local_ckpt))
-    model.to(device=device, dtype=torch.bfloat16).eval().requires_grad_(False)
+
+    # On MPS, splitting "cast to dtype on CPU" from "move to device" is much
+    # faster than doing both at once — the combined `.to()` casts and ships
+    # each tensor separately, lazily JITting an MPS kernel per (shape, dtype)
+    # combo. Doing the dtype cast first on CPU avoids that per-tensor JIT.
+    if device.type == "mps":
+        print(f"[load_model] casting to {base_dtype} on CPU...")
+        model.to(dtype=base_dtype)
+        print(f"[load_model] moving to {device}...")
+        model.to(device=device)
+    else:
+        model.to(device=device, dtype=base_dtype)
+    model.eval().requires_grad_(False)
+
     if model.pretransform is not None:
         model.pretransform.enable_grad = False
     return model, model_config
 
 
 def caption_metadata_fn(info, audio):
+    # NOTE: import inside the function so dataloader workers on macOS (spawn)
+    # have access — they don't inherit the parent script's globals.
+    from pathlib import Path
     txt = Path(info["path"]).with_suffix(".txt")
     if not txt.exists():
         return {"__reject__": True}
@@ -90,13 +117,27 @@ def train(args):
     torch._dynamo.config.capture_scalar_outputs = True
     torch.set_float32_matmul_precision("high")
 
+    # Pick device-appropriate precision. bf16 is great on CUDA; on MPS it's
+    # still gappy in PyTorch so we use fp16 there. CPU stays in fp32.
+    if AUTOCAST_DEVICE == "cuda":
+        trainer_precision, base_dtype = "bf16-mixed", torch.bfloat16
+    elif AUTOCAST_DEVICE == "mps":
+        trainer_precision, base_dtype = "16-mixed", torch.float16
+    else:
+        trainer_precision, base_dtype = "32-true", torch.float32
+    if args.base_precision is None:
+        args.base_precision = "bf16" if AUTOCAST_DEVICE == "cuda" else "fp16"
+    print(f"[train_lora] device={AUTOCAST_DEVICE} precision={trainer_precision} base_dtype={base_dtype} base_precision={args.base_precision}")
+
     seed = args.seed
 
     pl.seed_everything(seed, workers=True)
 
     model, model_config = load_model(
-        args.model, torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        args.model, torch.device(AUTOCAST_DEVICE), base_dtype
     )
+
+    print(f"[train_lora] model loaded")
 
     sample_rate = model.sample_rate
     ds_ratio = model.pretransform.downsampling_ratio
@@ -137,8 +178,11 @@ def train(args):
         num_workers=args.num_workers,
         drop_last=True,
         collate_fn=collation_fn,
-        worker_init_fn=lambda worker_id: torch.manual_seed(seed + worker_id),
+        # No worker_init_fn — `pl.seed_everything(seed, workers=True)` above
+        # already seeds each worker as seed+worker_id. A lambda here would
+        # also break macOS multiprocessing (spawn can't pickle local lambdas).
     )
+    print(f"[train_lora] dataset+dataloader ready ({len(dataset)} samples, num_workers={args.num_workers})")
 
     lora_state_dict = None
     if args.lora_checkpoint:
@@ -187,6 +231,8 @@ def train(args):
         ot_coupling=True,
         base_precision=args.base_precision,
     )
+
+    print(f"[train_lora] training wrapper ready (LoRA adapter={args.adapter_type}, rank={args.rank})")
 
     exc_callback = ExceptionCallback()
 
@@ -244,14 +290,60 @@ def train(args):
         )
     demo_dl = itertools.cycle([demo_batch])
 
+    # Build text-to-music demo conditioning so we get *real* prompt-driven demos
+    # at each checkpoint, not just inpaint demos.
+    #
+    # Source of demo prompts (in priority order):
+    #   1. --demo_prompts_file: one prompt per line, blank lines ignored.
+    #   2. Otherwise the first --num_t2m_demos prompts from the training dataset
+    #      (whatever order SampleDataset returns them in — not necessarily sorted).
+    if args.demo_prompts_file:
+        with open(args.demo_prompts_file) as f:
+            demo_prompts = [line.strip() for line in f if line.strip()]
+    else:
+        demo_prompts = [
+            md.get("prompt", "")
+            for md in metadata[: args.num_t2m_demos]
+            if md.get("prompt")
+        ]
+
+    t2m_conditioning = [
+        {"prompt": p, "seconds_total": int(args.duration)}
+        for p in demo_prompts
+    ]
+    if t2m_conditioning:
+        src = args.demo_prompts_file or "training dataset"
+        print(f"[train_lora] t2m demo prompts ({len(t2m_conditioning)}, source: {src}):")
+        for j, c in enumerate(t2m_conditioning):
+            print(f"  {j}: {c['prompt']}")
+
+    # Important: the callback's sample_size controls the length of t2m demo
+    # generations only (inpaint demos use the training audio's actual length).
+    # Defaulting to model_config["sample_size"] forces t2m demos to generate at
+    # the model's MAX duration (e.g., 380 s for medium-base), which is ~12×
+    # slower than necessary if you're training at --duration 30. Align it to
+    # the chosen training duration so t2m demos run in roughly the same time
+    # as inpaint demos.
+    sr = model_config.get("sample_rate")
+    ds_ratio = model_config.get("model", {}).get("pretransform", {}).get(
+        "config", {}
+    ).get("downsampling_ratio", 1)
+    # Align to downsampling ratio so the latent dims work out cleanly.
+    demo_sample_size = (int(args.duration * sr) // ds_ratio) * ds_ratio
+    if demo_sample_size <= 0:
+        demo_sample_size = model_config.get("sample_size")
+    print(f"[train_lora] demo sample_size: {demo_sample_size} samples "
+          f"({demo_sample_size / sr:.1f} s @ {sr} Hz)")
+
     demo_callback = DiffusionCondInpaintDemoCallback(
         demo_every=args.demo_every,
-        sample_size=model_config.get("sample_size"),
+        sample_size=demo_sample_size,
         sample_rate=model_config.get("sample_rate"),
-        demo_steps=50,
+        demo_steps=args.demo_steps,
         num_demos=4,
         demo_cfg_scales=[2, 4, 7],
         demo_dl=demo_dl,
+        demo_conditioning=t2m_conditioning,
     )
 
     callbacks = [ckpt_callback, exc_callback, demo_callback]
@@ -273,7 +365,7 @@ def train(args):
         devices="auto",
         accelerator="auto",
         strategy="auto",
-        precision="bf16-mixed",
+        precision=trainer_precision,
         accumulate_grad_batches=1,
         callbacks=callbacks,
         logger=logger,
@@ -284,6 +376,7 @@ def train(args):
         reload_dataloaders_every_n_epochs=0,
         num_sanity_val_steps=0,  # If you need to debug validation, change this line
     )
+    print(f"[train_lora] trainer ready — starting fit ({args.steps} steps)")
 
     trainer.fit(training_wrapper, dataloader)
 
@@ -356,8 +449,9 @@ def main():
     p.add_argument(
         "--base_precision",
         choices=["bf16", "bfloat16", "fp16", "float16"],
-        default="bf16",
-        help="Cast frozen base weights to lower precision (LoRA params stay fp32)",
+        default=None,
+        help="Cast frozen base weights to lower precision (LoRA params stay fp32). "
+             "Defaults to bf16 on CUDA, fp16 on MPS.",
     )
     p.add_argument(
         "--lora_checkpoint",
@@ -380,8 +474,34 @@ def main():
     p.add_argument("--checkpoint_every", type=int, default=500)
     p.add_argument("--log_every", type=int, default=100)
     p.add_argument("--demo_every", type=int, default=500)
-    p.add_argument("--num_workers", type=int, default=8)
+    p.add_argument(
+        "--demo_steps",
+        type=int,
+        default=50,
+        help="Diffusion sampling steps per demo. 50 is decent quality; bump to 100 for better.",
+    )
+    p.add_argument(
+        "--num_t2m_demos",
+        type=int,
+        default=4,
+        help="Number of text-to-music (prompt-only) demos per checkpoint, "
+             "using the first N training-set prompts. Set to 0 to disable t2m demos "
+             "and keep only inpaint demos (the old behavior). Ignored if "
+             "--demo_prompts_file is set.",
+    )
+    p.add_argument(
+        "--demo_prompts_file",
+        type=str,
+        default=None,
+        help="Optional path to a text file containing demo prompts (one per "
+             "line). When provided, these are used for t2m demos instead of "
+             "the first N training-set prompts.",
+    )
+    p.add_argument("--num_workers", type=int, default=None,
+                   help="DataLoader workers. Defaults to 8 on CUDA, 2 on MPS/CPU.")
     args = p.parse_args()
+    if args.num_workers is None:
+        args.num_workers = 8 if AUTOCAST_DEVICE == "cuda" else 2
     if not args.encoded_dir and not args.data_dir:
         p.error("one of --data_dir or --encoded_dir is required")
     train(args)
