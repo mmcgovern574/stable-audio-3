@@ -1,0 +1,22 @@
+{
+  "name": "title_sweep",
+  "lora_ckpt": "./lora_out/ckz_5000_dora/epoch=108-step=5000.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "cKz! Twilight Bmin 110 bpm @crushed_keyz",
+      "cKz! Dusk Bmin 110 bpm @crushed_keyz",
+      "cKz! Halo Bmin 110 bpm @crushed_keyz",
+      "cKz! Mirage Bmin 110 bpm @crushed_keyz",
+      "cKz! Echo Bmin 110 bpm @crushed_keyz",
+      "cKz! Veil Bmin 110 bpm @crushed_keyz",
+      "cKz! Ember Bmin 110 bpm @crushed_keyz",
+      "cKz! Crystal Bmin 110 bpm @crushed_keyz"
+    ],
+    "cfg":      [3],
+    "strength": [1.0],
+    "steps":    [50],
+    "seed":     [999]
+  }
+}

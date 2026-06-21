@@ -1,0 +1,40 @@
+{
+  "name": "ckz_eff2500_timegate_transfer",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "TIME-GATED LoRA, TRANSFER arm. Foreign melody (Cymatics, known key) as init_audio; cKz prompt is Cmin. With the gate OFF early (LoRA off for sigma>start), the init's melody+key should survive the structure-forming steps (no cKz melody forced, no key clash), then cKz timbre is painted late. Tests: (1) does gate<1.0 preserve the init melody + add cKz timbre better than gate=1.0 (=standard init_audio, which overwrote/clashed)? (2) does it resolve the Dmin-init vs Cmin-prompt clash? init_noise_level sets where sampling starts (sigma_max); gate must be below it to have an early-off phase.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "seed": [
+      7
+    ],
+    "init_audio": [
+      "/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Cymatics - Dragon Pt. 5/Sad/Cymatics - Dragon Sad Loop - Emotional - 140 BPM C Min.wav",
+      "/Users/mikemcgovern/Documents/SoundSauce/Melody_Loops/Cymatics - Dragon Pt. 5/Sad/Cymatics - Dragon Sad Loop - Left Behind - 155 BPM D Min.wav"
+    ],
+    "init_noise_level": [
+      0.55,
+      0.7
+    ],
+    "lora_start_sigma": [
+      1.0,
+      0.45,
+      0.3
+    ]
+  }
+}

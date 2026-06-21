@@ -1,0 +1,71 @@
+{
+  "name": "ckz_eff2500_allprompts",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "1. cKz! No tE VAYAS Fsharpmin 105 bpm @crushed_keyz 1",
+      "10. cKz! JUNGLE C#min 140 bpm @crushed_keyz",
+      "11. cKz! CANOPY Amin 125 bpm @crushed_keyz",
+      "12. cKz! WUNNA C#min 125 bpm @crushed_keyz",
+      "14. cKz! dESERT RAiN Bmin 160 @crushed_key",
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "16. cKz! Rent Free Cmin 140 bpm @crushed_keyz @justryda_",
+      "17. cKz! Pressure F#min 130 bpm @crushed_keyz 1",
+      "18. cKz! 3AM Cmin 161 bpm @crushed_keyz @prodkxvi",
+      "19. cKz! DreamDoor Emin 140 bpm @crushed_keyz x @bass._charity",
+      "2. cKz! ICE Dmin 135 bpm @crushed_keyz",
+      "21. cKz! Panda Cmin 90 bpm @crushed_keyz",
+      "22. cKz! Coupe C#min 180 bpm @crushed_keyz x @vicheatitup",
+      "23. cKz! Wants Gmin 170 bpm @crushed_keyz @justryda_",
+      "24. cKz! JuPitER Cmin 120 bpm @crushed_keyz",
+      "25. cKz! CoSmoS Dmin 132 bpm @crushed_keyz",
+      "26. cKz! BANDS A#min 150 bpm @crushed_keyz",
+      "27. cKz! CAROUSEL G#min 160 bpm @crushed_keyz",
+      "28. cKz!  LABYRiNTH Bmin 140 bpm @crushed_keyz",
+      "29. cKz! Act Up Amaj 180 bpm @crushed_keyz @incepshun_",
+      "3. cKz! Soulful Shadows Cmin 95 @crushed_key",
+      "30. cKz! Cry Now Laugh Later A#min 142 bpm @crushed_keyz",
+      "31. cKz! CONFINED 180 bpm Emin @crushed_keyz",
+      "32. cKz! Coldhearted Emaj 95 bpm @crushed_keyz @dcosounds",
+      "4. cKz! Emotions Cmin 155 bpm @crushed_keyz x @justryda",
+      "5. cKz! Depths Cmin 140 bpm @crushed_keyz x @justryda",
+      "6. cKz! LowKey Cmin 100 bpm @crushed_keyz x @justryda",
+      "6. cKz! Nasty - Reggaeton Bmin 170 bpm @crushed_keyz",
+      "7. cKz! ICEBERG 124bpm @crushed_keyz - crushedkeyz@gmail.com",
+      "8. cKz! BreakUp NAV starter D#min 190 bpm @crushed_keyz @bass._charity",
+      "9. cKz! Steppa Fmin 110 bpm @crushed_keyz",
+      "cKz! AzUL Fmin 140 bpm @crushed_keyz",
+      "cKz! Azkaban Gmin 110 bpm @crushed_keyz",
+      "cKz! DiMELO Amin 90 bpm @crushed_keyz",
+      "cKz! El Yunque Fsharpmin 90 bpm @crushed_keyz",
+      "cKz! FlaMEnCO Bmin 125 bpm @crushed_keyz",
+      "cKz! LATE NiGHTs F#min 135 bpm @crushed_keyz1",
+      "cKz! MYKE TOWERS Fmin 125 bpm @crushed_keyz",
+      "cKz! Mars C#min 125 bpm @crushed_keyz",
+      "cKz! POWER Dmin 125 bpm @crushed_keyz @itsbynu",
+      "cKz! SPRAY Dmin 180 bpm @crushed_keyz",
+      "cKz! SUBiENDO Emin 90 bpm @crushed_keyz 1",
+      "cKz! Scenic Cmin 110 bpm @crushed_keyz",
+      "cKz! StarLight 95 Amin @crushed_keyz x @dudeclayy",
+      "cKz! TrapSoul Dsharp min 90 bpm @crushed_keyz @itsbynu",
+      "cKz! dAYS OFF Gmin 150 bpm @crushed_keyz @officialnickystix"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7,
+      42,
+      123,
+      999
+    ]
+  }
+}

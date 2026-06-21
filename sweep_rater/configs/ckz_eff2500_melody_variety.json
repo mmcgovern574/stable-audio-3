@@ -1,0 +1,55 @@
+{
+  "name": "ckz_eff2500_melody_variety",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Fixed seed 7, prompt-only. Adjective swaps were cosmetic (word_isolation). This swaps the STRONGLY-TRAINED structured tokens that can override the seed skeleton: A) KEY sweep on ACTiVE, B) whole distinct REAL training prompts (each = a different learned song), C) STACKED/combined training names (hybrid test, user idea), D) BPM sweep on ACTiVE. Goal: find which lever gives VERY different + good melodies.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+
+      "15. cKz! ACTiVE Dmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Emin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE F#min 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Gmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Amin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Bmin 155 bpm @crushed_keyz x @justryda",
+
+      "2. cKz! ICE Dmin 135 bpm @crushed_keyz",
+      "10. cKz! JUNGLE C#min 140 bpm @crushed_keyz",
+      "21. cKz! Panda Cmin 90 bpm @crushed_keyz",
+      "25. cKz! CoSmoS Dmin 132 bpm @crushed_keyz",
+      "cKz! AzUL Fmin 140 bpm @crushed_keyz",
+      "28. cKz! LABYRiNTH Bmin 140 bpm @crushed_keyz",
+      "14. cKz! dESERT RAiN Bmin 160 @crushed_keyz",
+      "3. cKz! Soulful Shadows Cmin 95 @crushed_keyz",
+
+      "15. cKz! ICE JUNGLE Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Velvet Midnight Dmin 140 bpm @crushed_keyz",
+      "15. cKz! Frozen Ember Cmin 155 bpm @crushed_keyz",
+      "15. cKz! CoSmoS Mirage F#min 132 bpm @crushed_keyz",
+      "15. cKz! Panda Twilight Amin 110 bpm @crushed_keyz",
+      "15. cKz! ICEBERG dESERT RAiN Bmin 160 bpm @crushed_keyz",
+
+      "15. cKz! ACTiVE Cmin 90 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin 110 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin 130 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin 160 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7
+    ]
+  }
+}

@@ -1,0 +1,14 @@
+{
+  "name": "seed_variety",
+  "lora_ckpt": "./lora_out/ckz_5000_dora/epoch=108-step=5000.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "prompt": "cKz! Midnight Bmin 110 bpm @crushed_keyz",
+  "axes": {
+    "cfg":      [3],
+    "strength": [1.0],
+    "steps":    [50],
+    "seed":     [7, 17, 42, 77, 101, 123, 200, 314, 420, 500,
+                 555, 600, 700, 808, 888, 911, 999, 1024, 1337, 2024]
+  }
+}

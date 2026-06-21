@@ -203,3 +203,6 @@ hf_cache/
 lora_train.log
 *.logdata/crushed_keyz_lora.zip
 data/*.zip
+
+# editor/backup
+*.bak

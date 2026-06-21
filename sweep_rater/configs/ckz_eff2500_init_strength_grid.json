@@ -1,0 +1,37 @@
+{
+  "name": "ckz_eff2500_init_strength_grid",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "The two STRENGTH knobs in the init regime, swept TOGETHER (interaction untested). Fixed good loop (dark128, dense Cmin, anchors well). init_noise_level [0.6/0.75] = init strength (lower=loop anchors harder; higher=more novel). LoRA strength [0.85/1.0/1.15] = adapter strength; 1.0 was best for pure t2m but WITH an init providing structure the balance differs, and OVER-applying (1.15) may push the foreign latent harder onto the cKz timbre manifold (the missing-timbre fix). 2 seeds. Q: does some (noise x strength) combo give a novel loop-anchored melody with FULL cKz timbre? Rate timbre+melody+note.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "init_audio": [
+      "sweep_rater/init_clips/full_dark128.wav"
+    ],
+    "init_noise_level": [
+      0.6,
+      0.75
+    ],
+    "strength": [
+      0.85,
+      1.0,
+      1.15
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "name": "ckz_eff2500_fidelity_ab",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Confirm the two cheap floor-fixes the aggregate implicated for the library's 68% floor: LoRA strength 0.85->1.0 (1.0 minimizes floor globally; library's 0.85 was single-loop overfit) and steps 50->100 (aggregate hints 100>50, theory: more final steps = more HF detail = less muffle). 2 dense Cmin init loops x strength[0.85,1.0] x steps[50,100] x 2 seeds, noise 0.6, FULL-LoRA init regime. If strength1.0/steps100 cuts the floor + de-muffles, regenerate the library at the winner. Rate timbre(brightness!)+melody+note 'muffled?'.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "init_audio": [
+      "sweep_rater/init_clips/full_dark128.wav",
+      "sweep_rater/init_clips/full_oracle145.wav"
+    ],
+    "init_noise_level": [
+      0.6
+    ],
+    "strength": [
+      0.85,
+      1.0
+    ],
+    "steps": [
+      50,
+      100
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

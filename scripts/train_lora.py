@@ -170,6 +170,7 @@ def train(args):
             sample_size=sample_size,
             sample_rate=sample_rate,
             force_channels="stereo",
+            max_crop_offset_sec=args.max_crop_offset_sec,
         )
     dataloader = torch.utils.data.DataLoader(
         dataset,
@@ -329,7 +330,10 @@ def train(args):
         "config", {}
     ).get("downsampling_ratio", 1)
     # Align to downsampling ratio so the latent dims work out cleanly.
-    demo_sample_size = (int(args.duration * sr) // ds_ratio) * ds_ratio
+    # Demo length is decoupled from training --duration via --demo_duration, so
+    # demos can be short (fast) even when training on long crops.
+    demo_dur = args.demo_duration if args.demo_duration is not None else args.duration
+    demo_sample_size = (int(demo_dur * sr) // ds_ratio) * ds_ratio
     if demo_sample_size <= 0:
         demo_sample_size = model_config.get("sample_size")
     print(f"[train_lora] demo sample_size: {demo_sample_size} samples "
@@ -340,8 +344,8 @@ def train(args):
         sample_size=demo_sample_size,
         sample_rate=model_config.get("sample_rate"),
         demo_steps=args.demo_steps,
-        num_demos=4,
-        demo_cfg_scales=[2, 4, 7],
+        num_demos=args.num_inpaint_demos,
+        demo_cfg_scales=args.demo_cfg_scales,
         demo_dl=demo_dl,
         demo_conditioning=t2m_conditioning,
     )
@@ -467,6 +471,14 @@ def main():
         default=380.0,
         help="Maximum clip duration in seconds (default 380)",
     )
+    p.add_argument(
+        "--max_crop_offset_sec",
+        type=float,
+        default=None,
+        help="Cap the random crop start offset to [0, N] seconds. Keeps crops "
+             "near the start of each file (e.g. the melody body, excluding "
+             "trailing step-outs). Default: None (crop anywhere).",
+    )
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--logger", choices=["wandb", "comet", "csv", "none"], default="csv")
     p.add_argument("--name", type=str, default="lora-finetune")
@@ -475,10 +487,34 @@ def main():
     p.add_argument("--log_every", type=int, default=100)
     p.add_argument("--demo_every", type=int, default=500)
     p.add_argument(
+        "--demo_duration",
+        type=float,
+        default=None,
+        help="Length of demo clips in seconds. Defaults to --duration. Set shorter "
+             "(e.g. 12) to keep demos fast when training on long crops.",
+    )
+    p.add_argument(
+        "--num_inpaint_demos",
+        type=int,
+        default=4,
+        help="Number of inpaint demos (reconstructions of training audio) per "
+             "checkpoint. Set 0 to skip them — faster, and removes the seeded-from-"
+             "training-audio tail from the demo files.",
+    )
+    p.add_argument(
         "--demo_steps",
         type=int,
         default=50,
         help="Diffusion sampling steps per demo. 50 is decent quality; bump to 100 for better.",
+    )
+    p.add_argument(
+        "--demo_cfg_scales",
+        type=int,
+        nargs="+",
+        default=[2, 4, 7],
+        help="CFG scales to render at each demo checkpoint. Each scale renders "
+             "the full prompt set, so demos = prompts x scales. Use a single "
+             "value (e.g. --demo_cfg_scales 4) to keep demo time down.",
     )
     p.add_argument(
         "--num_t2m_demos",

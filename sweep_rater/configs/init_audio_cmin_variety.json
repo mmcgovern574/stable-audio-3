@@ -1,0 +1,29 @@
+{
+  "name": "init_audio_cmin_variety",
+  "lora_ckpt": "./lora_out/ckz_5000_dora/epoch=108-step=5000.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "init_audio": [
+      "data/crushed_keyz_lora/21. cKz! Panda Cmin 90 bpm @crushed_keyz.mp3",
+      "data/crushed_keyz_lora/3. cKz! Soulful Shadows Cmin 95 @crushed_key.mp3",
+      "data/crushed_keyz_lora/6. cKz! LowKey Cmin 100 bpm @crushed_keyz x @justryda.mp3",
+      "data/crushed_keyz_lora/cKz! Scenic Cmin 110 bpm @crushed_keyz.mp3",
+      "data/crushed_keyz_lora/24. cKz! JuPitER Cmin 120 bpm @crushed_keyz.mp3",
+      "data/crushed_keyz_lora/16. cKz! Rent Free Cmin 140 bpm @crushed_keyz @justryda_.mp3",
+      "data/crushed_keyz_lora/5. cKz! Depths Cmin 140 bpm @crushed_keyz x @justryda.mp3",
+      "data/crushed_keyz_lora/15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda.mp3",
+      "data/crushed_keyz_lora/4. cKz! Emotions Cmin 155 bpm @crushed_keyz x @justryda.mp3",
+      "data/crushed_keyz_lora/14. cKz! dESERT RAiN Bmin 160 @crushed_key.mp3",
+      "data/crushed_keyz_lora/28. cKz!  LABYRiNTH Bmin 140 bpm @crushed_keyz.mp3"
+    ],
+    "init_noise_level": [0.46],
+    "prompt": [
+      "cKz! Midnight Cmin 140 bpm @crushed_keyz"
+    ],
+    "cfg":      [3],
+    "strength": [1.0],
+    "steps":    [50],
+    "seed":     [7, 17, 123, 555, 999]
+  }
+}

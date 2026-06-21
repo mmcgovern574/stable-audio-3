@@ -1,0 +1,23 @@
+{
+  "name": "key_sweep",
+  "lora_ckpt": "./lora_out/ckz_5000_dora/epoch=108-step=5000.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "cKz! Midnight Amin 110 bpm @crushed_keyz",
+      "cKz! Midnight Bmin 110 bpm @crushed_keyz",
+      "cKz! Midnight Cmin 110 bpm @crushed_keyz",
+      "cKz! Midnight C#min 110 bpm @crushed_keyz",
+      "cKz! Midnight Dmin 110 bpm @crushed_keyz",
+      "cKz! Midnight Emin 110 bpm @crushed_keyz",
+      "cKz! Midnight Fmin 110 bpm @crushed_keyz",
+      "cKz! Midnight F#min 110 bpm @crushed_keyz",
+      "cKz! Midnight Gmin 110 bpm @crushed_keyz"
+    ],
+    "cfg":      [3],
+    "strength": [1.0],
+    "steps":    [50],
+    "seed":     [999]
+  }
+}

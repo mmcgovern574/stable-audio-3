@@ -1,0 +1,41 @@
+{
+  "name": "ckz_eff2500_wordwin_seeds",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz",
+      "15. cKz! ACTiVE Cmin @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin @crushed_keyz",
+      "15. cKz! ACTiVE Cmin"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7,
+      17,
+      42,
+      77,
+      123,
+      200,
+      314,
+      500,
+      777,
+      999,
+      1234,
+      2024
+    ]
+  }
+}

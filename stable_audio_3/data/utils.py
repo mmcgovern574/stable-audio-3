@@ -23,7 +23,8 @@ class PadCrop(nn.Module):
 
 class PadCrop_Normalized_T(nn.Module):
     
-    def __init__(self, n_samples: int, sample_rate: int, randomize: bool = True, pad: bool = True):
+    def __init__(self, n_samples: int, sample_rate: int, randomize: bool = True, pad: bool = True,
+                 max_offset_samples: int = None):
 
         super().__init__()
 
@@ -31,13 +32,18 @@ class PadCrop_Normalized_T(nn.Module):
         self.sample_rate = sample_rate
         self.randomize = randomize
         self.pad = pad
+        # If set, the random crop start offset is capped to [0, max_offset_samples].
+        # Used to keep crops within the melody region (excludes trailing step-outs).
+        self.max_offset_samples = max_offset_samples
 
     def __call__(self, source: torch.Tensor) -> Tuple[torch.Tensor, float, float, int, int, torch.Tensor]:
-        
+
         n_channels, n_samples = source.shape
-        
+
         # Calculate bounds and offset
         upper_bound = max(0, n_samples - self.n_samples)
+        if self.max_offset_samples is not None:
+            upper_bound = min(upper_bound, self.max_offset_samples)
         offset = 0
         if self.randomize and n_samples > self.n_samples:
             offset = random.randint(0, upper_bound)

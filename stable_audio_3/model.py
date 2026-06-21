@@ -1,4 +1,5 @@
 import json
+import os
 import numpy as np
 import torch
 import typing as tp
@@ -12,6 +13,61 @@ from stable_audio_3.models.lora import (
     set_lora_strength as _set_lora_strength,
     load_and_apply_loras,
 )
+
+
+class _LoraGatedBackbone:
+    """Proxies the diffusion backbone, setting LoRA strength as a function of the
+    current sigma (noise level) BEFORE each forward pass.
+
+    This enables *time-gated* LoRA: because diffusion is coarse-to-fine in time,
+    high-sigma (early) steps decide global structure (melody / harmony / rhythm)
+    and low-sigma (late) steps decide fine detail (timbre / texture). Applying the
+    adapter only in the low-sigma window lets the base model (or an init clip)
+    choose the melody while the LoRA paints the timbre on top.
+
+    schedule_fn: callable mapping a scalar sigma -> LoRA strength (float).
+    Only the backbone is gated; the conditioner LoRA is irrelevant during
+    sampling because the text conditioning is computed once before the loop.
+    """
+
+    def __init__(self, backbone, schedule_fn):
+        object.__setattr__(self, "_backbone", backbone)
+        object.__setattr__(self, "_schedule", schedule_fn)
+        object.__setattr__(self, "_last", None)
+        object.__setattr__(self, "_debug", bool(os.environ.get("CKZ_GATE_DEBUG")))
+
+    def _read_strength(self):
+        """Read back one lora_strength buffer to confirm the write propagated."""
+        for name, buf in self._backbone.named_buffers(recurse=True):
+            if name.endswith("lora_strength"):
+                return float(buf)
+        return None
+
+    def _apply(self, sigma):
+        s = float(self._schedule(float(sigma)))
+        if s != self._last:
+            # Always write under an inference-tolerant, grad-free context so the
+            # in-place buffer fill propagates regardless of the outer
+            # @torch.inference_mode() on generate(). (The previous try/except
+            # only fell back on RuntimeError; if the fill silently no-ops under
+            # inference_mode this guarantees it lands.)
+            with torch.inference_mode(False), torch.no_grad():
+                _set_lora_strength(self._backbone, s)
+            object.__setattr__(self, "_last", s)
+            if self._debug:
+                got = self._read_strength()
+                print(f"[gate] sigma={sigma:.4f} -> set strength {s} "
+                      f"(buffer reads {got})")
+
+    def __call__(self, x, t, *args, **kwargs):
+        # t is the current sigma broadcast to (batch,) by the sampler.
+        sigma = float(t.reshape(-1)[0]) if torch.is_tensor(t) else float(t)
+        self._apply(sigma)
+        return self._backbone(x, t, *args, **kwargs)
+
+    def __getattr__(self, name):
+        # Proxy everything else (parameters(), buffers, .training, etc.).
+        return getattr(object.__getattribute__(self, "_backbone"), name)
 
 
 class StableAudioModel:
@@ -108,6 +164,7 @@ class StableAudioModel:
         dist_shift=None,
         return_latents: bool = False,
         chunked_decode: tp.Optional[bool] = None,
+        lora_strength_schedule: tp.Optional[tp.Callable[[float], float]] = None,
         **sampler_kwargs,
     ) -> torch.Tensor:
         """
@@ -316,9 +373,17 @@ class StableAudioModel:
         cond_inputs = {**conditioning_inputs, **negative_conditioning_tensors}
 
         sampler_type = sampler_kwargs.pop("sampler_type", None)
+        rescale_cfg = sampler_kwargs.pop("rescale_cfg", True)
+
+        # Time-gated LoRA: wrap the backbone so the adapter strength is set as a
+        # function of the current sigma before each sampling step. No-op (uses the
+        # globally-set strength) when no schedule is provided.
+        backbone = self.model.model
+        if lora_strength_schedule is not None:
+            backbone = _LoraGatedBackbone(self.model.model, lora_strength_schedule)
 
         result = sample_diffusion(
-            model=self.model.model,
+            model=backbone,
             noise=noise,
             cond_inputs=cond_inputs,
             diffusion_objective=self.model.diffusion_objective,
@@ -335,7 +400,7 @@ class StableAudioModel:
             else self.model.sampling_dist_shift,
             sampler_type=sampler_type,
             batch_cfg=True,
-            rescale_cfg=True,
+            rescale_cfg=rescale_cfg,
             apg_scale=apg_scale,
             init_data=init_audio,
             init_noise_level=init_noise_level,

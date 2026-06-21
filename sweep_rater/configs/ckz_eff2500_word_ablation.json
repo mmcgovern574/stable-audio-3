@@ -1,0 +1,93 @@
+{
+  "name": "ckz_eff2500_word_ablation",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin 155 bpm x @justryda",
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz",
+      "ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "cKz! Cmin 155 bpm @crushed_keyz x @justryda",
+      "cKz! ACTiVE 155 bpm @crushed_keyz x @justryda",
+      "cKz! ACTiVE Cmin @crushed_keyz x @justryda",
+      "cKz! ACTiVE Cmin 155 bpm x @justryda",
+      "cKz! ACTiVE Cmin 155 bpm @crushed_keyz",
+      "15. Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. ACTiVE 155 bpm @crushed_keyz x @justryda",
+      "15. ACTiVE Cmin @crushed_keyz x @justryda",
+      "15. ACTiVE Cmin 155 bpm x @justryda",
+      "15. ACTiVE Cmin 155 bpm @crushed_keyz",
+      "15. cKz! 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Cmin @crushed_keyz x @justryda",
+      "15. cKz! Cmin 155 bpm x @justryda",
+      "15. cKz! Cmin 155 bpm @crushed_keyz",
+      "15. cKz! ACTiVE @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE 155 bpm x @justryda",
+      "15. cKz! ACTiVE 155 bpm @crushed_keyz",
+      "15. cKz! ACTiVE Cmin x @justryda",
+      "15. cKz! ACTiVE Cmin @crushed_keyz",
+      "15. cKz! ACTiVE Cmin 155 bpm",
+      "Cmin 155 bpm @crushed_keyz x @justryda",
+      "ACTiVE 155 bpm @crushed_keyz x @justryda",
+      "ACTiVE Cmin @crushed_keyz x @justryda",
+      "ACTiVE Cmin 155 bpm x @justryda",
+      "ACTiVE Cmin 155 bpm @crushed_keyz",
+      "cKz! 155 bpm @crushed_keyz x @justryda",
+      "cKz! Cmin @crushed_keyz x @justryda",
+      "cKz! Cmin 155 bpm x @justryda",
+      "cKz! Cmin 155 bpm @crushed_keyz",
+      "cKz! ACTiVE @crushed_keyz x @justryda",
+      "cKz! ACTiVE 155 bpm x @justryda",
+      "cKz! ACTiVE 155 bpm @crushed_keyz",
+      "cKz! ACTiVE Cmin x @justryda",
+      "cKz! ACTiVE Cmin @crushed_keyz",
+      "cKz! ACTiVE Cmin 155 bpm",
+      "15. 155 bpm @crushed_keyz x @justryda",
+      "15. Cmin @crushed_keyz x @justryda",
+      "15. Cmin 155 bpm x @justryda",
+      "15. Cmin 155 bpm @crushed_keyz",
+      "15. ACTiVE @crushed_keyz x @justryda",
+      "15. ACTiVE 155 bpm x @justryda",
+      "15. ACTiVE 155 bpm @crushed_keyz",
+      "15. ACTiVE Cmin x @justryda",
+      "15. ACTiVE Cmin @crushed_keyz",
+      "15. ACTiVE Cmin 155 bpm",
+      "15. cKz! @crushed_keyz x @justryda",
+      "15. cKz! 155 bpm x @justryda",
+      "15. cKz! 155 bpm @crushed_keyz",
+      "15. cKz! Cmin x @justryda",
+      "15. cKz! Cmin @crushed_keyz",
+      "15. cKz! Cmin 155 bpm",
+      "15. cKz! ACTiVE x @justryda",
+      "15. cKz! ACTiVE @crushed_keyz",
+      "15. cKz! ACTiVE 155 bpm",
+      "15. cKz! ACTiVE Cmin",
+      "@crushed_keyz",
+      "cKz! @crushed_keyz",
+      "cKz! ACTiVE @crushed_keyz",
+      "ACTiVE @crushed_keyz"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7
+    ]
+  }
+}

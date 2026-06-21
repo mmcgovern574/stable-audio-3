@@ -1,0 +1,32 @@
+{
+  "name": "ckz_eff2500_cfg_wide",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "prompt": "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+  "axes": {
+    "cfg": [
+      0,
+      1,
+      2,
+      4,
+      8,
+      16,
+      32,
+      64,
+      100
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7
+    ]
+  }
+}

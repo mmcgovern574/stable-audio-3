@@ -31,6 +31,14 @@ _PARAM_RE = re.compile(
     flags=re.IGNORECASE,
 )
 
+# init_noise_level is emitted by sweep_matrix.py as `noise<val>` (e.g. `noise0.9`).
+# Parse it as its own numeric axis so the analyzer can report it.
+_NOISE_RE = re.compile(r"noise([0-9]+(?:\.[0-9]+)?)")
+# init_audio appears as `init=<stem>` in the filename — capture the stem as a
+# categorical axis. The stem is bounded by `__` separators that sweep_matrix
+# uses to delimit param-block / prompt-block.
+_INIT_AUDIO_RE = re.compile(r"init=([^_].*?)(?=_(?:noise|cfg|strength|steps|seed|__))")
+
 
 def parse_filename_params(filename: str) -> dict:
     stem = Path(filename).stem
@@ -42,7 +50,31 @@ def parse_filename_params(filename: str) -> dict:
             out[key] = float(val) if "." in val else int(val)
         except ValueError:
             pass
+    m_noise = _NOISE_RE.search(stem)
+    if m_noise:
+        out["init_noise"] = float(m_noise.group(1))
+    m_init = _INIT_AUDIO_RE.search(stem)
+    if m_init:
+        # Keep the first ~28 chars so it's a readable categorical key.
+        out["init_audio"] = m_init.group(1)[:28]
     return out
+
+
+def entry_timbre(r):
+    if r.get("timbre") is not None: return r["timbre"]
+    if r.get("rating") is not None: return r["rating"]   # legacy single rating
+    return None
+
+
+def entry_melody(r):
+    if r.get("melody") is not None: return r["melody"]
+    if r.get("rating") is not None: return r["rating"]   # legacy single rating
+    return None
+
+
+def entry_score(r):
+    vals = [x for x in (entry_timbre(r), entry_melody(r)) if x is not None]
+    return mean(vals) if vals else None
 
 
 def main():
@@ -74,11 +106,16 @@ def main():
     for key, r in ratings.items():
         if filter_prefix is not None and not key.startswith(filter_prefix):
             continue
+        sc = entry_score(r)
+        if sc is None:
+            continue
         rows.append({
             "key":      key,
             "filename": Path(key).name,
             "folder":   str(Path(key).parent),
-            "rating":   r["rating"],
+            "timbre":   entry_timbre(r),
+            "melody":   entry_melody(r),
+            "score":    sc,
             "notes":    r.get("notes", ""),
             "ts":       r.get("ts", ""),
             "params":   parse_filename_params(Path(key).name),
@@ -89,37 +126,49 @@ def main():
         print(f"No ratings in {scope}.")
         return
 
-    scores = [r["rating"] for r in rows]
+    tvals = [r["timbre"] for r in rows if r["timbre"] is not None]
+    mvals = [r["melody"] for r in rows if r["melody"] is not None]
     print(f"DB:           {RATINGS_DB}")
     if args.folder:
         print(f"Filtered to:  {args.folder}")
     print(f"Rated clips:  {len(rows)}")
-    print(f"Mean rating:  {mean(scores):.2f}  (σ={pstdev(scores):.2f}, "
-          f"min={min(scores)}, max={max(scores)})")
+    if tvals:
+        print(f"Timbre mean:  {mean(tvals):.2f}  (σ={pstdev(tvals):.2f}, n={len(tvals)})")
+    if mvals:
+        print(f"Melody mean:  {mean(mvals):.2f}  (σ={pstdev(mvals):.2f}, n={len(mvals)})")
 
     all_axes = sorted({k for r in rows for k in r["params"]})
     if not all_axes:
         print("\nNo recognized parameters in filenames. Showing only top clips.")
     else:
         for axis in all_axes:
-            by_val = defaultdict(list)
+            agg = defaultdict(lambda: {"t": [], "m": []})
             for r in rows:
                 if axis in r["params"]:
-                    by_val[r["params"][axis]].append(r["rating"])
-            if not by_val:
+                    if r["timbre"] is not None: agg[r["params"][axis]]["t"].append(r["timbre"])
+                    if r["melody"] is not None: agg[r["params"][axis]]["m"].append(r["melody"])
+            if not agg:
                 continue
-            rankings = [(v, mean(s), len(s)) for v, s in by_val.items()]
-            rankings.sort(key=lambda x: (-x[1], x[0]))
-            print(f"\n  {axis} (best → worst):")
-            for v, m, n in rankings:
-                bar = "█" * round(m * 4)
-                print(f"    {axis}={str(v):<8}  mean={m:.2f}  n={n:<3}  {bar}")
+            rankings = []
+            for v, d in agg.items():
+                tm = mean(d["t"]) if d["t"] else None
+                mm = mean(d["m"]) if d["m"] else None
+                n = max(len(d["t"]), len(d["m"]))
+                rankings.append((v, tm, mm, n))
+            rankings.sort(key=lambda x: (-((x[1] or 0) + (x[2] or 0)), x[0]))
+            print(f"\n  {axis}  (best → worst by timbre+melody):")
+            for v, tm, mm, n in rankings:
+                ts = f"{tm:.2f}" if tm is not None else " -- "
+                ms = f"{mm:.2f}" if mm is not None else " -- "
+                print(f"    {axis}={str(v):<10}  timbre={ts}  melody={ms}  n={n}")
 
-    rows.sort(key=lambda r: -r["rating"])
-    print(f"\n  Top {min(args.top, len(rows))} clips by rating:")
+    rows.sort(key=lambda r: -r["score"])
+    print(f"\n  Top {min(args.top, len(rows))} clips by (timbre+melody)/2:")
     for r in rows[:args.top]:
         param_str = " ".join(f"{k}={v}" for k, v in r["params"].items()) or "(no params)"
-        line = f"    {r['rating']}★  {param_str}"
+        tt = r["timbre"] if r["timbre"] is not None else "-"
+        mm = r["melody"] if r["melody"] is not None else "-"
+        line = f"    T{tt} M{mm}  {param_str}"
         if r["notes"]:
             line += f'   "{r["notes"]}"'
         line += f"   → {r['key']}"

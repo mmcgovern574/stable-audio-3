@@ -1,0 +1,13 @@
+{
+  "name": "cfg_strength_azul",
+  "lora_ckpt": "./lora_out/ckz_5000_dora/epoch=108-step=5000.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "prompt": "cKz! AzUL Fmin 140 bpm @crushed_keyz",
+  "axes": {
+    "cfg":      [3, 5, 7, 9],
+    "strength": [0.5, 0.75, 1.0],
+    "steps":    [50],
+    "seed":     [42, 123, 999]
+  }
+}

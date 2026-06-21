@@ -1,0 +1,37 @@
+{
+  "name": "ckz_eff2500_timegate_novelty",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "TIME-GATED LoRA, novelty arm (no init). lora_start_sigma = sigma at/below which the adapter is full; ABOVE it (early/high-noise structure steps) the adapter is OFF (lora_low default 0.0) so the BASE MODEL decides the melody. Then cKz timbre is painted in the late/low-sigma steps. Hypothesis: as gate drops from 1.0 (control = current behavior) toward 0.2, melodies diversify across seeds while timbre stays cKz. Find the crossover where it's novel AND still reads cKz. Rate timbre + melody + note 'varied?'.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "lora_start_sigma": [
+      1.0,
+      0.7,
+      0.5,
+      0.35,
+      0.2
+    ],
+    "seed": [
+      7,
+      123,
+      777,
+      1234
+    ]
+  }
+}

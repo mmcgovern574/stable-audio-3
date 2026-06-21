@@ -21,13 +21,14 @@ Endpoints:
 from __future__ import annotations
 
 import argparse
+import csv
 import json
 import re
 import sys
 import threading
 import webbrowser
 from datetime import datetime
-from http.server import BaseHTTPRequestHandler, HTTPServer
+from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse, parse_qs
 
@@ -64,6 +65,31 @@ def list_wavs(folder: Path) -> list[dict]:
         if p.suffix.lower() != ".wav" or p.name.startswith("."):
             continue
         out.append({"filename": p.name, "params": parse_filename_params(p.name)})
+    return out
+
+
+def load_index(folder: Path) -> dict:
+    """Load library_index.csv (if present) → {clip_filename: {prompt, init_loop, init_path}}.
+
+    Lets the rater show, for each generated clip, its exact prompt + the init
+    loop it was built from (and play that loop as reference).
+    """
+    idx = folder / "library_index.csv"
+    out: dict = {}
+    if not idx.is_file():
+        return out
+    try:
+        with open(idx, newline="") as f:
+            for row in csv.DictReader(f):
+                fn = row.get("file")
+                if fn:
+                    out[fn] = {
+                        "prompt":    row.get("prompt", ""),
+                        "init_loop": row.get("init_loop", ""),
+                        "init_path": row.get("init_path", ""),
+                    }
+    except (OSError, csv.Error):
+        pass
     return out
 
 
@@ -122,6 +148,9 @@ def migrate_legacy_ratings() -> int:
 
 class Handler(BaseHTTPRequestHandler):
     folder: Path = Path()  # set by main()
+    segments: list = []          # prompt strings, in demo concatenation order
+    segment_seconds: float = 0.0 # seconds per segment (demo_duration)
+    index: dict = {}             # clip filename → {prompt, init_loop, init_path}
 
     def log_message(self, fmt, *args):
         pass
@@ -174,14 +203,23 @@ class Handler(BaseHTTPRequestHandler):
             return self._send(200, "text/html; charset=utf-8", HTML_PATH.read_bytes())
 
         if path == "/api/files":
+            files = list_wavs(self.folder)
+            for f in files:
+                info = self.index.get(f["filename"])
+                if info:
+                    f["init"] = {"prompt": info.get("prompt", ""),
+                                 "init_loop": info.get("init_loop", "")}
             return self._send_json({
                 "folder":     str(self.folder),
                 "rel_folder": self._rel(self.folder),
-                "files":      list_wavs(self.folder),
+                "files":      files,
             })
 
         if path == "/api/ratings":
             return self._send_json(load_ratings())
+
+        if path == "/api/segments":
+            return self._send_json({"prompts": self.segments, "seconds": self.segment_seconds})
 
         if path.startswith("/audio/"):
             filename = unquote(path[len("/audio/"):])
@@ -193,6 +231,20 @@ class Handler(BaseHTTPRequestHandler):
             if not rel:
                 return self._send_404("missing p")
             return self._serve_audio(REPO_ROOT / rel)
+
+        if path == "/init":
+            # Serve the INIT loop for a given generated clip. Allowlisted: only
+            # init_path values that appear in library_index.csv are reachable,
+            # so this is safe even though those files live outside REPO_ROOT.
+            qs = parse_qs(url.query or "")
+            fn = unquote((qs.get("file") or [""])[0])
+            info = self.index.get(fn)
+            if not info or not info.get("init_path"):
+                return self._send_404("no init for clip")
+            ip = Path(info["init_path"])
+            if not ip.is_file() or ip.suffix.lower() != ".wav":
+                return self._send_404("init file missing")
+            return self._send(200, "audio/wav", ip.read_bytes())
 
         return self._send_404()
 
@@ -211,15 +263,28 @@ class Handler(BaseHTTPRequestHandler):
             return self._send_json({"error": "path required"}, status=400)
 
         ratings = load_ratings()
-        rating = payload.get("rating")
-        if rating is None:
+
+        def _valid(x):
+            return x is None or (isinstance(x, int) and 0 <= x <= 5)
+
+        timbre = payload.get("timbre")
+        melody = payload.get("melody")
+        # Back-compat: a bare "rating" still works (applies to both dims).
+        if "timbre" not in payload and "melody" not in payload and "rating" in payload:
+            timbre = melody = payload.get("rating")
+
+        if not (_valid(timbre) and _valid(melody)):
+            return self._send_json(
+                {"error": "timbre/melody must be int 0..5 or null"}, status=400)
+
+        if timbre is None and melody is None:
             ratings.pop(key, None)
         else:
-            if not (isinstance(rating, int) and 0 <= rating <= 5):
-                return self._send_json({"error": "rating must be int 0..5 or null"}, status=400)
+            prev = ratings.get(key, {})
             ratings[key] = {
-                "rating": rating,
-                "notes":  payload.get("notes") or "",
+                "timbre": timbre,
+                "melody": melody,
+                "notes":  payload.get("notes") if payload.get("notes") is not None else prev.get("notes", ""),
                 "ts":     datetime.now().isoformat(timespec="seconds"),
             }
         save_ratings(ratings)
@@ -233,6 +298,11 @@ def main():
                    help="Folder of .wav files for the active rating session.")
     p.add_argument("--port", type=int, default=8765)
     p.add_argument("--no-browser", action="store_true")
+    p.add_argument("--segments", type=Path, default=None,
+                   help="Text file of prompts (one per line) concatenated into each "
+                        "demo clip, in order. Shown as a clickable timeline in the UI.")
+    p.add_argument("--segment-seconds", type=float, default=12.0,
+                   help="Seconds per segment (the demo_duration). Default 12.")
     args = p.parse_args()
 
     folder = args.folder.resolve()
@@ -240,6 +310,13 @@ def main():
         sys.exit(f"Not a directory: {folder}")
 
     Handler.folder = folder
+    Handler.index = load_index(folder)
+    if Handler.index:
+        print(f"Index:     {len(Handler.index)} clips mapped to init loops (library_index.csv)")
+    if args.segments and args.segments.is_file():
+        Handler.segments = [ln.strip() for ln in args.segments.read_text().splitlines() if ln.strip()]
+        Handler.segment_seconds = args.segment_seconds
+        print(f"Segments:  {len(Handler.segments)} prompts x {args.segment_seconds}s")
     migrate_legacy_ratings()
 
     # Pick an available port; bump if --port is busy.
@@ -248,7 +325,7 @@ def main():
     last_err = None
     for port in range(args.port, args.port + 10):
         try:
-            server = HTTPServer(("127.0.0.1", port), Handler)
+            server = ThreadingHTTPServer(("127.0.0.1", port), Handler)
             addr = ("127.0.0.1", port)
             break
         except OSError as e:

@@ -1,0 +1,32 @@
+{
+  "name": "ckz_eff2500_cfg_sweep",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "18. cKz! 3AM Cmin 161 bpm @crushed_keyz @prodkxvi",
+      "cKz! AzUL Fmin 140 bpm @crushed_keyz",
+      "14. cKz! dESERT RAiN Bmin 160 @crushed_key"
+    ],
+    "cfg": [
+      2,
+      3,
+      4,
+      5,
+      7
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7,
+      42,
+      123
+    ]
+  }
+}

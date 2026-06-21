@@ -1,0 +1,33 @@
+{
+  "name": "ckz_gate_debug",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "DIAGNOSTIC. Run with CKZ_GATE_DEBUG=1 to print the per-step sigma->strength toggle + buffer readback. gate=0.95 turns LoRA off for ONLY the first 1-2 highest-noise steps; if even that kills cKz timbre, the early steps are decisive (hypothesis-limited, not a bug). 1.0 = control.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "lora_start_sigma": [
+      1.0,
+      0.95,
+      0.9,
+      0.7
+    ],
+    "seed": [
+      7
+    ]
+  }
+}

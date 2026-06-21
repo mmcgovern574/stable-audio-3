@@ -1,0 +1,45 @@
+{
+  "name": "ckz_eff2500_seedhunt",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "cKz! AzUL Fmin 140 bpm @crushed_keyz",
+      "12. cKz! WUNNA C#min 125 bpm @crushed_keyz",
+      "cKz! Mars C#min 125 bpm @crushed_keyz",
+      "cKz! SPRAY Dmin 180 bpm @crushed_keyz",
+      "2. cKz! ICE Dmin 135 bpm @crushed_keyz",
+      "24. cKz! JuPitER Cmin 120 bpm @crushed_keyz",
+      "cKz! Azkaban Gmin 110 bpm @crushed_keyz"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7,
+      17,
+      42,
+      77,
+      101,
+      123,
+      200,
+      314,
+      420,
+      500,
+      555,
+      700,
+      777,
+      888,
+      999,
+      1234
+    ]
+  }
+}

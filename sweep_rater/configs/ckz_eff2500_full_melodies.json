@@ -1,0 +1,39 @@
+{
+  "name": "ckz_eff2500_full_melodies",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Retry the init novelty engine with DENSE FULL melody loops (stems were too sparse/quiet -> sparse output). 6 diverse full Cymatics C-min loops (all 0% silence, span 80-160 BPM / dark/monster/lofi/R&B/ethnic/cobra), FULL LoRA (gate is dead), noise 0.7, 2 seeds. All C-min so the Cmin prompt matches (no clash). Q: does each foreign loop yield a distinct NEW cKz melody with good timbre? This is the novelty-engine validation + the init library for the auto-picker. Rate timbre+melody+note 'novel & dope?'.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "init_audio": [
+      "sweep_rater/init_clips/full_dark128.wav",
+      "sweep_rater/init_clips/full_monster80.wav",
+      "sweep_rater/init_clips/full_oracle145.wav",
+      "sweep_rater/init_clips/full_rose109.wav",
+      "sweep_rater/init_clips/full_tokyo135.wav",
+      "sweep_rater/init_clips/full_cobra160.wav"
+    ],
+    "init_noise_level": [
+      0.7
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

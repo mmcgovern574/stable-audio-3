@@ -1,0 +1,18 @@
+{
+  "name": "hiphop_winners_eval",
+  "_comment": "Head-to-head re-eval of the NEW full-library LoRA on the two top-ranked prompts (ICE Dmin 135, Midnight Bmin 110), in the new caption vocabulary. Axes mirror the old multi_prompt_validation / seed_variety runs (cfg 3, strength 1.0, steps 50, same 20 seeds, duration 20) so the 1-5 ratings are directly comparable to the old model. UPDATE lora_ckpt to the checkpoint you pick from the training demos before running.",
+  "lora_ckpt": "./lora_out/hiphop_full_ext/epoch=4-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "prompt": [
+      "crushed keyz, hip hop melody loop, D minor, 135 bpm",
+      "crushed keyz, hip hop melody loop, B minor, 110 bpm"
+    ],
+    "cfg":      [3],
+    "strength": [1.0],
+    "steps":    [50],
+    "seed":     [7, 17, 42, 77, 101, 123, 200, 314, 420, 500,
+                 555, 600, 700, 808, 888, 911, 999, 1024, 1337, 2024]
+  }
+}

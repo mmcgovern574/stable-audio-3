@@ -1,0 +1,36 @@
+{
+  "name": "ckz_eff2500_layerfilter",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Native lora_layer_filter (exclusion: matched layer-name substrings get the adapter DISABLED). Probe which MODULE TYPE carries cKz timbre, on the DEPTH/module axis the time-gate couldn't touch. LoRA layers live on self_attn / cross_attn / ff across 24 blocks. Arms: control(all on); off self_attn; off cross_attn; off ff; LoRA ONLY on ff (off self+cross); LoRA ONLY on self_attn (off ff+cross). If timbre survives with LoRA only on ff -> timbre=ff, and attention=base may free melody = the decoupling we want. Fixed prompt, 2 seeds. Run with CKZ_GATE_DEBUG=1 to print disabled-layer counts.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "lora_layer_filter": [
+      "",
+      "self_attn",
+      "cross_attn",
+      ".ff.",
+      "self_attn,cross_attn",
+      ".ff.,cross_attn"
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

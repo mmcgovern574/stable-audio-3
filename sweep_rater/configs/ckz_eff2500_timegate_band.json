@@ -1,0 +1,37 @@
+{
+  "name": "ckz_eff2500_timegate_band",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "gate_debug found a VIABLE BAND: gate 0.95 keeps full cKz timbre (T4) while base model owns the first ~40% of structure steps; gate<=0.9 breaks timbre. Now map the band near the top [1.0..0.90] across 4 seeds to answer the real question: in the timbre-safe band, does the MELODY actually diversify vs gate 1.0, or is it timbre-intact-but-same? Compare same seeds at 1.0 vs 0.95. Rate timbre (holds?) + melody + note 'different from 1.0 / varied?'.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "lora_start_sigma": [
+      1.0,
+      0.97,
+      0.95,
+      0.93,
+      0.90
+    ],
+    "seed": [
+      7,
+      123,
+      777,
+      1234
+    ]
+  }
+}

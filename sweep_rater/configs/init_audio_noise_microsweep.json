@@ -1,0 +1,22 @@
+{
+  "name": "init_audio_noise_microsweep",
+  "lora_ckpt": "./lora_out/ckz_5000_dora/epoch=108-step=5000.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "axes": {
+    "init_audio": [
+      "data/crushed_keyz_lora/cKz! FlaMEnCO Bmin 125 bpm @crushed_keyz.mp3"
+    ],
+    "init_noise_level": [
+      0.20, 0.25, 0.30, 0.35, 0.40, 0.45, 0.50,
+      0.55, 0.60, 0.65, 0.70, 0.75, 0.80
+    ],
+    "prompt": [
+      "cKz! Midnight Bmin 110 bpm @crushed_keyz"
+    ],
+    "cfg":      [3],
+    "strength": [1.0],
+    "steps":    [50],
+    "seed":     [999]
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "name": "ckz_eff2500_depths_grid",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Replicate the key x bpm grid on a DIFFERENT training title (Depths) to test if key/bpm is a general lever or an ACTiVE quirk. Depths' authentic base = '5. cKz! Depths Cmin 140 bpm @crushed_keyz' (no collab). Sweep 4 keys x 3 bpms, 2 seeds (7,123) — same seeds as ACTiVE grid for comparability. 140 = Depths' native bpm anchor.",
+  "axes": {
+    "prompt": [
+      "5. cKz! Depths Cmin 130 bpm @crushed_keyz",
+      "5. cKz! Depths Cmin 140 bpm @crushed_keyz",
+      "5. cKz! Depths Cmin 160 bpm @crushed_keyz",
+      "5. cKz! Depths F#min 130 bpm @crushed_keyz",
+      "5. cKz! Depths F#min 140 bpm @crushed_keyz",
+      "5. cKz! Depths F#min 160 bpm @crushed_keyz",
+      "5. cKz! Depths Gmin 130 bpm @crushed_keyz",
+      "5. cKz! Depths Gmin 140 bpm @crushed_keyz",
+      "5. cKz! Depths Gmin 160 bpm @crushed_keyz",
+      "5. cKz! Depths Bmin 130 bpm @crushed_keyz",
+      "5. cKz! Depths Bmin 140 bpm @crushed_keyz",
+      "5. cKz! Depths Bmin 160 bpm @crushed_keyz"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

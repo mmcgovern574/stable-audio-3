@@ -1,0 +1,43 @@
+{
+  "name": "ckz_eff2500_key_bpm_grid",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "melody_variety showed KEY + BPM are the real novelty+quality levers (Gmin/Bmin/130/160 = M4), creative WORDS only cosmetic (timbre always safe via trigger). This maps the key x bpm sweet spot across 2 seeds (7,123) to confirm beyond single-seed. Arm B: 6 creative titles at the best region (Bmin 160) to show timbre holds but melody ~flat. Hold trigger + collab constant.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 130 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Cmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE F#min 130 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE F#min 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Gmin 130 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Gmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Bmin 130 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Bmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! ACTiVE Bmin 160 bpm @crushed_keyz x @justryda",
+
+      "15. cKz! Velvet Bmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! Frozen Bmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! Mirage Bmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! Ghostly Bmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! Cathedral Bmin 160 bpm @crushed_keyz x @justryda",
+      "15. cKz! Monsoon Bmin 160 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

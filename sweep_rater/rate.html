@@ -40,7 +40,8 @@
     .player { display:flex; align-items:center; gap:1rem; margin-top:.8rem; color:var(--fg-dim);
               font-variant-numeric:tabular-nums; }
     .player button { background:var(--accent); color:#0e1014; font-weight:700;
-                     border:0; border-radius:6px; padding:.4rem .9rem; cursor:pointer; }
+                     border:0; border-radius:6px; padding:.25rem .8rem; cursor:pointer;
+                     font-size:1.1rem; line-height:1; min-width:44px; }
     .player button:disabled { opacity:.5; cursor:default; }
 
     .filename { font-family:ui-monospace,Menlo,monospace; font-size:.95rem;
@@ -52,6 +53,19 @@
             color:var(--fg-dim); font-family:ui-monospace,Menlo,monospace; }
     .chip strong { color:var(--fg); font-weight:600; }
     .chips-empty { color:var(--fg-dim); font-size:.8rem; font-style:italic; margin-top:.6rem; }
+
+    .segments { display:flex; flex-direction:column; gap:3px; margin-top:.7rem; }
+    .segments .seg-title { font-size:.72rem; color:var(--fg-dim); margin-bottom:.1rem; }
+    .seg { display:grid; grid-template-columns:74px 1fr; gap:.5rem; align-items:center;
+           background:var(--panel-2); border:1px solid var(--border); border-left:3px solid transparent;
+           border-radius:6px; padding:.25rem .5rem; cursor:pointer; }
+    .seg:hover { border-color:var(--fg-dim); }
+    .seg.active { border-left-color:var(--accent); background:#202637; }
+    .seg .seg-time { font-family:ui-monospace,Menlo,monospace; font-size:.78rem; color:var(--fg-dim);
+                     font-variant-numeric:tabular-nums; }
+    .seg.active .seg-time { color:var(--accent); }
+    .seg .seg-prompt { font-family:ui-monospace,Menlo,monospace; font-size:.82rem; color:var(--fg);
+                       overflow:hidden; text-overflow:ellipsis; white-space:nowrap; }
 
     .rating-row { display:flex; align-items:center; gap:1rem; flex-wrap:wrap; margin-top:1rem; }
     .stars { display:inline-flex; gap:.25rem; }
@@ -82,11 +96,27 @@
 
     .empty { text-align:center; color:var(--fg-dim); padding:3rem 1rem; }
 
-    .hist { display:flex; gap:.3rem; margin-top:.6rem; flex-wrap:wrap; }
-    .hist-bin { background:var(--panel-2); border:1px solid var(--border); border-radius:4px;
-                padding:.15rem .4rem; font-size:.75rem; color:var(--fg-dim);
-                font-family:ui-monospace,Menlo,monospace; }
-    .hist-bin.has { color:var(--star); }
+    /* Mini vertical histogram of ratings for the current folder.
+       Grid layout: top row (count) and bottom row (label) auto-size, middle
+       row (bar) takes the rest. This pins every count and every label to the
+       same vertical line across all columns regardless of bar height. */
+    .hist { display:flex; align-items:stretch; gap:6px; margin-top:.8rem;
+            height:78px; padding-bottom:2px; }
+    .hist-col { display:grid; grid-template-rows:14px 1fr 12px; row-gap:2px;
+                justify-items:center; min-width:26px; }
+    .hist-col.sep { margin-left:8px; padding-left:8px;
+                    border-left:1px dashed var(--border); }
+    .hist-count { font-size:.72rem; color:var(--fg); font-family:ui-monospace,Menlo,monospace;
+                  line-height:14px; align-self:end; }
+    .hist-bar-wrap { width:18px; display:flex; align-items:end; align-self:stretch;
+                     overflow:hidden; }
+    .hist-bar { width:100%; background:var(--star); border-radius:3px 3px 0 0;
+                min-height:2px; max-height:100%; transition:height .15s ease-out; }
+    .hist-col.zero .hist-bar { background:var(--star-empty); }
+    .hist-col.unrated .hist-bar { background:var(--fg-dim); opacity:.55; }
+    .hist-label { font-size:.7rem; color:var(--fg-dim); line-height:12px;
+                  font-family:ui-monospace,Menlo,monospace; align-self:start; }
+    .hist-col.unrated .hist-label { color:var(--fg-dim); }
 
     /* "All previously rated" section */
     .section-title { font-size:.95rem; color:var(--fg-dim); margin:0 0 .8rem 0; font-weight:600; }
@@ -96,9 +126,10 @@
                                    border:1px solid var(--border); border-radius:4px;
                                    padding:.2rem .4rem; font:inherit; font-size:.85rem; }
 
-    .rated-row { display:grid; grid-template-columns:88px 1fr auto;
+    .rated-row { display:grid; grid-template-columns:118px 1fr auto;
                  gap:.6rem; align-items:center; padding:.5rem 0;
                  border-bottom:1px solid var(--border); }
+    .rated-row .stars-display .dim { color:var(--fg-dim); font-size:.7rem; }
     .rated-row:last-child { border-bottom:0; }
     .rated-row .stars-display { color:var(--star); font-size:1rem; letter-spacing:1px;
                                 font-family:ui-monospace,Menlo,monospace; }
@@ -111,6 +142,15 @@
                                 font-family:ui-monospace,Menlo,monospace; }
     .rated-row .label .notes { font-size:.8rem; color:var(--fg-dim); font-style:italic; margin-top:.15rem; }
     .rated-row audio { height:32px; }
+    .rated-row .audio-slot { display:flex; align-items:center; justify-content:flex-end; min-width:44px; }
+    .rated-row .lazy-play-btn { background:transparent; border:1px solid var(--border);
+                                color:var(--fg); border-radius:6px; padding:.25rem .7rem;
+                                cursor:pointer; font-size:1rem; line-height:1; }
+    .rated-row .lazy-play-btn:hover { border-color:var(--accent); color:var(--accent); }
+    .rated-more { padding:.6rem 0 0; text-align:center; }
+    .rated-more .more-btn { background:transparent; color:var(--fg-dim); border:1px solid var(--border);
+                            border-radius:6px; padding:.35rem .9rem; cursor:pointer; font-size:.85rem; }
+    .rated-more .more-btn:hover { color:var(--fg); border-color:var(--fg-dim); }
     .rated-row.current { background:var(--panel-2); border-radius:6px; padding-left:.4rem; padding-right:.4rem; }
   </style>
 </head>
@@ -134,20 +174,36 @@
     <div class="chips" id="chips"></div>
     <div id="waveform"></div>
     <div class="player">
-      <button id="play-btn">play</button>
+      <button id="play-btn" aria-label="play / pause" title="play / pause">▶</button>
       <span id="time">00:00 / 00:00</span>
       <span class="spacer" style="flex:1"></span>
       <span style="font-size:.85rem;">clip <strong id="pos">1 / 1</strong></span>
     </div>
 
+    <div id="init-ref" style="margin:.55rem 0;padding:.5rem .65rem;border:1px solid #2a3146;border-radius:8px;background:rgba(255,255,255,.02);display:none">
+      <div style="font-size:.72rem;color:var(--fg-dim);margin-bottom:.2rem">prompt</div>
+      <div id="init-prompt" style="font-size:.9rem;margin-bottom:.45rem;font-family:monospace">…</div>
+      <div style="font-size:.72rem;color:var(--fg-dim);margin-bottom:.25rem">init audio (reference) · <span id="init-name" style="color:var(--fg)"></span></div>
+      <audio id="init-audio" controls preload="none" style="width:100%;height:32px"></audio>
+    </div>
+
+    <div class="segments" id="segments"></div>
+
     <div class="rating-row">
-      <strong>rating:</strong>
-      <span class="stars" id="stars"></span>
+      <strong style="min-width:3.6rem">timbre</strong>
+      <span class="stars" id="stars-timbre"></span>
+    </div>
+    <div class="rating-row">
+      <strong style="min-width:3.6rem">melody</strong>
+      <span class="stars" id="stars-melody"></span>
       <button class="clear-btn" id="clear-btn">clear</button>
       <span class="saved-indicator" id="saved-indicator">saved ✓</span>
     </div>
     <textarea class="notes" id="notes" placeholder="optional notes…"></textarea>
-    <div class="hist" id="hist"></div>
+    <div style="display:flex;gap:2.4rem;flex-wrap:wrap;margin-top:.4rem">
+      <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">timbre</div><div class="hist" id="hist-timbre"></div></div>
+      <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">melody</div><div class="hist" id="hist-melody"></div></div>
+    </div>
 
     <nav class="btn-row">
       <button id="prev-btn">← prev</button>
@@ -168,8 +224,10 @@
       <span class="right">
         <label>sort
           <select id="sort-mode">
-            <option value="rating-desc">rating ↓</option>
-            <option value="rating-asc">rating ↑</option>
+            <option value="rating-desc">avg ↓</option>
+            <option value="rating-asc">avg ↑</option>
+            <option value="timbre-desc">timbre ↓</option>
+            <option value="melody-desc">melody ↓</option>
             <option value="ts-desc">newest first</option>
             <option value="ts-asc">oldest first</option>
             <option value="path">by path</option>
@@ -182,12 +240,9 @@
 </main>
 
 <footer>
-  <kbd>←</kbd> <kbd>→</kbd> prev/next ·
-  <kbd>space</kbd> play ·
-  <kbd>0</kbd>–<kbd>5</kbd> rate ·
-  <kbd>c</kbd> clear ·
-  <kbd>r</kbd> random ·
-  <kbd>u</kbd> next unrated
+  <kbd>←</kbd> <kbd>→</kbd> prev/next · <kbd>space</kbd> play ·
+  timbre <kbd>1</kbd>–<kbd>5</kbd> · melody <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>G</kbd> ·
+  <kbd>c</kbd> clear · <kbd>r</kbd> random · <kbd>u</kbd> next unrated
 </footer>
 
 <script src="https://unpkg.com/wavesurfer.js@7.8.6/dist/wavesurfer.min.js"></script>
@@ -204,9 +259,28 @@ const state = {
   ws:           null,
   unratedOnly:  false,
   sortMode:     "rating-desc",
+  showAllRated: false,  // cap rated list to top N until user opts in
+  segments:     {prompts: [], seconds: 0},  // demo prompt timeline (optional)
 };
 
 const $ = (id) => document.getElementById(id);
+
+// Rating helpers. Entries are {timbre, melody, notes, ts}; legacy entries are
+// {rating, notes, ts} — for those, the single rating stands in for both dims.
+function entryTimbre(r){ return r ? (r.timbre != null ? r.timbre : (r.rating != null ? r.rating : null)) : null; }
+function entryMelody(r){ return r ? (r.melody != null ? r.melody : (r.rating != null ? r.rating : null)) : null; }
+function entryScore(r){
+  const t = entryTimbre(r), m = entryMelody(r);
+  if (t == null && m == null) return 0;
+  if (t == null) return m;
+  if (m == null) return t;
+  return (t + m) / 2;
+}
+function isFullyRated(key){
+  const r = state.ratings[key];
+  if (!r) return false;
+  return (r.timbre != null && r.melody != null) || r.rating != null;
+}
 
 function fmtTime(sec) {
   if (!isFinite(sec)) return "00:00";
@@ -231,7 +305,7 @@ function currentKey() {
 function recomputeOrder() {
   const all = state.files.map((_, i) => i);
   state.order = state.unratedOnly
-    ? all.filter(i => !(joinPath(state.relFolder, state.files[i].filename) in state.ratings))
+    ? all.filter(i => !isFullyRated(joinPath(state.relFolder, state.files[i].filename)))
     : all;
   if (state.pos >= state.order.length) state.pos = Math.max(0, state.order.length - 1);
 }
@@ -244,9 +318,21 @@ function flashSaved() {
 }
 
 function render() {
+  // Note: renderRated() is intentionally NOT called here. Re-rendering the
+  // full "all previously rated" list on every nav (←/→/r/u) gets expensive
+  // once you have 100+ ratings. Only callers that *change* ratings
+  // (setRating, clearRating, saveNotes) and boot/refresh trigger it.
   renderMain();
-  renderRated();
   updateStats();
+  highlightCurrentInRatedList();
+}
+
+// Lightweight: just move the "current" highlight class without rebuilding rows.
+function highlightCurrentInRatedList() {
+  const cur = currentKey();
+  document.querySelectorAll(".rated-row").forEach(r => {
+    r.classList.toggle("current", r.dataset.key === cur);
+  });
 }
 
 function renderMain() {
@@ -278,57 +364,117 @@ function renderMain() {
     }
   }
 
-  $("waveform").innerHTML = "";
-  if (state.ws) state.ws.destroy();
+  // Lazy-init WaveSurfer ONCE. Reuse for every subsequent clip by calling
+  // load() on the same instance. Destroying+recreating per clip burns hundreds
+  // of ms on DOM teardown + GL context recreation; load() just streams the
+  // new audio into the existing renderer.
+  ensureWaveSurfer();
+  $("play-btn").disabled = true;
+  state.ws.load(`/audio/${encodeURIComponent(f.filename)}`);
+
+  // Init-audio reference: show the prompt + the loop this clip was built from,
+  // with a plain <audio> player (no waveform) for A/B reference.
+  const initBox = $("init-ref");
+  const ia = $("init-audio");
+  if (f.init && (f.init.init_loop || f.init.prompt)) {
+    $("init-prompt").textContent = f.init.prompt || "(unknown prompt)";
+    $("init-name").textContent = f.init.init_loop || "";
+    ia.src = `/init?file=${encodeURIComponent(f.filename)}`;
+    ia.load();
+    initBox.style.display = "block";
+  } else {
+    initBox.style.display = "none";
+    ia.pause(); ia.removeAttribute("src");
+  }
+
+  const key = currentKey();
+  const r = state.ratings[key];
+  drawStars("timbre", entryTimbre(r) || 0);
+  drawStars("melody", entryMelody(r) || 0);
+  $("notes").value = r ? (r.notes || "") : "";
+
+  renderSegments();
+  $("pos").textContent = `${state.pos + 1} / ${state.order.length}`;
+}
+
+// Track last reported playback time so we can detect native loop wrap-arounds
+// (when media.loop=true wraps from end → 0, WaveSurfer's cursor needs a kick).
+let _lastPlaybackT = 0;
+
+function ensureWaveSurfer() {
+  if (state.ws) return;
   state.ws = WaveSurfer.create({
     container: "#waveform",
     waveColor:"#3a4159", progressColor:"#7aa2ff", cursorColor:"#e6e9f2",
     height:110, barWidth:2, barRadius:1, barGap:1, normalize:true,
   });
-  state.ws.load(`/audio/${encodeURIComponent(f.filename)}`);
   state.ws.on("ready", () => {
     $("time").textContent = `00:00 / ${fmtTime(state.ws.getDuration())}`;
     $("play-btn").disabled = false;
-    $("play-btn").textContent = "play";
+    $("play-btn").textContent = "▶";
     try {
       const m = state.ws.getMediaElement && state.ws.getMediaElement();
       if (m) m.loop = true;
     } catch (_) { /* ignore */ }
+    _lastPlaybackT = 0;
     const r = state.ws.play();
     if (r && typeof r.catch === "function") r.catch(() => {});
   });
-  // Track last reported time. When native looping wraps (t suddenly jumps
-  // backward), force WaveSurfer to sync its progress cursor to the new time.
-  let lastT = 0;
   state.ws.on("timeupdate", (t) => {
-    if (t < lastT - 0.5) {
-      // Wrap-around: native media.loop=true rewound. Re-sync the cursor.
+    if (t < _lastPlaybackT - 0.5) {
       try { state.ws.setTime(0); } catch (_) {}
     }
-    lastT = t;
+    _lastPlaybackT = t;
     $("time").textContent = `${fmtTime(t)} / ${fmtTime(state.ws.getDuration())}`;
+    highlightSegment(t);
   });
-  state.ws.on("play",  () => $("play-btn").textContent = "pause");
-  state.ws.on("pause", () => $("play-btn").textContent = "play");
-  $("play-btn").disabled = true;
-
-  const key = currentKey();
-  const r = state.ratings[key];
-  drawStars(r ? r.rating : 0);
-  $("notes").value = r ? (r.notes || "") : "";
-
-  $("pos").textContent = `${state.pos + 1} / ${state.order.length}`;
+  state.ws.on("play",  () => { try { $("init-audio").pause(); } catch (_) {} $("play-btn").textContent = "⏸"; });
+  state.ws.on("pause", () => $("play-btn").textContent = "▶");
 }
 
-function drawStars(n) {
-  const wrap = $("stars");
+function renderSegments() {
+  const box = $("segments");
+  const segs = state.segments;
+  if (!box) return;
+  if (!segs.prompts || !segs.prompts.length || !segs.seconds) {
+    box.innerHTML = "";
+    return;
+  }
+  box.innerHTML = `<div class="seg-title">prompts in this demo (click to jump):</div>`;
+  segs.prompts.forEach((p, i) => {
+    const start = i * segs.seconds;
+    const end = (i + 1) * segs.seconds;
+    const row = document.createElement("div");
+    row.className = "seg";
+    row.dataset.idx = i;
+    row.innerHTML = `<span class="seg-time">${fmtTime(start)}–${fmtTime(end)}</span>` +
+                    `<span class="seg-prompt" title="${escapeHtml(p)}">${escapeHtml(p)}</span>`;
+    row.addEventListener("click", () => {
+      if (state.ws) { try { state.ws.setTime(start + 0.05); if (!state.ws.isPlaying()) state.ws.play(); } catch (_) {} }
+    });
+    box.appendChild(row);
+  });
+  highlightSegment(0);
+}
+
+function highlightSegment(t) {
+  const segs = state.segments;
+  if (!segs.seconds || !segs.prompts.length) return;
+  const idx = Math.min(segs.prompts.length - 1, Math.floor(t / segs.seconds));
+  document.querySelectorAll("#segments .seg").forEach(el => {
+    el.classList.toggle("active", Number(el.dataset.idx) === idx);
+  });
+}
+
+function drawStars(which, n) {
+  const wrap = $("stars-" + which);
   wrap.innerHTML = "";
   for (let i = 1; i <= 5; i++) {
     const b = document.createElement("button");
     b.textContent = "★";
     b.className = (i <= n) ? "on" : "";
-    b.title = `rate ${i}`;
-    b.addEventListener("click", () => setRating(i));
+    b.title = `${which} ${i}`;
+    b.addEventListener("click", () => setRating(which, i));
     wrap.appendChild(b);
   }
 }
@@ -349,42 +495,89 @@ function updateStats() {
   }
   $("stats").textContent = `${inFolder}/${total} rated in folder · ${Object.keys(state.ratings).length} total · ${state.order.length} shown`;
 
-  // Histogram across current folder.
+  buildHist("hist-timbre", entryTimbre);
+  buildHist("hist-melody", entryMelody);
+}
+
+function buildHist(containerId, dimFn) {
+  // Mini bar-chart histogram across current folder for one rating dimension.
   const counts = {0:0,1:0,2:0,3:0,4:0,5:0};
   let unrated = 0;
   for (const f of state.files) {
     const r = state.ratings[joinPath(state.relFolder, f.filename)];
-    if (r) counts[r.rating]++;
-    else unrated++;
+    const v = r ? dimFn(r) : null;
+    if (v == null) unrated++;
+    else counts[v]++;
   }
-  const hist = $("hist");
+  const maxCount = Math.max(unrated, ...Object.values(counts)) || 1;
+  const hist = $(containerId);
   hist.innerHTML = "";
-  for (const k of [5,4,3,2,1,0]) {
-    const span = document.createElement("span");
-    span.className = "hist-bin" + (counts[k] ? " has" : "");
-    span.textContent = `${k}★:${counts[k]}`;
-    hist.appendChild(span);
+
+  // One column per rating value (0★–5★), then a separated column for "unrated".
+  const cols = [
+    {label: "0",    count: counts[0], cls: counts[0] ? "" : "zero", sep: false},
+    {label: "1",    count: counts[1], cls: counts[1] ? "" : "zero", sep: false},
+    {label: "2",    count: counts[2], cls: counts[2] ? "" : "zero", sep: false},
+    {label: "3",    count: counts[3], cls: counts[3] ? "" : "zero", sep: false},
+    {label: "4",    count: counts[4], cls: counts[4] ? "" : "zero", sep: false},
+    {label: "5",    count: counts[5], cls: counts[5] ? "" : "zero", sep: false},
+    {label: "—",    count: unrated,   cls: "unrated",               sep: true},
+  ];
+  for (const c of cols) {
+    const col = document.createElement("div");
+    col.className = "hist-col " + c.cls + (c.sep ? " sep" : "");
+    col.title = (c.label === "—" ? "unrated" : `${c.label}★`) + `: ${c.count}`;
+
+    const num = document.createElement("div");
+    num.className = "hist-count";
+    num.textContent = c.count > 0 ? c.count : "";
+
+    const wrap = document.createElement("div");
+    wrap.className = "hist-bar-wrap";
+    const bar = document.createElement("div");
+    bar.className = "hist-bar";
+    // Reserve at least 2px so an empty bar shows as a thin baseline. The
+    // CSS bar-wrap has overflow:hidden + max-height:100% so even if the
+    // computed height exceeds the row, it visually clamps.
+    const h = c.count === 0 ? 2 : Math.max(2, Math.round((c.count / maxCount) * 48));
+    bar.style.height = h + "px";
+    wrap.appendChild(bar);
+
+    const lbl = document.createElement("div");
+    lbl.className = "hist-label";
+    lbl.textContent = c.label === "—" ? "—" : c.label + "★";
+
+    col.appendChild(num);
+    col.appendChild(wrap);
+    col.appendChild(lbl);
+    hist.appendChild(col);
   }
-  const u = document.createElement("span");
-  u.className = "hist-bin";
-  u.textContent = `unrated:${unrated}`;
-  hist.appendChild(u);
 }
 
 // ─── "All previously rated" section ────────────────────────────────────
+const RATED_LIST_DEFAULT_LIMIT = 20;
+
 function renderRated() {
-  const rows = Object.entries(state.ratings).map(([key, r]) => ({key, ...r}));
-  $("rated-count").textContent = `(${rows.length})`;
+  const allRows = Object.entries(state.ratings).map(([key, r]) => ({key, ...r}));
+  $("rated-count").textContent = `(${allRows.length})`;
 
   const sortMode = state.sortMode;
-  rows.sort((a, b) => {
-    if (sortMode === "rating-desc") return b.rating - a.rating || (a.ts < b.ts ? 1 : -1);
-    if (sortMode === "rating-asc")  return a.rating - b.rating || (a.ts < b.ts ? -1 : 1);
+  allRows.sort((a, b) => {
+    if (sortMode === "rating-desc") return entryScore(b) - entryScore(a) || (a.ts < b.ts ? 1 : -1);
+    if (sortMode === "rating-asc")  return entryScore(a) - entryScore(b) || (a.ts < b.ts ? -1 : 1);
+    if (sortMode === "timbre-desc") return (entryTimbre(b) ?? -1) - (entryTimbre(a) ?? -1) || (a.ts < b.ts ? 1 : -1);
+    if (sortMode === "melody-desc") return (entryMelody(b) ?? -1) - (entryMelody(a) ?? -1) || (a.ts < b.ts ? 1 : -1);
     if (sortMode === "ts-desc")     return a.ts < b.ts ? 1 : -1;
     if (sortMode === "ts-asc")      return a.ts < b.ts ? -1 : 1;
     if (sortMode === "path")        return a.key.localeCompare(b.key);
     return 0;
   });
+
+  // Cap to N to keep DOM cost predictable as the ratings DB grows.
+  // User can opt in to the full list via a checkbox at the bottom.
+  const showAll = state.showAllRated;
+  const rows = showAll ? allRows : allRows.slice(0, RATED_LIST_DEFAULT_LIMIT);
+  const hidden = allRows.length - rows.length;
 
   const list = $("rated-list");
   list.innerHTML = "";
@@ -401,12 +594,17 @@ function renderRated() {
   for (const r of rows) {
     const row = document.createElement("div");
     row.className = "rated-row" + (r.key === curKey ? " current" : "");
+    row.dataset.key = r.key;  // for highlightCurrentInRatedList()
 
     const stars = document.createElement("div");
     stars.className = "stars-display";
-    let s = "";
-    for (let i = 1; i <= 5; i++) s += i <= r.rating ? "★" : "<span class='off'>★</span>";
-    stars.innerHTML = s;
+    const rowStars = (v) => {
+      let s = "";
+      for (let i = 1; i <= 5; i++) s += (v != null && i <= v) ? "★" : "<span class='off'>★</span>";
+      return s;
+    };
+    stars.innerHTML = `<span class="dim">T</span> ${rowStars(entryTimbre(r))}<br>` +
+                      `<span class="dim">M</span> ${rowStars(entryMelody(r))}`;
 
     const label = document.createElement("div");
     label.className = "label";
@@ -417,17 +615,49 @@ function renderRated() {
                        <div class="folder">${escapeHtml(folder || ".")}</div>` +
                       (r.notes ? `<div class="notes">${escapeHtml(r.notes)}</div>` : "");
 
-    const audio = document.createElement("audio");
-    audio.controls = true;
-    audio.preload = "none";
-    audio.src = `/audio_at?p=${encodeURIComponent(r.key)}`;
-    // Pause WaveSurfer when this audio plays, so they don't overlap.
-    audio.addEventListener("play", () => { if (state.ws) state.ws.pause(); });
+    // Lazy audio: render a play button until the user actually clicks it.
+    // Instantiating 100+ <audio> elements up-front creates a media decoder
+    // per row and pegs Safari memory. Defer until needed.
+    const audioSlot = document.createElement("div");
+    audioSlot.className = "audio-slot";
+    const playBtn = document.createElement("button");
+    playBtn.className = "lazy-play-btn";
+    playBtn.title = "load and play this clip";
+    playBtn.textContent = "▶";
+    playBtn.addEventListener("click", () => {
+      // Swap the button out for a real <audio controls>.
+      const audio = document.createElement("audio");
+      audio.controls = true;
+      audio.preload = "auto";
+      audio.src = `/audio_at?p=${encodeURIComponent(r.key)}`;
+      audio.addEventListener("play", () => { if (state.ws) state.ws.pause(); });
+      audio.autoplay = true;
+      audioSlot.replaceChildren(audio);
+      // Browser autoplay can fail without user interaction; this IS a click
+      // event, so the play() call below is allowed.
+      const p = audio.play();
+      if (p && typeof p.catch === "function") p.catch(() => {});
+    });
+    audioSlot.appendChild(playBtn);
 
     row.appendChild(stars);
     row.appendChild(label);
-    row.appendChild(audio);
+    row.appendChild(audioSlot);
     list.appendChild(row);
+  }
+
+  // "show all" toggle if we truncated.
+  if (hidden > 0 || showAll) {
+    const more = document.createElement("div");
+    more.className = "rated-more";
+    more.innerHTML = showAll
+      ? `<button class="more-btn">show only top ${RATED_LIST_DEFAULT_LIMIT}</button>`
+      : `<button class="more-btn">show all (${hidden} more)</button>`;
+    more.querySelector("button").addEventListener("click", () => {
+      state.showAllRated = !state.showAllRated;
+      renderRated();
+    });
+    list.appendChild(more);
   }
 }
 
@@ -438,38 +668,45 @@ function escapeHtml(s) {
 }
 
 // ─── Server I/O ────────────────────────────────────────────────────────
-async function postRating(path, rating, notes) {
+async function postRating(path, timbre, melody, notes) {
   const r = await fetch("/api/rating", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({path, rating, notes}),
+    body: JSON.stringify({path, timbre, melody, notes}),
   });
   if (!r.ok) throw new Error("rating save failed: " + r.status);
   return r.json();
 }
 
-async function setRating(n) {
+async function setRating(which, n) {
   const f = currentFile();
   if (!f) return;
   const key = currentKey();
   const notes = $("notes").value;
-  await postRating(key, n, notes);
-  state.ratings[key] = {rating:n, notes, ts:new Date().toISOString()};
-  drawStars(n);
+  const cur = state.ratings[key] || {};
+  let timbre = entryTimbre(cur), melody = entryMelody(cur);
+  if (which === "timbre") timbre = n; else melody = n;
+  await postRating(key, timbre, melody, notes);
+  state.ratings[key] = {timbre, melody, notes, ts:new Date().toISOString()};
+  drawStars("timbre", timbre || 0);
+  drawStars("melody", melody || 0);
   flashSaved();
   renderRated();
   updateStats();
-  setTimeout(() => goNextUnrated(), 350);
+  // Auto-advance only once BOTH dimensions are set, so you can rate them in
+  // either order without the clip jumping away after the first star.
+  if (timbre != null && melody != null) setTimeout(() => goNextUnrated(), 300);
 }
 
 async function clearRating() {
   const f = currentFile();
   if (!f) return;
   const key = currentKey();
-  await postRating(key, null, "");
+  await postRating(key, null, null, "");
   delete state.ratings[key];
   $("notes").value = "";
-  drawStars(0);
+  drawStars("timbre", 0);
+  drawStars("melody", 0);
   flashSaved();
   renderRated();
   updateStats();
@@ -482,7 +719,7 @@ async function saveNotes() {
   const cur = state.ratings[key];
   if (!cur) return;
   const notes = $("notes").value;
-  await postRating(key, cur.rating, notes);
+  await postRating(key, entryTimbre(cur), entryMelody(cur), notes);
   cur.notes = notes;
   flashSaved();
   renderRated();
@@ -505,10 +742,24 @@ function goNextUnrated() {
   for (let step = 1; step <= state.order.length; step++) {
     const i = (start + step) % state.order.length;
     const k = joinPath(state.relFolder, state.files[state.order[i]].filename);
-    if (!(k in state.ratings)) { state.pos = i; render(); return; }
+    if (!isFullyRated(k)) { state.pos = i; render(); return; }
   }
 }
-function togglePlay() { if (state.ws) state.ws.playPause(); }
+function togglePlay() {
+  if (!state.ws) return;
+  // Stop the init reference player so the two never contend (Safari freeze).
+  try { $("init-audio").pause(); } catch (_) {}
+  // Use explicit play/pause (not playPause()) + catch the play() promise so a
+  // rejected/interrupted play after media contention can't leave us stuck.
+  try {
+    if (state.ws.isPlaying()) {
+      state.ws.pause();
+    } else {
+      const r = state.ws.play();
+      if (r && typeof r.catch === "function") r.catch(() => {});
+    }
+  } catch (_) {}
+}
 
 async function refresh() {
   const prevKey = currentKey();
@@ -521,10 +772,12 @@ async function refresh() {
 }
 
 async function loadData() {
-  const [filesResp, ratings] = await Promise.all([
+  const [filesResp, ratings, segments] = await Promise.all([
     fetch("/api/files").then(r => r.json()),
     fetch("/api/ratings").then(r => r.json()),
+    fetch("/api/segments").then(r => r.json()).catch(() => ({prompts: [], seconds: 0})),
   ]);
+  state.segments  = segments && Array.isArray(segments.prompts) ? segments : {prompts: [], seconds: 0};
   state.folder    = filesResp.folder || "";
   state.relFolder = filesResp.rel_folder || "";
   state.files     = filesResp.files || [];
@@ -541,6 +794,12 @@ function bindControls() {
   $("play-btn").onclick    = togglePlay;
   $("clear-btn").onclick   = clearRating;
   $("refresh-btn").onclick = refresh;
+
+  // Mutual exclusion: when the init reference plays, pause the main waveform.
+  // (Two concurrent media elements can freeze playback in Safari.)
+  $("init-audio").addEventListener("play", () => {
+    try { if (state.ws && state.ws.isPlaying()) state.ws.pause(); } catch (_) {}
+  });
 
   $("notes").addEventListener("blur", saveNotes);
   $("unrated-only").addEventListener("change", e => {
@@ -561,7 +820,8 @@ function bindControls() {
     else if (e.key === "r")                           { goRandom(); }
     else if (e.key === "u")                           { goNextUnrated(); }
     else if (e.key === "c")                           { clearRating(); }
-    else if (/^[0-5]$/.test(e.key))                   { setRating(parseInt(e.key, 10)); }
+    else if (/^[1-5]$/.test(e.key))                   { setRating("timbre", parseInt(e.key, 10)); }
+    else if (/^[asdfg]$/i.test(e.key))                { setRating("melody", {a:1,s:2,d:3,f:4,g:5}[e.key.toLowerCase()]); }
   });
 }
 

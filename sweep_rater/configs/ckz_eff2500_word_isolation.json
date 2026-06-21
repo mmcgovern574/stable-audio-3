@@ -1,0 +1,50 @@
+{
+  "name": "ckz_eff2500_word_isolation",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "ONE fixed seed (7). Swap ONLY the descriptor word, everything else = proven full ACTiVE string. Same seed => same noise => any audible diff is purely the word. Words ordered so neighbors contrast hard (energetic<->calm<->dark) to make the word effect obvious A/B. 24 words, ~10 min.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Serene Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Frantic Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Mournful Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Radiant Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Hollow Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Kinetic Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Frozen Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Molten Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Velvet Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Restless Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Dreamy Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Savage Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Tender Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Chaotic Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Glacial Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Euphoric Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Sinister Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Ember Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Mirage Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Brutal Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Angelic Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Murky Cmin 155 bpm @crushed_keyz x @justryda",
+      "15. cKz! Electric Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "strength": [
+      1.0
+    ],
+    "steps": [
+      50
+    ],
+    "seed": [
+      7
+    ]
+  }
+}

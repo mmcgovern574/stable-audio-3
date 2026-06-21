@@ -1,0 +1,36 @@
+{
+  "name": "ckz_eff2500_cfg_interval",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Native cfg_interval=(min,max) sigma where classifier-free guidance is applied; outside it CFG is skipped while the LoRA stays FULLY ON (timbre safe, no muffle). Gating CFG off early (sigma>X) lets the unconditional base+LoRA own early/structure steps; guidance refines toward the prompt late. The timbre-safe version of the time-gate. (0,1)=control. Tests whether removing early prompt-pull diversifies melody without degrading timbre. 4 seeds.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "cfg_interval": [
+      [0, 1],
+      [0, 0.7],
+      [0, 0.5],
+      [0, 0.3]
+    ],
+    "seed": [
+      7,
+      123,
+      777,
+      1234
+    ]
+  }
+}

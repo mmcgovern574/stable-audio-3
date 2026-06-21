@@ -190,6 +190,7 @@ class SampleDataset(torch.utils.data.Dataset):
         volume_norm_param=(-16, 2),
         strip_silence=False,
         pad=True,
+        max_crop_offset_sec=None,
     ):
         super().__init__()
         self.filenames = []
@@ -203,7 +204,9 @@ class SampleDataset(torch.utils.data.Dataset):
 
         self.root_paths = []
 
-        self.pad_crop = PadCrop_Normalized_T(sample_size, sample_rate, randomize=random_crop, pad=pad)
+        max_off = int(max_crop_offset_sec * sample_rate) if max_crop_offset_sec is not None else None
+        self.pad_crop = PadCrop_Normalized_T(sample_size, sample_rate, randomize=random_crop, pad=pad,
+                                             max_offset_samples=max_off)
         self.strip_silence = strip_silence
 
         self.force_channels = force_channels

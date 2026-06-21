@@ -1,0 +1,37 @@
+{
+  "name": "ckz_eff2500_init_strength_fine",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "Pin the strength-grid finding: in the init regime LOWER LoRA strength (0.85) beat 1.0, and over-applying (1.15) + high noise (0.75) were worse. But it was marginal/seed-driven (T4M4 seed7 only). Fix noise=0.6 (the winning anchor), sweep LoRA strength [0.75/0.85/0.95] across 2 dense loops (dark128, monster80) x 2 seeds to confirm 'lower-LoRA-helps-with-init' is robust, not a fluke. Best recipe candidate = dense full loop + noise 0.6 + str ~0.85. Rate timbre+melody+note.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "init_audio": [
+      "sweep_rater/init_clips/full_dark128.wav",
+      "sweep_rater/init_clips/full_monster80.wav"
+    ],
+    "init_noise_level": [
+      0.6
+    ],
+    "strength": [
+      0.75,
+      0.85,
+      0.95
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}

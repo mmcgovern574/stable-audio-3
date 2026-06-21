@@ -1,0 +1,38 @@
+{
+  "name": "ckz_eff2500_init_stems",
+  "lora_ckpt": "./lora_out/ckz_melody_capped/epoch=54-step=2500.ckpt",
+  "model": "medium-base",
+  "duration": 20,
+  "_design": "REVISED after timegate_transfer: the GATE is dead (muffles); init_audio + FULL LoRA at noise 0.55-0.7 is the novelty WIN (T4/M4 'dope new melody'). So drop the gate, test the stems question in the regime that works. Same Bad Energy C-min loop, 4 init types: Keys (clean melodic lead) / Bells (melodic) / full mix / Ambience (texture contrast). FULL LoRA throughout. Sweep noise 0.55/0.7. Q: does a melodic STEM give cleaner / better novel cKz melodies than the full mix? Rate timbre + melody + note 'novel & dope? artifacts?'.",
+  "axes": {
+    "prompt": [
+      "15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda"
+    ],
+    "sampler": [
+      "dpmpp"
+    ],
+    "cfg": [
+      3
+    ],
+    "steps": [
+      50
+    ],
+    "strength": [
+      1.0
+    ],
+    "init_audio": [
+      "sweep_rater/init_clips/be_keys.wav",
+      "sweep_rater/init_clips/be_bells.wav",
+      "sweep_rater/init_clips/be_full.wav",
+      "sweep_rater/init_clips/be_ambience.wav"
+    ],
+    "init_noise_level": [
+      0.55,
+      0.7
+    ],
+    "seed": [
+      7,
+      123
+    ]
+  }
+}
