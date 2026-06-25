@@ -1,4 +1,40 @@
 {
+  "demo_cfg_4_00000001.wav": {
+    "melody": 1,
+    "notes": "",
+    "timbre": 1,
+    "ts": "2026-06-21T19:27:38"
+  },
+  "demo_cfg_4_00000501.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T19:28:26"
+  },
+  "demo_cfg_4_00001001.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T19:28:59"
+  },
+  "demo_cfg_4_00001501.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T19:32:45"
+  },
+  "demo_cfg_4_00002001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T19:33:45"
+  },
+  "demo_cfg_4_00002501.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T20:04:48"
+  },
   "eval_out/1_10._cKz!_JUNGLE_C#min_140_bpm_@crushed_keyz_cfg7_steps50_dur30s.wav": {
     "notes": "",
     "rating": 3,
@@ -123,6 +159,716 @@
     "notes": "",
     "rating": 3,
     "ts": "2026-05-27T14:00:26"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s0": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T08:43:15"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s1": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T08:41:16"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s2": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-23T08:42:12"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s3": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T08:42:24"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s4": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T08:42:37"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s5": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T08:42:46"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s6": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-23T08:42:59"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s7": {
+    "melody": 2,
+    "notes": "dope, close to overfit",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T08:43:27"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s0": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T09:51:50"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s1": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T09:52:05"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s2": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T09:52:44"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s3": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T09:52:59"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s4": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T09:53:12"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s5": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T09:53:23"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s6": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-23T09:53:33"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00002001.wav#s7": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T09:53:46"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s0": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T11:59:48"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s1": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T12:00:00"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s2": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T12:00:13"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s3": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T12:00:23"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s4": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T12:00:55"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s5": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T12:01:09"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s6": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-23T12:01:21"
+  },
+  "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00004001.wav#s7": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T12:01:42"
+  },
+  "lora_out/ckz_aug_v1_cont/demos/demo_cfg_4_00000001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T22:11:03"
+  },
+  "lora_out/ckz_aug_v1_cont/demos/demo_cfg_4_00000501.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T22:12:00"
+  },
+  "lora_out/ckz_aug_v1_cont/demos/demo_cfg_4_00001001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T22:12:54"
+  },
+  "lora_out/ckz_aug_v1_cont/demos/demo_cfg_4_00001501.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T22:13:48"
+  },
+  "lora_out/ckz_aug_v1_cont/demos/demo_cfg_4_00002001.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T22:14:55"
+  },
+  "lora_out/ckz_aug_v1_cont/demos/demo_cfg_4_00002501.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T22:15:58"
+  },
+  "lora_out/ckz_aug_v1_long/demos/demo_cfg_4_00000001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:30:21"
+  },
+  "lora_out/ckz_aug_v1_long/demos/demo_cfg_4_00002001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:31:35"
+  },
+  "lora_out/ckz_aug_v1_long/demos/demo_cfg_4_00004001.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T06:32:17"
+  },
+  "lora_out/ckz_aug_v1_long/demos/demo_cfg_4_00006001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:33:12"
+  },
+  "lora_out/ckz_aug_v1_long/demos/demo_cfg_4_00008001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:34:11"
+  },
+  "lora_out/ckz_aug_v1_long/demos/demo_cfg_4_00010001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:35:45"
+  },
+  "lora_out/ckz_aug_v1_long2/demos/demo_cfg_4_00000001.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T07:49:06"
+  },
+  "lora_out/ckz_aug_v1_long2/demos/demo_cfg_4_00002001.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T09:14:43"
+  },
+  "lora_out/ckz_aug_v1_long2/demos/demo_cfg_4_00004001.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T11:44:01"
+  },
+  "lora_out/ckz_aug_v1_long2/demos/demo_cfg_4_00006001.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T13:04:11"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed123__aug-07500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:20:47"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed123__aug-11500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T07:23:15"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed123__aug-15500_cfg4.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:29:52"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed123__v1-2500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:18:03"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed7__aug-07500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:20:07"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed7__aug-11500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T07:23:24"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed7__aug-15500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:30:05"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed7__v1-2500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T07:14:02"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed123__aug-07500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T07:19:21"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed123__aug-11500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T07:23:46"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed123__aug-15500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:29:24"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed123__v1-2500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:13:12"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed7__aug-07500_cfg4.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T07:18:36"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed7__aug-11500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-22T07:22:55"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed7__aug-15500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T07:29:36"
+  },
+  "sweep_rater/campaigns/ab_timbre_v1_vs_aug/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed7__v1-2500_cfg4.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T07:13:24"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage1_v1-1k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T19:35:44"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage1_v1-1k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:35:12"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage2_v1-3k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:45:46"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage2_v1-3k__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:46:01"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage3_long-4k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:46:08"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage3_long-4k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:46:18"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage4_long-10k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:56:03"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage4_long-10k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:56:12"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage5_long2-8k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:56:24"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/00_Mirage_Gmin__stage5_long2-8k__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T19:56:38"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage1_v1-1k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 1,
+    "ts": "2026-06-22T19:36:06"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage1_v1-1k__seed7.wav": {
+    "melody": 3,
+    "notes": "dope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:35:29"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage2_v1-3k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:49:09"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage2_v1-3k__seed7.wav": {
+    "melody": 3,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:49:26"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage3_long-4k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:49:34"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage3_long-4k__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T19:49:46"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage4_long-10k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:56:49"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage4_long-10k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:56:57"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage5_long2-8k__seed123.wav": {
+    "melody": 5,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-23T07:36:03"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/01_Obsidian_D#min__stage5_long2-8k__seed7.wav": {
+    "melody": 5,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T07:36:13"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage1_v1-1k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:36:47"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage1_v1-1k__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:36:23"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage2_v1-3k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:49:58"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage2_v1-3k__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:50:14"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage3_long-4k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:57:06"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage3_long-4k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:52:45"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage4_long-10k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:57:12"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage4_long-10k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-22T19:57:20"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage5_long2-8k__seed123.wav": {
+    "melody": 4,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T07:36:25"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/02_Cascade_F#min__stage5_long2-8k__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T07:36:38"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage1_v1-1k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:37:24"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage1_v1-1k__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 1,
+    "ts": "2026-06-22T19:37:00"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage2_v1-3k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:52:58"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage2_v1-3k__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:53:11"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage3_long-4k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:57:29"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage3_long-4k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T07:34:29"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage4_long-10k__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T07:34:39"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage4_long-10k__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T07:34:48"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage5_long2-8k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T07:35:16"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/03_Wraith_Bmin__stage5_long2-8k__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T07:35:30"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage1_v1-1k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:53:19"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage1_v1-1k__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:37:52"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage2_v1-3k__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:45:27"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage2_v1-3k__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:45:35"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage3_long-4k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-22T19:53:29"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage3_long-4k__seed7.wav": {
+    "melody": 2,
+    "notes": "overfit a little",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-22T19:55:36"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage4_long-10k__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-22T19:55:42"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage4_long-10k__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-22T19:55:54"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage5_long2-8k__seed123.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T07:35:40"
+  },
+  "sweep_rater/campaigns/aug_sweetspot/04_TRAIN_ACTiVE__stage5_long2-8k__seed7.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T07:35:52"
   },
   "sweep_rater/campaigns/cfg_strength_azul/0001__cfg3_strength0.5_steps50_seed42__cKz!_AzUL_Fmin_140_bpm_@crushed_keyz.wav": {
     "notes": "",
@@ -1108,6 +1854,186 @@
     "notes": "",
     "rating": 3,
     "ts": "2026-06-18T09:38:33"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step0500__ACTiVE__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:51:23"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step0500__ACTiVE__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:51:33"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step0500__AzUL__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:51:42"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step0500__AzUL__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:51:48"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step0500__ICE__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:51:55"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step0500__ICE__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:52:05"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1000__ACTiVE__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:52:13"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1000__ACTiVE__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:52:23"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1000__AzUL__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T16:13:18"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1000__AzUL__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:52:37"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1000__ICE__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:52:49"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1000__ICE__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:53:02"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1500__ACTiVE__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-21T16:09:01"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1500__ACTiVE__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-21T16:09:11"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1500__AzUL__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T16:09:23"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1500__AzUL__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T16:09:30"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1500__ICE__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T16:09:44"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step1500__ICE__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T16:09:53"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2000__ACTiVE__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-21T16:10:19"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2000__ACTiVE__seed7.wav": {
+    "melody": 5,
+    "notes": "FIREEE",
+    "timbre": 5,
+    "ts": "2026-06-21T16:10:39"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2000__AzUL__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T16:10:51"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2000__AzUL__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-21T16:11:03"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2000__ICE__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T16:11:23"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2000__ICE__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T16:11:33"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2500__ACTiVE__seed123.wav": {
+    "melody": 5,
+    "notes": "have heard this one in the past many times",
+    "timbre": 4,
+    "ts": "2026-06-21T16:11:59"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2500__ACTiVE__seed7.wav": {
+    "melody": 4,
+    "notes": "heard this many times in the past",
+    "timbre": 4,
+    "ts": "2026-06-21T16:12:15"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2500__AzUL__seed123.wav": {
+    "melody": 3,
+    "notes": "have heard this exact in the past",
+    "timbre": 4,
+    "ts": "2026-06-21T16:12:33"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2500__AzUL__seed7.wav": {
+    "melody": 2,
+    "notes": "have heard this exact sample in past",
+    "timbre": 4,
+    "ts": "2026-06-21T16:12:47"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2500__ICE__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T16:12:56"
+  },
+  "sweep_rater/campaigns/checkpoint_novelty/step2500__ICE__seed7.wav": {
+    "melody": 3,
+    "notes": "have heard this exact one in the past",
+    "timbre": 3,
+    "ts": "2026-06-21T16:13:10"
   },
   "sweep_rater/campaigns/ckz_capped_cont/demo_cfg_4_00000001.wav": {
     "melody": 3,
@@ -5531,6 +6457,846 @@
     "timbre": 2,
     "ts": "2026-06-21T09:23:21"
   },
+  "sweep_rater/campaigns/ckz_factory_v1/00_Mirage_Cmin_90__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:42:03"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/00_Mirage_Cmin_90__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T17:42:26"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/01_Obsidian_C#min_130__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T17:42:38"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/01_Obsidian_C#min_130__seed7.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:42:51"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/02_Voltage_Dmin_155__seed123.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-22T17:43:10"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/02_Voltage_Dmin_155__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:43:23"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/03_Riptide_D#min_120__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:45:38"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/03_Riptide_D#min_120__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T17:46:13"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/04_Phantom_Emin_145__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:52:54"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/04_Phantom_Emin_145__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:46:24"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/05_Ember_Fmin_100__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:46:43"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/05_Ember_Fmin_100__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:46:58"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/06_Cascade_F#min_135__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:47:17"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/06_Cascade_F#min_135__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-22T17:47:30"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/07_Velvet_Gmin_160__seed123.wav": {
+    "melody": 4,
+    "notes": "Dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:47:48"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/07_Velvet_Gmin_160__seed7.wav": {
+    "melody": 3,
+    "notes": "another dope one!",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-22T17:48:09"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/08_Tundra_G#min_125__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:48:36"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/08_Tundra_G#min_125__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:48:48"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/09_Solaris_Amin_150__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:48:58"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/09_Solaris_Amin_150__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:49:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/10_Nocturne_A#min_110__seed123.wav": {
+    "melody": 5,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:49:35"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/10_Nocturne_A#min_110__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:49:49"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/11_Skyline_Bmin_140__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:53:28"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/11_Skyline_Bmin_140__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T17:50:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/12_Eclipse_Cmin_90__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:53:44"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/12_Eclipse_Cmin_90__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:54:00"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/13_Glacier_C#min_130__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:54:13"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/13_Glacier_C#min_130__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T17:54:27"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/14_Inferno_Dmin_155__seed123.wav": {
+    "melody": 4,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-22T17:54:43"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/14_Inferno_Dmin_155__seed7.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-22T17:54:55"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/15_Onyx_D#min_120__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T17:55:07"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/15_Onyx_D#min_120__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:55:15"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/16_Cobalt_Emin_145__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T17:55:32"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/16_Cobalt_Emin_145__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:55:43"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/17_Specter_Fmin_100__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:55:55"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/17_Specter_Fmin_100__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:56:09"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/18_Halcyon_F#min_135__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:17:03"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/18_Halcyon_F#min_135__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T17:56:23"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/19_Maelstrom_Gmin_160__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T18:16:01"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/19_Maelstrom_Gmin_160__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:16:16"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/20_Nimbus_G#min_125__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:16:25"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/20_Nimbus_G#min_125__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:16:33"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/21_Vortex_Amin_150__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T18:16:42"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/21_Vortex_Amin_150__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T18:16:51"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/22_Abyss_A#min_110__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:17:22"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/22_Abyss_A#min_110__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:17:31"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/23_Citadel_Bmin_140__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T18:17:40"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/23_Citadel_Bmin_140__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-22T18:17:58"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/24_Quartz_Cmin_90__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T18:18:27"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/24_Quartz_Cmin_90__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:20:39"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/25_Zephyr_C#min_130__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:20:48"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/25_Zephyr_C#min_130__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:20:55"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/26_Cinder_Dmin_155__seed123.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-22T18:21:08"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/26_Cinder_Dmin_155__seed7.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-22T18:21:20"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/27_Fathom_D#min_120__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T18:21:42"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/27_Fathom_D#min_120__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:21:51"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/28_Harbor_Emin_145__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T18:22:04"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/28_Harbor_Emin_145__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-22T18:22:13"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/29_Lattice_Fmin_100__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T18:22:25"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/29_Lattice_Fmin_100__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:22:38"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/30_Meridian_F#min_135__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:22:46"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/30_Meridian_F#min_135__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:22:56"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/31_Opal_Gmin_160__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T18:23:08"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/31_Opal_Gmin_160__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T18:23:20"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/32_Pyre_G#min_125__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:23:30"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/32_Pyre_G#min_125__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:23:37"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/33_Sable_Amin_150__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:23:47"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/33_Sable_Amin_150__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T18:24:01"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/34_Umbra_A#min_110__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-22T18:24:12"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/34_Umbra_A#min_110__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-22T18:24:50"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/35_Wraith_Bmin_140__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T18:25:01"
+  },
+  "sweep_rater/campaigns/ckz_factory_v1/35_Wraith_Bmin_140__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T18:25:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/00_Cascade_Cmin_90__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:27:18"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/00_Cascade_Cmin_90__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T13:27:27"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/01_Wraith_C#min_130__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T13:27:35"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/01_Wraith_C#min_130__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:27:44"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/02_Nocturne_Dmin_155__seed123.wav": {
+    "melody": 3,
+    "notes": "starting to overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T13:28:03"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/02_Nocturne_Dmin_155__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:28:13"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/03_Voltage_D#min_120__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:28:24"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/03_Voltage_D#min_120__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T13:28:31"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/04_Velvet_Emin_145__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T13:28:39"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/04_Velvet_Emin_145__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:28:52"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/05_Solaris_Fmin_100__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:29:03"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/05_Solaris_Fmin_100__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:29:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/06_Obsidian_F#min_135__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:29:19"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/06_Obsidian_F#min_135__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-23T13:29:34"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/07_Mirage_Gmin_160__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:29:44"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/07_Mirage_Gmin_160__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:29:55"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/08_Specter_G#min_125__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T13:30:05"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/08_Specter_G#min_125__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T13:30:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/09_Drift_Amin_150__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T13:30:20"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/09_Drift_Amin_150__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:30:29"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/10_Crimson_A#min_110__seed123.wav": {
+    "melody": 3,
+    "notes": "starting to overfit",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T13:30:49"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/10_Crimson_A#min_110__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-23T13:31:04"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/11_Hollow_Bmin_140__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:33:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/11_Hollow_Bmin_140__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:33:20"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/12_Lantern_Cmin_90__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T13:33:31"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/12_Lantern_Cmin_90__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:33:43"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/13_Marrow_C#min_130__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:33:59"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/13_Marrow_C#min_130__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:34:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/14_Static_Dmin_155__seed123.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T13:34:20"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/14_Static_Dmin_155__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-23T13:34:31"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/15_Pulse_D#min_120__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T13:34:43"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/15_Pulse_D#min_120__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:34:53"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/16_Hazard_Emin_145__seed123.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 2,
+    "ts": "2026-06-23T13:35:05"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/16_Hazard_Emin_145__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T13:36:11"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/17_Lotus_Fmin_100__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T13:36:20"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/17_Lotus_Fmin_100__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T13:36:34"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/18_Venom_F#min_135__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:36:45"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/18_Venom_F#min_135__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:36:56"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/19_Cipher_Gmin_160__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:37:42"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/19_Cipher_Gmin_160__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T13:37:53"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/20_Tidal_G#min_125__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:39:07"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/20_Tidal_G#min_125__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:39:19"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/21_Frost_Amin_150__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T13:39:45"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/21_Frost_Amin_150__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:40:21"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/22_Halo_A#min_110__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T13:41:07"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/22_Halo_A#min_110__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T14:33:23"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/23_Ember_Bmin_140__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T14:33:38"
+  },
+  "sweep_rater/campaigns/ckz_factory_v2/23_Ember_Bmin_140__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:33:49"
+  },
   "sweep_rater/campaigns/ckz_gate_debug/0001__samp-dpmpp_cfg3_steps50_strength1.0_gate1.0_seed7__15._cKz!_ACTiVE_Cmin_155_bpm_@crushed_keyz_x_@justryda.wav": {
     "melody": 4,
     "notes": "",
@@ -8003,6 +9769,426 @@
     "timbre": 3,
     "ts": "2026-06-18T10:09:52"
   },
+  "sweep_rater/campaigns/discover_01/00_Mirage_Dmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T12:27:55"
+  },
+  "sweep_rater/campaigns/discover_01/00_Mirage_G#min_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T12:28:13"
+  },
+  "sweep_rater/campaigns/discover_01/01_Obsidian_Bmin_m__s75__seed7.wav": {
+    "melody": 1,
+    "notes": "horrible screeching",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T12:28:32"
+  },
+  "sweep_rater/campaigns/discover_01/01_Obsidian_Fmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:29:13"
+  },
+  "sweep_rater/campaigns/discover_01/02_Cascade_A#min_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:29:49"
+  },
+  "sweep_rater/campaigns/discover_01/02_Cascade_Emin_t__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:30:06"
+  },
+  "sweep_rater/campaigns/discover_01/03_Wraith_Amin_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:30:30"
+  },
+  "sweep_rater/campaigns/discover_01/03_Wraith_D#min_t__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:30:48"
+  },
+  "sweep_rater/campaigns/discover_01/04_Nocturne_C#min_t__s75__seed7.wav": {
+    "melody": 1,
+    "notes": "horrible loud clipping",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T12:31:24"
+  },
+  "sweep_rater/campaigns/discover_01/04_Nocturne_Gmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:31:10"
+  },
+  "sweep_rater/campaigns/discover_01/05_Voltage_Cmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T12:31:43"
+  },
+  "sweep_rater/campaigns/discover_01/05_Voltage_F#min_t__s75__seed7.wav": {
+    "melody": 1,
+    "notes": "horrible loud clipping",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T12:31:56"
+  },
+  "sweep_rater/campaigns/discover_01/06_Solaris_C#min_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:33:42"
+  },
+  "sweep_rater/campaigns/discover_01/06_Solaris_Gmin_t__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:33:58"
+  },
+  "sweep_rater/campaigns/discover_01/07_Velvet_A#min_t__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T12:34:25"
+  },
+  "sweep_rater/campaigns/discover_01/07_Velvet_Emin_m__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:34:47"
+  },
+  "sweep_rater/campaigns/discover_01/08_Mirage_Bmin_t__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T12:35:11"
+  },
+  "sweep_rater/campaigns/discover_01/08_Mirage_Fmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T12:35:46"
+  },
+  "sweep_rater/campaigns/discover_01/09_Obsidian_Cmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:37:18"
+  },
+  "sweep_rater/campaigns/discover_01/09_Obsidian_F#min_m__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T12:36:04"
+  },
+  "sweep_rater/campaigns/discover_01/10_Cascade_Amin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:36:26"
+  },
+  "sweep_rater/campaigns/discover_01/10_Cascade_D#min_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:37:07"
+  },
+  "sweep_rater/campaigns/discover_01/11_Wraith_Dmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "a bit overfit to training",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:37:52"
+  },
+  "sweep_rater/campaigns/discover_01/11_Wraith_G#min_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "similar to training example but cool",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T12:38:25"
+  },
+  "sweep_rater/campaigns/discover_01/12_Nocturne_Dmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:38:45"
+  },
+  "sweep_rater/campaigns/discover_01/12_Nocturne_G#min_t__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:38:59"
+  },
+  "sweep_rater/campaigns/discover_01/13_Voltage_Bmin_m__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:39:15"
+  },
+  "sweep_rater/campaigns/discover_01/13_Voltage_Fmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:39:38"
+  },
+  "sweep_rater/campaigns/discover_01/14_Solaris_A#min_m__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:39:54"
+  },
+  "sweep_rater/campaigns/discover_01/14_Solaris_Emin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:40:13"
+  },
+  "sweep_rater/campaigns/discover_01/15_Velvet_Amin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:40:29"
+  },
+  "sweep_rater/campaigns/discover_01/15_Velvet_D#min_t__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:41:04"
+  },
+  "sweep_rater/campaigns/discover_01/16_Mirage_C#min_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:42:04"
+  },
+  "sweep_rater/campaigns/discover_01/16_Mirage_Gmin_m__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:41:20"
+  },
+  "sweep_rater/campaigns/discover_01/17_Obsidian_Cmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:42:21"
+  },
+  "sweep_rater/campaigns/discover_01/17_Obsidian_F#min_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:42:56"
+  },
+  "sweep_rater/campaigns/discover_01/18_Cascade_C#min_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:43:18"
+  },
+  "sweep_rater/campaigns/discover_01/18_Cascade_Gmin_t__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T12:44:23"
+  },
+  "sweep_rater/campaigns/discover_01/19_Wraith_A#min_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:45:06"
+  },
+  "sweep_rater/campaigns/discover_01/19_Wraith_Emin_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "FIRE!! high quality",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:44:48"
+  },
+  "sweep_rater/campaigns/discover_01/20_Nocturne_Bmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:45:46"
+  },
+  "sweep_rater/campaigns/discover_01/20_Nocturne_Fmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:45:26"
+  },
+  "sweep_rater/campaigns/discover_01/21_Voltage_Cmin_t__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "melody jumpy/unstable. is the init melody being sampled at the proper rate respective to time? is the melody from the model prospecting hearing it at the speed I hear it now or is it sped up/slowed down?",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:48:19"
+  },
+  "sweep_rater/campaigns/discover_01/21_Voltage_F#min_m__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 2,
+    "ts": "2026-06-25T12:46:23"
+  },
+  "sweep_rater/campaigns/discover_01/22_Solaris_Amin_t__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:49:19"
+  },
+  "sweep_rater/campaigns/discover_01/22_Solaris_D#min_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:49:55"
+  },
+  "sweep_rater/campaigns/discover_01/23_Velvet_Dmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:50:16"
+  },
+  "sweep_rater/campaigns/discover_01/23_Velvet_G#min_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:50:31"
+  },
+  "sweep_rater/campaigns/discover_01/24_Mirage_Dmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:50:51"
+  },
+  "sweep_rater/campaigns/discover_01/24_Mirage_G#min_t__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T12:51:10"
+  },
+  "sweep_rater/campaigns/discover_01/25_Obsidian_Bmin_m__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:51:39"
+  },
+  "sweep_rater/campaigns/discover_01/25_Obsidian_Fmin_t__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "jumpy melody",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:52:00"
+  },
+  "sweep_rater/campaigns/discover_01/26_Cascade_A#min_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "FIREE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T12:52:16"
+  },
+  "sweep_rater/campaigns/discover_01/26_Cascade_Emin_t__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:52:39"
+  },
+  "sweep_rater/campaigns/discover_01/27_Wraith_Amin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:52:53"
+  },
+  "sweep_rater/campaigns/discover_01/27_Wraith_D#min_t__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T12:53:12"
+  },
+  "sweep_rater/campaigns/discover_01/28_Nocturne_C#min_t__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:54:19"
+  },
+  "sweep_rater/campaigns/discover_01/28_Nocturne_Gmin_m__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-25T12:53:25"
+  },
+  "sweep_rater/campaigns/discover_01/29_Voltage_Cmin_m__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T12:53:45"
+  },
+  "sweep_rater/campaigns/discover_01/29_Voltage_F#min_t__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 2,
+    "ts": "2026-06-25T12:54:04"
+  },
   "sweep_rater/campaigns/eff2500_medium/medium__2_cKz_ICE_Dmin_135_b__seed123.wav": {
     "melody": 1,
     "notes": "",
@@ -8074,6 +10260,558 @@
     "notes": "",
     "timbre": 3,
     "ts": "2026-06-18T18:43:10"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/00_seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:08:07"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/00_seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:08:20"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/00_seed7.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "timbre": 4,
+    "ts": "2026-06-22T14:08:33"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/00_seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:08:42"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/01_seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:08:58"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/01_seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:10:42"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/01_seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:09:13"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/01_seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:10:12"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/02_seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:11:01"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/02_seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:11:40"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/02_seed7.wav": {
+    "melody": 4,
+    "notes": "FIRE!",
+    "timbre": 4,
+    "ts": "2026-06-22T14:10:30"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/02_seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:11:15"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/03_seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:17:20"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/03_seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:17:29"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/03_seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:17:36"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/03_seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T14:17:48"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/04_seed123.wav": {
+    "melody": 3,
+    "notes": "overfit, sounds just like training example",
+    "timbre": 3,
+    "ts": "2026-06-22T14:18:06"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/04_seed1234.wav": {
+    "melody": 3,
+    "notes": "overfit, sounds just like training example",
+    "timbre": 3,
+    "ts": "2026-06-22T14:18:22"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/04_seed7.wav": {
+    "melody": 3,
+    "notes": "overfit, sounds just like training example",
+    "timbre": 3,
+    "ts": "2026-06-22T14:18:26"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/04_seed777.wav": {
+    "melody": 3,
+    "notes": "overfit, sounds just like training example",
+    "timbre": 3,
+    "ts": "2026-06-22T14:18:29"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/05_seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:18:42"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/05_seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:19:23"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/05_seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:19:28"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/05_seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:20:32"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/06_seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:21:34"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/06_seed1234.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "timbre": 2,
+    "ts": "2026-06-22T14:21:37"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/06_seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:20:42"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/06_seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:20:51"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/07_seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T14:21:03"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/07_seed1234.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "timbre": 2,
+    "ts": "2026-06-22T14:21:20"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/07_seed7.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "timbre": 2,
+    "ts": "2026-06-22T14:21:23"
+  },
+  "sweep_rater/campaigns/eval_ckz_aug_v1_long2/07_seed777.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "timbre": 2,
+    "ts": "2026-06-22T14:21:28"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/00_seed123.wav": {
+    "melody": 1,
+    "notes": "",
+    "timbre": 1,
+    "ts": "2026-06-21T10:33:30"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/00_seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:33:43"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/00_seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:33:52"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/00_seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:34:00"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/01_seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:34:10"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/01_seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:34:21"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/01_seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:34:34"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/01_seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:34:45"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/02_seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:34:55"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/02_seed1234.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:35:09"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/02_seed7.wav": {
+    "melody": 3,
+    "notes": "sounds like past common example from a while ago",
+    "timbre": 2,
+    "ts": "2026-06-21T10:35:35"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/02_seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:35:46"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/03_seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:36:01"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/03_seed1234.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-21T10:36:14"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/03_seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:36:27"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/03_seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:36:38"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/04_seed123.wav": {
+    "melody": 4,
+    "notes": "sounds exactly like the highest rated from the past. keep hearing this one over and over",
+    "timbre": 4,
+    "ts": "2026-06-21T10:37:00"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/04_seed1234.wav": {
+    "melody": 4,
+    "notes": "high-rated from past, have heard this a lot in past runs",
+    "timbre": 4,
+    "ts": "2026-06-21T10:37:15"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/04_seed7.wav": {
+    "melody": 4,
+    "notes": "heard this one also a lot in the past runs",
+    "timbre": 4,
+    "ts": "2026-06-21T10:37:31"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/04_seed777.wav": {
+    "melody": 4,
+    "notes": "heard this in past runs",
+    "timbre": 4,
+    "ts": "2026-06-21T10:37:43"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/05_seed123.wav": {
+    "melody": 2,
+    "notes": "new novel but not good",
+    "timbre": 2,
+    "ts": "2026-06-21T10:38:02"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/05_seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:38:15"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/05_seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:38:26"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/05_seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:38:32"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/06_seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "timbre": 4,
+    "ts": "2026-06-21T10:38:45"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/06_seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:38:53"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/06_seed7.wav": {
+    "melody": 4,
+    "notes": "heard this many times in past from previous runs, not novel",
+    "timbre": 4,
+    "ts": "2026-06-21T10:39:14"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/06_seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:39:23"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/07_seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:39:33"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/07_seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-21T10:39:41"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/07_seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:39:50"
+  },
+  "sweep_rater/campaigns/eval_ckz_melody_capped/07_seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-21T10:40:01"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N0_Mirage_Gmin__seed123__aug-8000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:18:52"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N0_Mirage_Gmin__seed123__v1-2000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:19:06"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N0_Mirage_Gmin__seed7__aug-8000.wav": {
+    "melody": 4,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:19:18"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N0_Mirage_Gmin__seed7__v1-2000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:19:35"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N1_Obsidian_D#min__seed123__aug-8000.wav": {
+    "melody": 5,
+    "notes": "so dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T17:19:53"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N1_Obsidian_D#min__seed123__v1-2000.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T17:20:09"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N1_Obsidian_D#min__seed7__aug-8000.wav": {
+    "melody": 5,
+    "notes": "FIREE",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-22T17:20:25"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N1_Obsidian_D#min__seed7__v1-2000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:21:53"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N2_Riptide_Bmin__seed123__aug-8000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:22:10"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N2_Riptide_Bmin__seed123__v1-2000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:22:24"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N2_Riptide_Bmin__seed7__aug-8000.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:22:35"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/N2_Riptide_Bmin__seed7__v1-2000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:22:57"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T0_ACTiVE__seed123__aug-8000.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:23:07"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T0_ACTiVE__seed123__v1-2000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:23:17"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T0_ACTiVE__seed7__aug-8000.wav": {
+    "melody": 4,
+    "notes": "overfit",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-22T17:23:42"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T0_ACTiVE__seed7__v1-2000.wav": {
+    "melody": 5,
+    "notes": "Absolute FIRE! all time best",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-22T15:08:35"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T1_AzUL__seed123__aug-8000.wav": {
+    "melody": 3,
+    "notes": "FIRE",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:23:58"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T1_AzUL__seed123__v1-2000.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T15:09:30"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T1_AzUL__seed7__aug-8000.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T17:24:10"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T1_AzUL__seed7__v1-2000.wav": {
+    "melody": 2,
+    "notes": "off-key at some parts",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T15:08:54"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T2_ICE__seed123__aug-8000.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:24:20"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T2_ICE__seed123__v1-2000.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T15:09:46"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T2_ICE__seed7__aug-8000.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T17:18:35"
+  },
+  "sweep_rater/campaigns/headtohead_v1_2000_vs_aug/T2_ICE__seed7__v1-2000.wav": {
+    "melody": 2,
+    "notes": "low frequencies",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T15:09:14"
   },
   "sweep_rater/campaigns/hiphop_winners_eval/0001__cfg3_strength1.0_steps50_seed7__crushed_keyz,_hip_hop_melody_loop,_D_minor,_135_bpm.wav": {
     "notes": "",
@@ -9105,6 +11843,2204 @@
     "rating": 1,
     "ts": "2026-05-28T13:16:05"
   },
+  "sweep_rater/campaigns/init_harvest_aug/00_Mirage_Dmin__s70__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T14:40:56"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/00_Mirage_Dmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:41:07"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/01_Obsidian_Bmin__s70__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:41:21"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/01_Obsidian_Bmin__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:41:29"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/02_Cascade_A#min__s70__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T14:41:42"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/02_Cascade_A#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:41:53"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/03_Wraith_Amin__s70__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:42:06"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/03_Wraith_Amin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:42:15"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/04_Nocturne_Gmin__s70__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T14:42:28"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/04_Nocturne_Gmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:42:35"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/05_Voltage_Cmin__s70__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T14:42:58"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/05_Voltage_Cmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T14:42:45"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/06_Solaris_C#min__s70__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-23T14:55:39"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/06_Solaris_C#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:43:09"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/07_Velvet_Emin__s70__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:51:10"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/07_Velvet_Emin__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T14:51:21"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/08_Mirage_Fmin__s70__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:51:40"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/08_Mirage_Fmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:51:47"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/09_Obsidian_F#min__s70__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:51:55"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/09_Obsidian_F#min__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T14:52:05"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/10_Cascade_D#min__s70__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T14:55:49"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/10_Cascade_D#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T14:55:58"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/11_Wraith_G#min__s70__seed123.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T14:56:10"
+  },
+  "sweep_rater/campaigns/init_harvest_aug/11_Wraith_G#min__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T14:56:18"
+  },
+  "sweep_rater/campaigns/init_harvest_big/00_Mirage_Dmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T15:10:07"
+  },
+  "sweep_rater/campaigns/init_harvest_big/01_Obsidian_Bmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T15:10:27"
+  },
+  "sweep_rater/campaigns/init_harvest_big/02_Cascade_A#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T15:10:34"
+  },
+  "sweep_rater/campaigns/init_harvest_big/03_Wraith_Amin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T15:10:45"
+  },
+  "sweep_rater/campaigns/init_harvest_big/04_Nocturne_Gmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T15:10:53"
+  },
+  "sweep_rater/campaigns/init_harvest_big/05_Voltage_Cmin__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T15:11:02"
+  },
+  "sweep_rater/campaigns/init_harvest_big/06_Solaris_C#min__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T15:11:10"
+  },
+  "sweep_rater/campaigns/init_harvest_big/07_Velvet_Emin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T15:11:27"
+  },
+  "sweep_rater/campaigns/init_harvest_big/08_Mirage_Fmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T15:11:41"
+  },
+  "sweep_rater/campaigns/init_harvest_big/09_Obsidian_F#min__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T15:11:49"
+  },
+  "sweep_rater/campaigns/init_harvest_big/10_Cascade_D#min__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T15:12:02"
+  },
+  "sweep_rater/campaigns/init_harvest_big/11_Wraith_G#min__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T15:12:21"
+  },
+  "sweep_rater/campaigns/init_harvest_big/12_Nocturne_Bmaj__s70__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 2,
+    "ts": "2026-06-23T15:12:33"
+  },
+  "sweep_rater/campaigns/init_harvest_big/13_Voltage_F#maj__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T15:12:42"
+  },
+  "sweep_rater/campaigns/init_harvest_big/14_Solaris_Dmaj__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T15:12:52"
+  },
+  "sweep_rater/campaigns/init_harvest_big/15_Velvet_A#maj__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T15:13:03"
+  },
+  "sweep_rater/campaigns/init_harvest_big/16_Mirage_Emaj__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T15:13:13"
+  },
+  "sweep_rater/campaigns/init_harvest_big/17_Obsidian_Dmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T15:13:23"
+  },
+  "sweep_rater/campaigns/init_harvest_big/18_Cascade_Bmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T15:13:38"
+  },
+  "sweep_rater/campaigns/init_harvest_big/19_Wraith_A#min__s70__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 2,
+    "ts": "2026-06-23T15:13:47"
+  },
+  "sweep_rater/campaigns/init_harvest_big/20_Nocturne_Amin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 1,
+    "ts": "2026-06-23T15:14:04"
+  },
+  "sweep_rater/campaigns/init_harvest_big/21_Voltage_Gmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "slightly overfit",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T15:14:54"
+  },
+  "sweep_rater/campaigns/init_harvest_big/22_Solaris_Cmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T15:15:09"
+  },
+  "sweep_rater/campaigns/init_harvest_big/23_Velvet_C#min__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T15:15:38"
+  },
+  "sweep_rater/campaigns/init_harvest_big/24_Mirage_Emin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T16:19:31"
+  },
+  "sweep_rater/campaigns/init_harvest_big/25_Obsidian_Fmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:21:16"
+  },
+  "sweep_rater/campaigns/init_harvest_big/26_Cascade_F#min__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:22:01"
+  },
+  "sweep_rater/campaigns/init_harvest_big/27_Wraith_D#min__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T16:22:56"
+  },
+  "sweep_rater/campaigns/init_harvest_big/28_Nocturne_G#min__s70__seed7.wav": {
+    "melody": 5,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:23:10"
+  },
+  "sweep_rater/campaigns/init_harvest_big/29_Voltage_Dmin__s70__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T16:23:28"
+  },
+  "sweep_rater/campaigns/init_harvest_big/30_Solaris_Bmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:23:49"
+  },
+  "sweep_rater/campaigns/init_harvest_big/31_Velvet_A#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:25:23"
+  },
+  "sweep_rater/campaigns/init_harvest_big/32_Mirage_Amin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:25:41"
+  },
+  "sweep_rater/campaigns/init_harvest_big/33_Obsidian_Gmin__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:26:17"
+  },
+  "sweep_rater/campaigns/init_harvest_big/34_Cascade_Cmin__s70__seed7.wav": {
+    "melody": 5,
+    "notes": "dope!",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-24T16:26:44"
+  },
+  "sweep_rater/campaigns/init_harvest_big/35_Wraith_C#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:27:22"
+  },
+  "sweep_rater/campaigns/init_harvest_big/36_Nocturne_Emin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:29:05"
+  },
+  "sweep_rater/campaigns/init_harvest_big/37_Voltage_Fmin__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T16:30:00"
+  },
+  "sweep_rater/campaigns/init_harvest_big/38_Solaris_F#min__s70__seed7.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:30:11"
+  },
+  "sweep_rater/campaigns/init_harvest_big/39_Velvet_D#min__s70__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:34:38"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/00_Mirage_Dmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:27:36"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/00_Mirage_Dmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:27:44"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/01_Obsidian_Bmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:27:53"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/01_Obsidian_Bmin__s75__seed7.wav": {
+    "melody": 1,
+    "notes": "horrible screech, loud",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:28:05"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/02_Cascade_A#min__s60__seed7.wav": {
+    "melody": 5,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-24T21:28:13"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/02_Cascade_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:28:20"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/03_Wraith_Amin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:28:36"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/03_Wraith_Amin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:28:46"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/04_Nocturne_Gmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:28:52"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/04_Nocturne_Gmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:29:00"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/05_Voltage_Cmin__s60__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T21:29:07"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/05_Voltage_Cmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T21:29:17"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/06_Solaris_C#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:29:24"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/06_Solaris_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:29:32"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/07_Velvet_Emin__s60__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:29:44"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/07_Velvet_Emin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:29:53"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/08_Mirage_Fmin__s60__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:30:01"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/08_Mirage_Fmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:31:10"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/09_Obsidian_F#min__s60__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T21:31:16"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/09_Obsidian_F#min__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T21:31:23"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/10_Cascade_D#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:31:30"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/10_Cascade_D#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:32:41"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/11_Wraith_G#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:32:52"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/11_Wraith_G#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:33:15"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/12_Nocturne_Dmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:34:04"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/12_Nocturne_Dmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-24T21:34:13"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/13_Voltage_Bmin__s60__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:34:24"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/13_Voltage_Bmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:35:52"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/14_Solaris_A#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:36:12"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/14_Solaris_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:36:23"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/15_Velvet_Amin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:37:03"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/15_Velvet_Amin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "better timbre than previous, same melody",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:37:31"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/16_Mirage_Gmin__s60__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-24T21:37:40"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/16_Mirage_Gmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 5,
+    "ts": "2026-06-24T21:37:50"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/17_Obsidian_Cmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:39:07"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/17_Obsidian_Cmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T21:39:23"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/18_Cascade_C#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T21:39:29"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/18_Cascade_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "low quality, slightly muffled",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T21:39:44"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/19_Wraith_Emin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T21:39:58"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/19_Wraith_Emin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T21:40:05"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/20_Nocturne_Fmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T21:40:17"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/20_Nocturne_Fmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:40:24"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/21_Voltage_F#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-24T21:40:33"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/21_Voltage_F#min__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:40:42"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/22_Solaris_D#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:40:54"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/22_Solaris_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T21:41:00"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/23_Velvet_G#min__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:41:08"
+  },
+  "sweep_rater/campaigns/init_harvest_floor/23_Velvet_G#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:41:14"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt106__bpmX__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T21:52:41"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt106__bpmX__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-24T21:52:54"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt146__cfg3__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:49:42"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt146__cfg3__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:49:55"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt146__cfg5__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:51:22"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt146__cfg5__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:51:32"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt146__cfg7__seed123.wav": {
+    "melody": 2,
+    "notes": "distorted, clipping",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:52:04"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/00_Mirage_A#min_init146_prompt146__cfg7__seed7.wav": {
+    "melody": 2,
+    "notes": "distorted",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:52:15"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt109__bpmX__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:56:18"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt109__bpmX__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T21:55:43"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt69__cfg3__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:53:38"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt69__cfg3__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:52:27"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt69__cfg5__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:55:53"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt69__cfg5__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:54:50"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt69__cfg7__seed123.wav": {
+    "melody": 1,
+    "notes": "loud clashing",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:55:22"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/01_Obsidian_Amin_init69_prompt69__cfg7__seed7.wav": {
+    "melody": 1,
+    "notes": "loud clashing",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:55:29"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt130__cfg3__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T21:56:32"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt130__cfg3__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T21:56:08"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt130__cfg5__seed123.wav": {
+    "melody": 1,
+    "notes": "loud distorted",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:58:20"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt130__cfg5__seed7.wav": {
+    "melody": 1,
+    "notes": "loud clashing",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:58:28"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt130__cfg7__seed123.wav": {
+    "melody": 1,
+    "notes": "loud clashing horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:59:27"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt130__cfg7__seed7.wav": {
+    "melody": 1,
+    "notes": "loud clash that gets louder and louder",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T21:58:51"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt90__bpmX__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T06:53:09"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/02_Cascade_Bmin_init130_prompt90__bpmX__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T21:59:14"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt120__cfg3__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-25T06:53:20"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt120__cfg3__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T06:53:30"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt120__cfg5__seed123.wav": {
+    "melody": 5,
+    "notes": "FIREEE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T06:53:40"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt120__cfg5__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T06:53:48"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt120__cfg7__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T06:54:02"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt120__cfg7__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T06:54:12"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt80__bpmX__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-25T06:54:29"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/03_Solaris_C#min_init120_prompt80__bpmX__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T06:54:40"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt105__bpmX__seed123.wav": {
+    "melody": 1,
+    "notes": "distorted, loud, horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:54:52"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt105__bpmX__seed7.wav": {
+    "melody": 1,
+    "notes": "distorted loud horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:55:05"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt145__cfg3__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T06:55:13"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt145__cfg3__seed7.wav": {
+    "melody": 1,
+    "notes": "distorted loud horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:55:18"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt145__cfg5__seed123.wav": {
+    "melody": 1,
+    "notes": "distorted loud horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:55:23"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt145__cfg5__seed7.wav": {
+    "melody": 1,
+    "notes": "distorted loud horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:55:28"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt145__cfg7__seed123.wav": {
+    "melody": 1,
+    "notes": "distorted loud horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:55:32"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/04_Wraith_Cmin_init145_prompt145__cfg7__seed7.wav": {
+    "melody": 1,
+    "notes": "distorted loud horrible",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-25T06:55:38"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt110__bpmX__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T06:55:49"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt110__bpmX__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T06:56:09"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt150__cfg3__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-25T06:56:21"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt150__cfg3__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T06:56:32"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt150__cfg5__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T06:56:58"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt150__cfg5__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T06:57:21"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt150__cfg7__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T06:57:29"
+  },
+  "sweep_rater/campaigns/init_knobs_ab/05_Nocturne_D#min_init150_prompt150__cfg7__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T06:57:42"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__noinit__seed123.wav": {
+    "melody": 4,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T19:00:29"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__noinit__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T18:59:15"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s60__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:01:07"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s60__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:01:33"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:02:27"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "fire",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-22T19:02:15"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s85__seed123.wav": {
+    "melody": 3,
+    "notes": "sounds more like initial audio",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:02:49"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s85__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T19:03:03"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s92__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:03:51"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/00_Mirage_Dmin__s92__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:03:18"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__noinit__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:04:56"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__noinit__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T19:04:18"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s60__seed123.wav": {
+    "melody": 3,
+    "notes": "ope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:06:50"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s60__seed7.wav": {
+    "melody": 4,
+    "notes": "dope melody",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:05:49"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "interesting, this one is pluck vs other obsidian ones were all flutes no pluck",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:07:41"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "horrible screeching",
+    "novelty": 2,
+    "timbre": 1,
+    "ts": "2026-06-22T19:06:22"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s85__seed123.wav": {
+    "melody": 2,
+    "notes": "not much flute in this one, mainly pluck",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:08:43"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s85__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:07:53"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s92__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:08:57"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/01_Obsidian_Bmin__s92__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:08:23"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__noinit__seed123.wav": {
+    "melody": 3,
+    "notes": "timbre is distorted",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:09:36"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__noinit__seed7.wav": {
+    "melody": 2,
+    "notes": "not great melody",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:09:14"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s60__seed123.wav": {
+    "melody": 1,
+    "notes": "too reverby, violin distorted",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:10:53"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s60__seed7.wav": {
+    "melody": 5,
+    "notes": "FIRE!",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-22T19:10:16"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "not sounding as much like crushed Keyz",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T19:12:03"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-22T19:11:11"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s85__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:12:49"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s85__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T19:13:00"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s92__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:13:36"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/02_Cascade_A#min__s92__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:13:18"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__noinit__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:14:29"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__noinit__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T19:13:58"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s60__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:15:35"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:14:56"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:17:06"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:16:01"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s85__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T19:17:37"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s85__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:17:15"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s92__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T19:20:04"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/03_Wraith_Amin__s92__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T19:17:55"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__noinit__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:19:37"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__noinit__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:19:45"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s60__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:20:38"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s60__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:19:52"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:21:01"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:20:46"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s85__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:21:57"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s85__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T19:21:19"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s92__seed123.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 2,
+    "ts": "2026-06-22T19:22:39"
+  },
+  "sweep_rater/campaigns/init_sweep_aug/04_Nocturne_Gmin__s92__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T19:22:14"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptDmin__match__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:41:25"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptDmin__match__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:41:39"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptEmin__up2__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:42:00"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptEmin__up2__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:43:08"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptG#min__tritone__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-24T16:44:05"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptG#min__tritone__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:44:56"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptnone__nokey__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:53:24"
+  },
+  "sweep_rater/campaigns/key_match_ab/00_Mirage_initDmin_promptnone__nokey__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T16:45:10"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptBmin__match__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T16:45:27"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptBmin__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T16:45:42"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptC#min__up2__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:54:40"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptC#min__up2__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T16:58:49"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptFmin__tritone__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:00:03"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptFmin__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:00:13"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptnone__nokey__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:00:29"
+  },
+  "sweep_rater/campaigns/key_match_ab/01_Obsidian_initBmin_promptnone__nokey__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:01:28"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptA#min__match__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T17:01:44"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptA#min__match__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T17:02:58"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptCmin__up2__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:03:07"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptCmin__up2__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:04:44"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptEmin__tritone__seed123.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-24T17:05:05"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptEmin__tritone__seed7.wav": {
+    "melody": 5,
+    "notes": "FIRE!!",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T17:05:17"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptnone__nokey__seed123.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T17:05:33"
+  },
+  "sweep_rater/campaigns/key_match_ab/02_Cascade_initA#min_promptnone__nokey__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T17:07:00"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptAmin__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:07:18"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptAmin__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T17:07:30"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptBmin__up2__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:07:43"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptBmin__up2__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:08:02"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptD#min__tritone__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:08:45"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptD#min__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:09:14"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptnone__nokey__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T17:09:29"
+  },
+  "sweep_rater/campaigns/key_match_ab/03_Solaris_initAmin_promptnone__nokey__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T17:09:50"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptAmin__up2__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T17:09:57"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptAmin__up2__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 1,
+    "ts": "2026-06-24T17:10:07"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptC#min__tritone__seed123.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 1,
+    "ts": "2026-06-24T17:10:16"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptC#min__tritone__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T17:10:31"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptGmin__match__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T17:10:44"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptGmin__match__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T17:10:51"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptnone__nokey__seed123.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 1,
+    "timbre": 2,
+    "ts": "2026-06-24T17:10:59"
+  },
+  "sweep_rater/campaigns/key_match_ab/04_Wraith_initGmin_promptnone__nokey__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T17:11:17"
+  },
+  "sweep_rater/campaigns/key_match_confirm/00_Mirage_initA#min_promptA#min__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:11:17"
+  },
+  "sweep_rater/campaigns/key_match_confirm/00_Mirage_initA#min_promptA#min__match__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T18:11:35"
+  },
+  "sweep_rater/campaigns/key_match_confirm/00_Mirage_initA#min_promptEmin__tritone__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:13:34"
+  },
+  "sweep_rater/campaigns/key_match_confirm/00_Mirage_initA#min_promptEmin__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:14:18"
+  },
+  "sweep_rater/campaigns/key_match_confirm/01_Obsidian_initAmin_promptAmin__match__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:14:44"
+  },
+  "sweep_rater/campaigns/key_match_confirm/01_Obsidian_initAmin_promptAmin__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:14:54"
+  },
+  "sweep_rater/campaigns/key_match_confirm/01_Obsidian_initAmin_promptD#min__tritone__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:15:29"
+  },
+  "sweep_rater/campaigns/key_match_confirm/01_Obsidian_initAmin_promptD#min__tritone__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:15:44"
+  },
+  "sweep_rater/campaigns/key_match_confirm/02_Cascade_initBmin_promptBmin__match__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE!!",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T18:16:00"
+  },
+  "sweep_rater/campaigns/key_match_confirm/02_Cascade_initBmin_promptBmin__match__seed7.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-24T18:16:17"
+  },
+  "sweep_rater/campaigns/key_match_confirm/02_Cascade_initBmin_promptFmin__tritone__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T18:17:10"
+  },
+  "sweep_rater/campaigns/key_match_confirm/02_Cascade_initBmin_promptFmin__tritone__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:17:38"
+  },
+  "sweep_rater/campaigns/key_match_confirm/03_Solaris_initC#min_promptC#min__match__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T18:18:00"
+  },
+  "sweep_rater/campaigns/key_match_confirm/03_Solaris_initC#min_promptC#min__match__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T18:18:24"
+  },
+  "sweep_rater/campaigns/key_match_confirm/03_Solaris_initC#min_promptGmin__tritone__seed123.wav": {
+    "melody": 5,
+    "notes": "absolute fire, best quality yet (super clear, no noise, dope melody)",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T18:19:12"
+  },
+  "sweep_rater/campaigns/key_match_confirm/03_Solaris_initC#min_promptGmin__tritone__seed7.wav": {
+    "melody": 5,
+    "notes": "FIRE!!! better than the best",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T18:19:34"
+  },
+  "sweep_rater/campaigns/key_match_confirm/04_Wraith_initCmin_promptCmin__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:20:59"
+  },
+  "sweep_rater/campaigns/key_match_confirm/04_Wraith_initCmin_promptCmin__match__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:21:08"
+  },
+  "sweep_rater/campaigns/key_match_confirm/04_Wraith_initCmin_promptF#min__tritone__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:21:15"
+  },
+  "sweep_rater/campaigns/key_match_confirm/04_Wraith_initCmin_promptF#min__tritone__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:21:23"
+  },
+  "sweep_rater/campaigns/key_match_confirm/05_Nocturne_initD#min_promptAmin__tritone__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:22:01"
+  },
+  "sweep_rater/campaigns/key_match_confirm/05_Nocturne_initD#min_promptAmin__tritone__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:22:56"
+  },
+  "sweep_rater/campaigns/key_match_confirm/05_Nocturne_initD#min_promptD#min__match__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:23:06"
+  },
+  "sweep_rater/campaigns/key_match_confirm/05_Nocturne_initD#min_promptD#min__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:23:13"
+  },
+  "sweep_rater/campaigns/key_match_confirm/06_Velvet_initDmin_promptDmin__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:26:24"
+  },
+  "sweep_rater/campaigns/key_match_confirm/06_Velvet_initDmin_promptDmin__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:23:38"
+  },
+  "sweep_rater/campaigns/key_match_confirm/06_Velvet_initDmin_promptG#min__tritone__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T18:23:50"
+  },
+  "sweep_rater/campaigns/key_match_confirm/06_Velvet_initDmin_promptG#min__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:24:01"
+  },
+  "sweep_rater/campaigns/key_match_confirm/07_Voltage_initEmin_promptA#min__tritone__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:24:09"
+  },
+  "sweep_rater/campaigns/key_match_confirm/07_Voltage_initEmin_promptA#min__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:24:30"
+  },
+  "sweep_rater/campaigns/key_match_confirm/07_Voltage_initEmin_promptEmin__match__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:24:40"
+  },
+  "sweep_rater/campaigns/key_match_confirm/07_Voltage_initEmin_promptEmin__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:24:51"
+  },
+  "sweep_rater/campaigns/key_match_confirm/08_Mirage_initF#min_promptCmin__tritone__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:25:08"
+  },
+  "sweep_rater/campaigns/key_match_confirm/08_Mirage_initF#min_promptCmin__tritone__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:25:19"
+  },
+  "sweep_rater/campaigns/key_match_confirm/08_Mirage_initF#min_promptF#min__match__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:25:28"
+  },
+  "sweep_rater/campaigns/key_match_confirm/08_Mirage_initF#min_promptF#min__match__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:25:33"
+  },
+  "sweep_rater/campaigns/key_match_confirm/09_Obsidian_initFmin_promptBmin__tritone__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:26:34"
+  },
+  "sweep_rater/campaigns/key_match_confirm/09_Obsidian_initFmin_promptBmin__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:25:42"
+  },
+  "sweep_rater/campaigns/key_match_confirm/09_Obsidian_initFmin_promptFmin__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:26:00"
+  },
+  "sweep_rater/campaigns/key_match_confirm/09_Obsidian_initFmin_promptFmin__match__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T18:26:13"
+  },
+  "sweep_rater/campaigns/key_match_confirm/10_Cascade_initG#min_promptDmin__tritone__seed123.wav": {
+    "melody": 5,
+    "notes": "FIRE",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-24T18:26:50"
+  },
+  "sweep_rater/campaigns/key_match_confirm/10_Cascade_initG#min_promptDmin__tritone__seed7.wav": {
+    "melody": 5,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-24T18:27:08"
+  },
+  "sweep_rater/campaigns/key_match_confirm/10_Cascade_initG#min_promptG#min__match__seed123.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-24T18:27:20"
+  },
+  "sweep_rater/campaigns/key_match_confirm/10_Cascade_initG#min_promptG#min__match__seed7.wav": {
+    "melody": 4,
+    "notes": "FIRE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T18:27:36"
+  },
+  "sweep_rater/campaigns/key_match_confirm/11_Solaris_initGmin_promptC#min__tritone__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:30:27"
+  },
+  "sweep_rater/campaigns/key_match_confirm/11_Solaris_initGmin_promptC#min__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:30:40"
+  },
+  "sweep_rater/campaigns/key_match_confirm/11_Solaris_initGmin_promptGmin__match__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T18:30:48"
+  },
+  "sweep_rater/campaigns/key_match_confirm/11_Solaris_initGmin_promptGmin__match__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:27:47"
+  },
+  "sweep_rater/campaigns/key_match_confirm/12_Wraith_initA#min_promptA#min__match__seed123.wav": {
+    "melody": 1,
+    "notes": "screech!",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-24T18:29:04"
+  },
+  "sweep_rater/campaigns/key_match_confirm/12_Wraith_initA#min_promptA#min__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:29:36"
+  },
+  "sweep_rater/campaigns/key_match_confirm/12_Wraith_initA#min_promptEmin__tritone__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:30:59"
+  },
+  "sweep_rater/campaigns/key_match_confirm/12_Wraith_initA#min_promptEmin__tritone__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-24T18:31:12"
+  },
+  "sweep_rater/campaigns/key_match_confirm/13_Nocturne_initAmin_promptAmin__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:31:22"
+  },
+  "sweep_rater/campaigns/key_match_confirm/13_Nocturne_initAmin_promptAmin__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:31:28"
+  },
+  "sweep_rater/campaigns/key_match_confirm/13_Nocturne_initAmin_promptD#min__tritone__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-24T18:31:38"
+  },
+  "sweep_rater/campaigns/key_match_confirm/13_Nocturne_initAmin_promptD#min__tritone__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-24T18:32:21"
+  },
+  "sweep_rater/campaigns/key_match_confirm/14_Velvet_initBmin_promptBmin__match__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:33:40"
+  },
+  "sweep_rater/campaigns/key_match_confirm/14_Velvet_initBmin_promptBmin__match__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:32:53"
+  },
+  "sweep_rater/campaigns/key_match_confirm/14_Velvet_initBmin_promptFmin__tritone__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-24T18:34:07"
+  },
+  "sweep_rater/campaigns/key_match_confirm/14_Velvet_initBmin_promptFmin__tritone__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-24T18:34:19"
+  },
+  "sweep_rater/campaigns/key_match_confirm/15_Voltage_initC#min_promptC#min__match__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:34:43"
+  },
+  "sweep_rater/campaigns/key_match_confirm/15_Voltage_initC#min_promptC#min__match__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:34:30"
+  },
+  "sweep_rater/campaigns/key_match_confirm/15_Voltage_initC#min_promptGmin__tritone__seed123.wav": {
+    "melody": 5,
+    "notes": "much better! not muffled FIRE, similar to previous but way higher quality",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-24T18:36:18"
+  },
+  "sweep_rater/campaigns/key_match_confirm/15_Voltage_initC#min_promptGmin__tritone__seed7.wav": {
+    "melody": 4,
+    "notes": "instruments missing higher frequencies slightly muffled",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-24T18:35:36"
+  },
   "sweep_rater/campaigns/live_demos/demo_cfg_4_00000001.wav": {
     "melody": 2,
     "notes": "",
@@ -9140,6 +14076,958 @@
     "notes": "",
     "timbre": 4,
     "ts": "2026-06-18T14:52:38"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig75_plain__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:39:07"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig75_plain__seed1234.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:39:17"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig75_plain__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:39:27"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig75_plain__seed7.wav": {
+    "melody": 5,
+    "notes": "FIRE, added developed timbre",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T10:39:53"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig75_plain__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:40:04"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig75_plain__seed99.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:43:20"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig80_plain__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:43:34"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig80_plain__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:43:44"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig80_plain__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:43:56"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig80_plain__seed7.wav": {
+    "melody": 3,
+    "notes": "timbre is trying",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:44:14"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig80_plain__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:44:26"
+  },
+  "sweep_rater/campaigns/mode2_bold/sig80_plain__seed99.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T10:44:45"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig45_plain__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:57:23"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig45_plain__seed1234.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:57:30"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig45_plain__seed42.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:57:43"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig45_plain__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:57:47"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig45_plain__seed777.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 5,
+    "ts": "2026-06-25T08:58:00"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig45_plain__seed99.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:58:09"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig50_plain__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-25T08:58:26"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig50_plain__seed1234.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 5,
+    "ts": "2026-06-25T08:58:37"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig50_plain__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T08:58:48"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig50_plain__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:58:58"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig50_plain__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:59:21"
+  },
+  "sweep_rater/campaigns/mode2_confirm/sig50_plain__seed99.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T08:59:27"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig55_plain_st150__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T10:20:37"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig55_plain_st150__seed7.wav": {
+    "melody": 3,
+    "notes": "slightly fluttery--new timbre is trying",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:25:43"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig55_plain_st150__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:21:16"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig55_plain_st50__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:21:28"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig55_plain_st50__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:22:27"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig55_plain_st50__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:22:23"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig65_plain_st150__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:22:10"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig65_plain_st150__seed7.wav": {
+    "melody": 3,
+    "notes": "most timbre change so far--bassline added and brass, very cool. still sort of fluttery--timbre is trying but not all the way there yet.",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:26:40"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig65_plain_st150__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T10:24:37"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig65_plain_st50__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:26:58"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig65_plain_st50__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T10:27:12"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig65_plain_st50__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T10:27:27"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig75_plain_st150__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:27:41"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig75_plain_st150__seed7.wav": {
+    "melody": 4,
+    "notes": "best added timbre so far! more developed, not fluttering",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T10:28:07"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig75_plain_st150__seed777.wav": {
+    "melody": 4,
+    "notes": "much different timbre and bounce, novel",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T10:28:33"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig75_plain_st50__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-25T10:28:47"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig75_plain_st50__seed7.wav": {
+    "melody": 5,
+    "notes": "most developed timbre, better than all previous",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-25T10:30:23"
+  },
+  "sweep_rater/campaigns/mode2_develop/sig75_plain_st50__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:30:38"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls40__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:48:46"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls40__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T11:48:55"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls40__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:49:05"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls40__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 1,
+    "ts": "2026-06-25T11:49:16"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls40__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T11:49:25"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls40__seed99.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T11:49:34"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls50__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:49:46"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls50__seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:49:56"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls50__seed42.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:03"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls50__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:13"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls50__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:21"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls50__seed99.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 1,
+    "ts": "2026-06-25T11:50:28"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls60__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:37"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls60__seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:43"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls60__seed42.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:52"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls60__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:50:59"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls60__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T11:51:07"
+  },
+  "sweep_rater/campaigns/mode2_loraedge/ls60__seed99.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 1,
+    "ts": "2026-06-25T11:51:12"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-25T12:02:45"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:03:19"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:03:35"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed5.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:14:22"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-25T12:02:56"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T12:03:08"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed88.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:14:34"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls100__seed99.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T12:04:15"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:11:56"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed1234.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:12:03"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:12:12"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed5.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:12:15"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed7.wav": {
+    "melody": 1,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 1,
+    "ts": "2026-06-25T12:12:23"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:12:32"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed88.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:12:45"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls40__seed99.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:12:55"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:13:07"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:13:13"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed42.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-25T12:13:22"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed5.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:13:36"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:13:48"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:14:00"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed88.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T12:14:11"
+  },
+  "sweep_rater/campaigns/mode2_strength_clean/ls60__seed99.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T12:14:17"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_bright__seed123.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:33:58"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_bright__seed7.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:34:09"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_dark__seed123.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:34:25"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_dark__seed7.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:34:41"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_gritty__seed123.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:34:49"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_gritty__seed7.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:34:56"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_lush__seed123.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:02"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_lush__seed7.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:09"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_plain__seed123.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:14"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_plain__seed7.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:21"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_warm__seed123.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:30"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig30_warm__seed7.wav": {
+    "melody": 5,
+    "notes": "same as init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:37"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_bright__seed123.wav": {
+    "melody": 5,
+    "notes": "slightly new timbre",
+    "novelty": 2,
+    "timbre": 5,
+    "ts": "2026-06-25T08:35:59"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_bright__seed7.wav": {
+    "melody": 5,
+    "notes": "slightly new timbre",
+    "novelty": 2,
+    "timbre": 5,
+    "ts": "2026-06-25T08:36:21"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_dark__seed123.wav": {
+    "melody": 4,
+    "notes": "slightly new timbre",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-25T08:36:27"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_dark__seed7.wav": {
+    "melody": 3,
+    "notes": "very similar to init audio but with subtle off-key notes",
+    "novelty": null,
+    "timbre": 4,
+    "ts": "2026-06-25T08:14:24"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_gritty__seed123.wav": {
+    "melody": 5,
+    "notes": "slightly new timbre",
+    "novelty": 2,
+    "timbre": 5,
+    "ts": "2026-06-25T08:36:37"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_gritty__seed7.wav": {
+    "melody": 3,
+    "notes": "slightly new timbre, parts of melody off key",
+    "novelty": 2,
+    "timbre": 5,
+    "ts": "2026-06-25T08:37:00"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_lush__seed123.wav": {
+    "melody": 5,
+    "notes": "very similar to init audio",
+    "novelty": 1,
+    "timbre": 5,
+    "ts": "2026-06-25T08:37:24"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_lush__seed7.wav": {
+    "melody": 3,
+    "notes": "slightly different timbre, off key parts",
+    "novelty": 2,
+    "timbre": 5,
+    "ts": "2026-06-25T08:37:40"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_plain__seed123.wav": {
+    "melody": 5,
+    "notes": "DOPE!! same melody, very different timbre that is sick--this is more plucky sounding. we'll call this unique melody #3. (#1 was the first generation, #2 was the second which was basically the same as the first but Sith subtle string layer added). #1 and #2 I just realized are basically the exact same as the initial audio melody and timbre. this one is slightly different timbre",
+    "novelty": null,
+    "timbre": 5,
+    "ts": "2026-06-25T08:15:23"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_plain__seed7.wav": {
+    "melody": 5,
+    "notes": "same melody as #3 but super dope new timbre (synth Plucky)",
+    "novelty": null,
+    "timbre": 5,
+    "ts": "2026-06-25T08:10:38"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_warm__seed123.wav": {
+    "melody": 5,
+    "notes": "basically same as init audio",
+    "novelty": null,
+    "timbre": 5,
+    "ts": "2026-06-25T08:15:36"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig45_warm__seed7.wav": {
+    "melody": 3,
+    "notes": "cool timbre, getting more different than init audio but off key in some spots",
+    "novelty": null,
+    "timbre": 5,
+    "ts": "2026-06-25T08:16:11"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_bright__seed123.wav": {
+    "melody": 4,
+    "notes": "this is dope and this is the most novel/different from the init audio. all other previous generations were very similar to init audio clip",
+    "novelty": null,
+    "timbre": 5,
+    "ts": "2026-06-25T08:17:26"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_bright__seed7.wav": {
+    "melody": 5,
+    "notes": "dope, even more novel compared to init audio timbre!",
+    "novelty": null,
+    "timbre": 5,
+    "ts": "2026-06-25T08:17:56"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_dark__seed123.wav": {
+    "melody": 3,
+    "notes": "much different, timbre not good",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T08:38:15"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_dark__seed7.wav": {
+    "melody": 3,
+    "notes": "dope, very different from init",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:38:58"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_gritty__seed123.wav": {
+    "melody": 3,
+    "notes": "pads, not too complex, different from init timbre",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-25T08:39:33"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_gritty__seed7.wav": {
+    "melody": 3,
+    "notes": "pretty dope, different timbre",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:40:10"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_lush__seed123.wav": {
+    "melody": 3,
+    "notes": "new timbre",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:41:48"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_lush__seed7.wav": {
+    "melody": 2,
+    "notes": "new timbre, some parts off-key",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T08:42:12"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_plain__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:42:52"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_plain__seed7.wav": {
+    "melody": 3,
+    "notes": "new timbre, slightly distorted like model is trying to add in timbre but fading in and out. timbre seems unstable and fluttering between init audio and new timbre",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T08:44:05"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_warm__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:44:18"
+  },
+  "sweep_rater/campaigns/mode2_sweep/sig60_warm__seed7.wav": {
+    "melody": 3,
+    "notes": "timbre fluttering a bit (between init audio and ckz timbre) from now on I'll call this \"timbre fluttering\"",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T08:45:12"
+  },
+  "sweep_rater/campaigns/mode2_timbre/gate__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T11:01:02"
+  },
+  "sweep_rater/campaigns/mode2_timbre/gate__seed1234.wav": {
+    "melody": 2,
+    "notes": "novel but not good timbre--sounds like base model/stock type music",
+    "novelty": 4,
+    "timbre": 1,
+    "ts": "2026-06-25T11:01:36"
+  },
+  "sweep_rater/campaigns/mode2_timbre/gate__seed7.wav": {
+    "melody": 2,
+    "notes": "just 2 notes it seems. very different from init but poor quality",
+    "novelty": 4,
+    "timbre": 2,
+    "ts": "2026-06-25T10:58:28"
+  },
+  "sweep_rater/campaigns/mode2_timbre/gate__seed777.wav": {
+    "melody": 2,
+    "notes": "sound like base model, not crushed Keyz",
+    "novelty": 4,
+    "timbre": 1,
+    "ts": "2026-06-25T11:02:02"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls06__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:59:04"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls06__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:59:20"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls06__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T10:59:30"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls06__seed777.wav": {
+    "melody": 4,
+    "notes": "more variation in melody, same key. love it",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T11:00:23"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls08__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T11:00:08"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls08__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-25T11:00:44"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls08__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:56:03"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls08__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:56:28"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls10__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:56:57"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls10__seed1234.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:57:24"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls10__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-25T10:57:30"
+  },
+  "sweep_rater/campaigns/mode2_timbre/ls10__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-25T10:57:44"
   },
   "sweep_rater/campaigns/multi_prompt_validation/0001__cfg3_strength1.0_steps50_seed7__cKz!_AzUL_Fmin_140_bpm_@crushed_keyz.wav": {
     "notes": "",
@@ -9440,6 +15328,402 @@
     "notes": "",
     "rating": 2,
     "ts": "2026-05-28T10:08:33"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/00_Mirage_Gmin__seed123__aug8k.wav": {
+    "melody": 4,
+    "notes": "dope!!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:41:19"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/00_Mirage_Gmin__seed123__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T14:47:13"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/00_Mirage_Gmin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:41:32"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/00_Mirage_Gmin__seed7__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:47:30"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/01_Voltage_C#min__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:41:46"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/01_Voltage_C#min__seed123__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-22T14:47:51"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/01_Voltage_C#min__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:42:02"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/01_Voltage_C#min__seed7__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:49:44"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/02_Skyline_Fmin__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:42:16"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/02_Skyline_Fmin__seed123__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:51:35"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/02_Skyline_Fmin__seed7__aug8k.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:42:30"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/02_Skyline_Fmin__seed7__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T14:49:59"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/03_Obsidian_D#min__seed123__aug8k.wav": {
+    "melody": 4,
+    "notes": "dope!!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:42:42"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/03_Obsidian_D#min__seed123__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T14:50:22"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/03_Obsidian_D#min__seed7__aug8k.wav": {
+    "melody": 4,
+    "notes": "FIREE",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:42:51"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/03_Obsidian_D#min__seed7__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:50:36"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/04_Nocturne_Amin__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:43:03"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/04_Nocturne_Amin__seed123__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:50:48"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/04_Nocturne_Amin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:43:12"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/04_Nocturne_Amin__seed7__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-22T14:50:57"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/05_Riptide_Bmin__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:43:23"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/05_Riptide_Bmin__seed123__v1.wav": {
+    "melody": 4,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:51:13"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/05_Riptide_Bmin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:43:33"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/05_Riptide_Bmin__seed7__v1.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:51:21"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/06_Ember_Emin__seed123__aug8k.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:43:47"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/06_Ember_Emin__seed123__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:51:52"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/06_Ember_Emin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:44:15"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/06_Ember_Emin__seed7__v1.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:52:03"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/07_Cascade_F#min__seed123__aug8k.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T14:44:28"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/07_Cascade_F#min__seed123__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:53:34"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/07_Cascade_F#min__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:44:35"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/07_Cascade_F#min__seed7__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-22T14:52:24"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/08_Phantom_Dmin__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-22T14:44:55"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/08_Phantom_Dmin__seed123__v1.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:53:48"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/08_Phantom_Dmin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-22T14:45:02"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/08_Phantom_Dmin__seed7__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:53:22"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/09_Velvet_A#min__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:45:28"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/09_Velvet_A#min__seed123__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T14:56:35"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/09_Velvet_A#min__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:45:40"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/09_Velvet_A#min__seed7__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:54:00"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/10_Tundra_Gmin__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T14:45:56"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/10_Tundra_Gmin__seed123__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T14:55:50"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/10_Tundra_Gmin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:46:06"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/10_Tundra_Gmin__seed7__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T14:56:06"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/11_Solaris_Cmin__seed123__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-22T14:46:41"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/11_Solaris_Cmin__seed123__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-22T14:56:16"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/11_Solaris_Cmin__seed7__aug8k.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-22T14:46:57"
+  },
+  "sweep_rater/campaigns/novel_ab_8k_vs_v1/11_Solaris_Cmin__seed7__v1.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-22T14:56:27"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed123_cfg4_steps50.wav": {
+    "melody": 4,
+    "notes": "novel",
+    "timbre": 3,
+    "ts": "2026-06-22T07:03:05"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/novel__cKz!_Mirage_Gmin_120_bpm_@crushed_keyz__seed7_cfg4_steps50.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:58:19"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/novel__cKz!_Skyline_Fmin_140_bpm_@crushed_keyz__seed123_cfg4_steps50.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:59:55"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/novel__cKz!_Skyline_Fmin_140_bpm_@crushed_keyz__seed7_cfg4_steps50.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:56:28"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/novel__cKz!_Voltage_C#min_150_bpm_@crushed_keyz__seed123_cfg4_steps50.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 2,
+    "ts": "2026-06-22T07:00:21"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/novel__cKz!_Voltage_C#min_150_bpm_@crushed_keyz__seed7_cfg4_steps50.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:56:48"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed123_cfg4_steps50.wav": {
+    "melody": 4,
+    "notes": "novel",
+    "timbre": 4,
+    "ts": "2026-06-22T07:02:13"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/train__2._cKz!_ICE_Dmin_135_bpm_@crushed_keyz__seed7_cfg4_steps50.wav": {
+    "melody": 3,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:58:39"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/train__cKz!_AzUL_Fmin_140_bpm_@crushed_keyz__seed123_cfg4_steps50.wav": {
+    "melody": 2,
+    "notes": "same timber as training example. melody all over the place",
+    "timbre": 4,
+    "ts": "2026-06-22T07:02:40"
+  },
+  "sweep_rater/campaigns/novelty_aug_eff15500/train__cKz!_AzUL_Fmin_140_bpm_@crushed_keyz__seed7_cfg4_steps50.wav": {
+    "melody": 2,
+    "notes": "",
+    "timbre": 3,
+    "ts": "2026-06-22T06:59:03"
   },
   "sweep_rater/campaigns/old_lora_earlier_ckpts/step1000__2_cKz_ICE_Dmin_135_bpm_crush__seed123.wav": {
     "melody": 2,
@@ -9970,6 +16254,118 @@
     "notes": "",
     "rating": 5,
     "ts": "2026-05-28T09:05:52"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Cascade_F_min_13__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T07:59:13"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Cascade_F_min_13__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-23T07:59:22"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Mirage_Gmin_120___seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-23T07:59:36"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Mirage_Gmin_120___seed7.wav": {
+    "melody": 4,
+    "notes": "dope!",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T07:59:46"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Nocturne_Amin_95__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T08:00:54"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Nocturne_Amin_95__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T08:01:08"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Obsidian_D_min_1__seed123.wav": {
+    "melody": 4,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T07:59:57"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Obsidian_D_min_1__seed7.wav": {
+    "melody": 4,
+    "notes": "fire",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-23T08:00:06"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Voltage_C_min_15__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-23T08:01:45"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Voltage_C_min_15__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-23T08:01:23"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Wraith_Bmin_140___seed123.wav": {
+    "melody": 4,
+    "notes": "cool",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-23T08:00:17"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/novel_cKz_Wraith_Bmin_140___seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-23T08:00:30"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/train_ACTiVE__seed123.wav": {
+    "melody": 2,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-23T08:01:58"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/train_ACTiVE__seed7.wav": {
+    "melody": 3,
+    "notes": "overfit",
+    "novelty": 1,
+    "timbre": 4,
+    "ts": "2026-06-23T08:01:36"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/train_AzUL__seed123.wav": {
+    "melody": 3,
+    "notes": "on edge of maybe overfitting",
+    "novelty": 2,
+    "timbre": 4,
+    "ts": "2026-06-23T08:03:39"
+  },
+  "sweep_rater/campaigns/track_aug-8000-base/train_AzUL__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-23T08:03:48"
   },
   "sweep_rater/campaigns/validate_step3000/init_ckzPanda_noise0.42__seed42.wav": {
     "melody": 2,

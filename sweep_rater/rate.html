@@ -56,7 +56,8 @@
 
     .segments { display:flex; flex-direction:column; gap:3px; margin-top:.7rem; }
     .segments .seg-title { font-size:.72rem; color:var(--fg-dim); margin-bottom:.1rem; }
-    .seg { display:grid; grid-template-columns:74px 1fr; gap:.5rem; align-items:center;
+    .seg .seg-stat { font-family:ui-monospace,Menlo,monospace; font-size:.72rem; color:var(--star); white-space:nowrap; }
+    .seg { display:grid; grid-template-columns:74px 1fr auto; gap:.5rem; align-items:center;
            background:var(--panel-2); border:1px solid var(--border); border-left:3px solid transparent;
            border-radius:6px; padding:.25rem .5rem; cursor:pointer; }
     .seg:hover { border-color:var(--fg-dim); }
@@ -188,6 +189,7 @@
     </div>
 
     <div class="segments" id="segments"></div>
+    <div id="seg-rating-label" style="display:none;font-size:.85rem;color:var(--accent);margin:.5rem 0 .1rem;font-family:ui-monospace,Menlo,monospace"></div>
 
     <div class="rating-row">
       <strong style="min-width:3.6rem">timbre</strong>
@@ -196,6 +198,10 @@
     <div class="rating-row">
       <strong style="min-width:3.6rem">melody</strong>
       <span class="stars" id="stars-melody"></span>
+    </div>
+    <div class="rating-row">
+      <strong style="min-width:3.6rem">novelty</strong>
+      <span class="stars" id="stars-novelty"></span>
       <button class="clear-btn" id="clear-btn">clear</button>
       <span class="saved-indicator" id="saved-indicator">saved ✓</span>
     </div>
@@ -203,6 +209,7 @@
     <div style="display:flex;gap:2.4rem;flex-wrap:wrap;margin-top:.4rem">
       <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">timbre</div><div class="hist" id="hist-timbre"></div></div>
       <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">melody</div><div class="hist" id="hist-melody"></div></div>
+      <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">novelty</div><div class="hist" id="hist-novelty"></div></div>
     </div>
 
     <nav class="btn-row">
@@ -228,6 +235,7 @@
             <option value="rating-asc">avg ↑</option>
             <option value="timbre-desc">timbre ↓</option>
             <option value="melody-desc">melody ↓</option>
+            <option value="novelty-desc">novelty ↓</option>
             <option value="ts-desc">newest first</option>
             <option value="ts-asc">oldest first</option>
             <option value="path">by path</option>
@@ -242,6 +250,7 @@
 <footer>
   <kbd>←</kbd> <kbd>→</kbd> prev/next · <kbd>space</kbd> play ·
   timbre <kbd>1</kbd>–<kbd>5</kbd> · melody <kbd>A</kbd><kbd>S</kbd><kbd>D</kbd><kbd>F</kbd><kbd>G</kbd> ·
+  novelty <kbd>6</kbd><kbd>7</kbd><kbd>8</kbd><kbd>9</kbd><kbd>0</kbd> ·
   <kbd>c</kbd> clear · <kbd>r</kbd> random · <kbd>u</kbd> next unrated
 </footer>
 
@@ -261,6 +270,8 @@ const state = {
   sortMode:     "rating-desc",
   showAllRated: false,  // cap rated list to top N until user opts in
   segments:     {prompts: [], seconds: 0},  // demo prompt timeline (optional)
+  curSeg:       0,                           // segment the stars apply to (segmented demos)
+  notesKey:     null,                        // the EXACT key a note is being typed for (locked on focus)
 };
 
 const $ = (id) => document.getElementById(id);
@@ -269,6 +280,7 @@ const $ = (id) => document.getElementById(id);
 // {rating, notes, ts} — for those, the single rating stands in for both dims.
 function entryTimbre(r){ return r ? (r.timbre != null ? r.timbre : (r.rating != null ? r.rating : null)) : null; }
 function entryMelody(r){ return r ? (r.melody != null ? r.melody : (r.rating != null ? r.rating : null)) : null; }
+function entryNovelty(r){ return r ? (r.novelty != null ? r.novelty : null) : null; }
 function entryScore(r){
   const t = entryTimbre(r), m = entryMelody(r);
   if (t == null && m == null) return 0;
@@ -277,6 +289,13 @@ function entryScore(r){
   return (t + m) / 2;
 }
 function isFullyRated(key){
+  if (segmentsActive()) {
+    for (let i = 0; i < state.segments.prompts.length; i++) {
+      const r = state.ratings[`${key}#s${i}`];
+      if (!r || !((r.timbre != null && r.melody != null) || r.rating != null)) return false;
+    }
+    return true;
+  }
   const r = state.ratings[key];
   if (!r) return false;
   return (r.timbre != null && r.melody != null) || r.rating != null;
@@ -300,6 +319,43 @@ function currentFile() {
 function currentKey() {
   const f = currentFile();
   return f ? joinPath(state.relFolder, f.filename) : null;
+}
+function segmentsActive() {
+  return state.segments.prompts.length > 0 && state.segments.seconds > 0;
+}
+// the key the stars read/write: per-segment when this is a concatenated demo
+function ratingKey() {
+  const k = currentKey();
+  return (k && segmentsActive()) ? `${k}#s${state.curSeg}` : k;
+}
+function drawForKey(key) {
+  const r = state.ratings[key];
+  drawStars("timbre", entryTimbre(r) || 0);
+  drawStars("melody", entryMelody(r) || 0);
+  drawStars("novelty", entryNovelty(r) || 0);
+  // NEVER clobber the notes box while the user is typing in it (would scramble the note).
+  if (document.activeElement !== $("notes")) $("notes").value = r ? (r.notes || "") : "";
+}
+function selectSegment(idx) {
+  state.curSeg = idx;
+  drawForKey(ratingKey());
+  const lbl = $("seg-rating-label");
+  if (lbl) {
+    lbl.textContent = `★ rating melody ${idx+1}/${state.segments.prompts.length}:  ${state.segments.prompts[idx] || ""}`;
+    lbl.style.display = "block";
+  }
+  document.querySelectorAll("#segments .seg").forEach(el =>
+    el.classList.toggle("active", Number(el.dataset.idx) === idx));
+  updateSegStatus();
+}
+function updateSegStatus() {
+  const k = currentKey();
+  document.querySelectorAll("#segments .seg .seg-stat").forEach(el => {
+    const i = Number(el.dataset.idx);
+    const r = state.ratings[`${k}#s${i}`];
+    el.textContent = (r && (entryTimbre(r)!=null||entryMelody(r)!=null||entryNovelty(r)!=null))
+      ? `T${entryTimbre(r)??'-'} M${entryMelody(r)??'-'} N${entryNovelty(r)??'-'}` : "";
+  });
 }
 
 function recomputeOrder() {
@@ -370,7 +426,14 @@ function renderMain() {
   // new audio into the existing renderer.
   ensureWaveSurfer();
   $("play-btn").disabled = true;
-  state.ws.load(`/audio/${encodeURIComponent(f.filename)}`);
+  try { state.ws.load(`/audio/${encodeURIComponent(f.filename)}`); }
+  catch (_) { $("play-btn").disabled = false; }
+  // Watchdog: if "ready" never fires (partial/corrupt clip while generating live),
+  // re-enable controls after a few seconds so the player never hard-freezes.
+  clearTimeout(renderMain._wd);
+  renderMain._wd = setTimeout(() => {
+    if ($("play-btn").disabled) { $("play-btn").disabled = false; $("play-btn").textContent = "▶"; }
+  }, 6000);
 
   // Init-audio reference: show the prompt + the loop this clip was built from,
   // with a plain <audio> player (no waveform) for A/B reference.
@@ -387,13 +450,9 @@ function renderMain() {
     ia.pause(); ia.removeAttribute("src");
   }
 
-  const key = currentKey();
-  const r = state.ratings[key];
-  drawStars("timbre", entryTimbre(r) || 0);
-  drawStars("melody", entryMelody(r) || 0);
-  $("notes").value = r ? (r.notes || "") : "";
-
   renderSegments();
+  if (segmentsActive()) { selectSegment(0); }
+  else { drawForKey(currentKey()); const lbl = $("seg-rating-label"); if (lbl) lbl.style.display = "none"; }
   $("pos").textContent = `${state.pos + 1} / ${state.order.length}`;
 }
 
@@ -430,6 +489,18 @@ function ensureWaveSurfer() {
   });
   state.ws.on("play",  () => { try { $("init-audio").pause(); } catch (_) {} $("play-btn").textContent = "⏸"; });
   state.ws.on("pause", () => $("play-btn").textContent = "▶");
+  // A partial/mid-write clip (rating live while generating) or any decode failure
+  // must NOT freeze the UI: re-enable controls so you can skip to the next clip.
+  state.ws.on("error", () => {
+    clearTimeout(renderMain._wd);
+    $("play-btn").disabled = false;
+    $("play-btn").textContent = "▶";
+    $("time").textContent = "⚠ load error — press → for next";
+  });
+  // Symmetry: playing the init reference pauses the main clip (main already
+  // pauses init on play). Prevents the double-play state that could lock up.
+  const ia0 = $("init-audio");
+  if (ia0) ia0.addEventListener("play", () => { try { state.ws && state.ws.pause(); } catch (_) {} });
 }
 
 function renderSegments() {
@@ -440,7 +511,7 @@ function renderSegments() {
     box.innerHTML = "";
     return;
   }
-  box.innerHTML = `<div class="seg-title">prompts in this demo (click to jump):</div>`;
+  box.innerHTML = `<div class="seg-title">melodies in this demo — plays through; the stars below apply to the highlighted one (click to jump):</div>`;
   segs.prompts.forEach((p, i) => {
     const start = i * segs.seconds;
     const end = (i + 1) * segs.seconds;
@@ -448,22 +519,22 @@ function renderSegments() {
     row.className = "seg";
     row.dataset.idx = i;
     row.innerHTML = `<span class="seg-time">${fmtTime(start)}–${fmtTime(end)}</span>` +
-                    `<span class="seg-prompt" title="${escapeHtml(p)}">${escapeHtml(p)}</span>`;
+                    `<span class="seg-prompt" title="${escapeHtml(p)}">${escapeHtml(p)}</span>` +
+                    `<span class="seg-stat" data-idx="${i}"></span>`;
     row.addEventListener("click", () => {
+      selectSegment(i);
       if (state.ws) { try { state.ws.setTime(start + 0.05); if (!state.ws.isPlaying()) state.ws.play(); } catch (_) {} }
     });
     box.appendChild(row);
   });
-  highlightSegment(0);
 }
 
 function highlightSegment(t) {
   const segs = state.segments;
   if (!segs.seconds || !segs.prompts.length) return;
   const idx = Math.min(segs.prompts.length - 1, Math.floor(t / segs.seconds));
-  document.querySelectorAll("#segments .seg").forEach(el => {
-    el.classList.toggle("active", Number(el.dataset.idx) === idx);
-  });
+  if (document.activeElement === $("notes")) return;  // don't reselect/redraw while typing a note
+  if (idx !== state.curSeg) selectSegment(idx);   // stars follow the playing melody
 }
 
 function drawStars(which, n) {
@@ -497,6 +568,7 @@ function updateStats() {
 
   buildHist("hist-timbre", entryTimbre);
   buildHist("hist-melody", entryMelody);
+  buildHist("hist-novelty", entryNovelty);
 }
 
 function buildHist(containerId, dimFn) {
@@ -567,6 +639,7 @@ function renderRated() {
     if (sortMode === "rating-asc")  return entryScore(a) - entryScore(b) || (a.ts < b.ts ? -1 : 1);
     if (sortMode === "timbre-desc") return (entryTimbre(b) ?? -1) - (entryTimbre(a) ?? -1) || (a.ts < b.ts ? 1 : -1);
     if (sortMode === "melody-desc") return (entryMelody(b) ?? -1) - (entryMelody(a) ?? -1) || (a.ts < b.ts ? 1 : -1);
+    if (sortMode === "novelty-desc") return (entryNovelty(b) ?? -1) - (entryNovelty(a) ?? -1) || (a.ts < b.ts ? 1 : -1);
     if (sortMode === "ts-desc")     return a.ts < b.ts ? 1 : -1;
     if (sortMode === "ts-asc")      return a.ts < b.ts ? -1 : 1;
     if (sortMode === "path")        return a.key.localeCompare(b.key);
@@ -604,7 +677,8 @@ function renderRated() {
       return s;
     };
     stars.innerHTML = `<span class="dim">T</span> ${rowStars(entryTimbre(r))}<br>` +
-                      `<span class="dim">M</span> ${rowStars(entryMelody(r))}`;
+                      `<span class="dim">M</span> ${rowStars(entryMelody(r))}<br>` +
+                      `<span class="dim">N</span> ${rowStars(entryNovelty(r))}`;
 
     const label = document.createElement("div");
     label.className = "label";
@@ -668,11 +742,11 @@ function escapeHtml(s) {
 }
 
 // ─── Server I/O ────────────────────────────────────────────────────────
-async function postRating(path, timbre, melody, notes) {
+async function postRating(path, timbre, melody, novelty, notes) {
   const r = await fetch("/api/rating", {
     method: "POST",
     headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({path, timbre, melody, notes}),
+    body: JSON.stringify({path, timbre, melody, novelty, notes}),
   });
   if (!r.ok) throw new Error("rating save failed: " + r.status);
   return r.json();
@@ -681,46 +755,55 @@ async function postRating(path, timbre, melody, notes) {
 async function setRating(which, n) {
   const f = currentFile();
   if (!f) return;
-  const key = currentKey();
+  const key = ratingKey();
   const notes = $("notes").value;
   const cur = state.ratings[key] || {};
-  let timbre = entryTimbre(cur), melody = entryMelody(cur);
-  if (which === "timbre") timbre = n; else melody = n;
-  await postRating(key, timbre, melody, notes);
-  state.ratings[key] = {timbre, melody, notes, ts:new Date().toISOString()};
+  let timbre = entryTimbre(cur), melody = entryMelody(cur), novelty = entryNovelty(cur);
+  if (which === "timbre") timbre = n; else if (which === "melody") melody = n; else novelty = n;
+  await postRating(key, timbre, melody, novelty, notes);
+  state.ratings[key] = {timbre, melody, novelty, notes, ts:new Date().toISOString()};
   drawStars("timbre", timbre || 0);
   drawStars("melody", melody || 0);
+  drawStars("novelty", novelty || 0);
   flashSaved();
   renderRated();
   updateStats();
-  // Auto-advance only once BOTH dimensions are set, so you can rate them in
-  // either order without the clip jumping away after the first star.
-  if (timbre != null && melody != null) setTimeout(() => goNextUnrated(), 300);
+  if (segmentsActive()) {
+    updateSegStatus();
+    // when EVERY melody in this demo is rated, move on to the next demo file
+    if (isFullyRated(currentKey())) setTimeout(() => goNextUnrated(), 400);
+  } else if (timbre != null && melody != null && novelty != null) {
+    setTimeout(() => goNextUnrated(), 300);
+  }
 }
 
 async function clearRating() {
   const f = currentFile();
   if (!f) return;
-  const key = currentKey();
-  await postRating(key, null, null, "");
+  const key = ratingKey();
+  await postRating(key, null, null, null, "");
   delete state.ratings[key];
   $("notes").value = "";
   drawStars("timbre", 0);
   drawStars("melody", 0);
+  drawStars("novelty", 0);
   flashSaved();
   renderRated();
   updateStats();
+  if (segmentsActive()) updateSegStatus();
 }
 
 async function saveNotes() {
-  const f = currentFile();
-  if (!f) return;
-  const key = currentKey();
-  const cur = state.ratings[key];
-  if (!cur) return;
+  // Save to the key the note was STARTED on (locked at focus), NOT the live current
+  // clip — the current clip can change (auto-advance, segment playhead) before this fires.
+  const key = state.notesKey || ratingKey();
+  if (!key) return;
   const notes = $("notes").value;
-  await postRating(key, entryTimbre(cur), entryMelody(cur), notes);
-  cur.notes = notes;
+  const cur = state.ratings[key] || {};
+  const t = entryTimbre(cur), m = entryMelody(cur), n = entryNovelty(cur);
+  if (!cur.timbre && !cur.melody && !cur.novelty && !cur.rating && !notes.trim()) return;  // nothing to save
+  await postRating(key, t, m, n, notes);
+  state.ratings[key] = {timbre: t, melody: m, novelty: n, notes, ts: new Date().toISOString()};
   flashSaved();
   renderRated();
 }
@@ -801,7 +884,15 @@ function bindControls() {
     try { if (state.ws && state.ws.isPlaying()) state.ws.pause(); } catch (_) {}
   });
 
-  $("notes").addEventListener("blur", saveNotes);
+  // Lock the note to the clip/segment it was STARTED on, and autosave as you type so a
+  // restart or navigation can't lose or mis-attribute it.
+  $("notes").addEventListener("focus", () => { state.notesKey = ratingKey(); });
+  $("notes").addEventListener("input", () => {
+    if (!state.notesKey) state.notesKey = ratingKey();
+    clearTimeout(saveNotes._t);
+    saveNotes._t = setTimeout(saveNotes, 700);
+  });
+  $("notes").addEventListener("blur", () => { clearTimeout(saveNotes._t); saveNotes(); });
   $("unrated-only").addEventListener("change", e => {
     state.unratedOnly = e.target.checked;
     recomputeOrder();
@@ -822,6 +913,7 @@ function bindControls() {
     else if (e.key === "c")                           { clearRating(); }
     else if (/^[1-5]$/.test(e.key))                   { setRating("timbre", parseInt(e.key, 10)); }
     else if (/^[asdfg]$/i.test(e.key))                { setRating("melody", {a:1,s:2,d:3,f:4,g:5}[e.key.toLowerCase()]); }
+    else if (/^[67890]$/.test(e.key))                 { setRating("novelty", {"6":1,"7":2,"8":3,"9":4,"0":5}[e.key]); }
   });
 }
 

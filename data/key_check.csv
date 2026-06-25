@@ -1,0 +1,69 @@
+verdict,conf,label,detected,file
+OFF +5st,0.79,Bmin,Emin,cKz! Assault Bmin 140 bpm @crushed_keyz
+OFF +5st,0.75,G#min,C#min,cKz! MEDUSA G#min 140 bpm @crushed_keyz
+OFF -5st,0.75,Bmin,F#min,18. cKz! Come Back Bmin 150 bpm @crushed_keyz
+OFF +5st,0.72,Amin,Dmin,cKz! BAMBOO Amin 140 bpm @crushed_keyz
+OFF +5st,0.69,Amin,Dmin,17. cKz! BadBunny Amin 170 bpm @crushed_keyz
+OFF -5st,0.66,Cmin,Gmin,1. cKz! WAVY Cmin 90 bpm @crushed_keyz
+OFF +5st,0.61,G#min,C#min,cKz! DMT G#min 135 bpm @crushed_keyz
+OFF -5st,0.60,Cmin,Gmin,21. cKz! Panda Cmin 90 bpm @crushed_keyz
+no-label,0.76,—,F#min,7. cKz! ICEBERG 124bpm @crushed_keyz - crushedkeyz@gmail.com
+OK,0.62,F#min,F#min,1. cKz! No tE VAYAS Fsharpmin 105 bpm @crushed_keyz 1
+OK,0.73,C#min,C#min,10. cKz! JUNGLE C#min 140 bpm @crushed_keyz
+OK,0.95,Amin,Amin,11. cKz! CANOPY Amin 125 bpm @crushed_keyz
+OK,0.78,Fmin,Fmin,12. cKz! LOST Fmin 140 bpm @crushed_keyz x @bass._charity
+OK,0.63,C#min,C#min,12. cKz! WUNNA C#min 125 bpm @crushed_keyz
+OK,0.88,Bmin,Bmin,14. cKz! dESERT RAiN Bmin 160 @crushed_key
+OK,0.76,Cmin,Cmin,15. cKz! ACTiVE Cmin 155 bpm @crushed_keyz x @justryda
+OK,0.74,Gmin,Gmin,16. cKz! Rent Free Gmin 140 bpm @crushed_keyz @justryda_
+OK,0.52,C#min,C#min,17. cKz! Pressure C#min 130 bpm @crushed_keyz 1
+OK,0.67,Cmin,Cmin,18. cKz! 3AM Cmin 161 bpm @crushed_keyz @prodkxvi
+OK,0.79,Bmin,Bmin,19. cKz! DreamDoor Bmin 140 bpm @crushed_keyz x @bass._charity
+OK,0.84,Dmin,Dmin,2. cKz! ICE Dmin 135 bpm @crushed_keyz
+OK,0.76,C#min,C#min,22. cKz! Coupe C#min 180 bpm @crushed_keyz x @vicheatitup
+OK,0.92,Gmin,Gmin,23. cKz! Wants Gmin 170 bpm @crushed_keyz @justryda_
+OK,0.90,Cmin,Cmin,24. cKz! JuPitER Cmin 120 bpm @crushed_keyz
+OK,0.97,Dmin,Dmin,25. cKz! CoSmoS Dmin 132 bpm @crushed_keyz
+OK,0.86,A#min,A#min,26. cKz! BANDS A#min 150 bpm @crushed_keyz
+OK,0.66,G#min,G#min,27. cKz! CAROUSEL G#min 160 bpm @crushed_keyz
+OK,0.86,Bmin,Bmin,28. cKz!  LABYRiNTH Bmin 140 bpm @crushed_keyz
+OK,0.82,Amaj,F#min,29. cKz! Act Up Amaj 180 bpm @crushed_keyz @incepshun_
+OK,0.79,Cmin,Cmin,3. cKz! Soulful Shadows Cmin 95 @crushed_key
+OK,0.79,A#min,A#min,30. cKz! Cry Now Laugh Later A#min 142 bpm @crushed_keyz
+OK,0.90,Emin,Emin,31. cKz! CONFINED 180 bpm Emin @crushed_keyz
+OK,0.78,Emaj,C#min,32. cKz! Coldhearted Emaj 95 bpm @crushed_keyz @dcosounds
+OK,0.80,Cmin,Cmin,4. cKz! Bando Cmin 133 bpm @crushed_keyz x @dcosounds x @doverfvr
+OK,0.84,Cmin,Cmin,4. cKz! Emotions Cmin 155 bpm @crushed_keyz x @justryda
+OK,0.80,Cmin,Cmin,5. cKz! Depths Cmin 140 bpm @crushed_keyz x @justryda
+OK,0.85,Cmin,Cmin,6. cKz! LowKey Cmin 100 bpm @crushed_keyz x @justryda
+OK,0.77,Bmin,Bmin,6. cKz! Nasty - Reggaeton Bmin 170 bpm @crushed_keyz
+OK,0.81,D#min,D#min,8. cKz! BreakUp NAV starter D#min 190 bpm @crushed_keyz @bass._charity
+OK,0.89,Emin,Emin,9. cKz! Steppa Emin 110 bpm @crushed_keyz
+OK,0.92,C#min,C#min,cKz! Anuel Trap C#min 142 bpm @crushed_keyz
+OK,0.81,Fmin,Fmin,cKz! AzUL Fmin 140 bpm @crushed_keyz
+OK,0.77,Gmin,Gmin,cKz! Azkaban Gmin 110 bpm @crushed_keyz
+OK,0.85,Cmin,Cmin,cKz! BelowZero - 120 bpm Cmin - @crushed_keyz
+OK,0.73,Cmin,Cmin,cKz! CLOUT Cmin 155 bpm @crushed_keyz
+OK,0.86,A#min,A#min,cKz! COBRA A#min 90 bpm @crushed_keyz @justryda_
+OK,0.59,F#min,F#min,cKz! DESiREs [98 bpm F#min @crushed_keyz]
+OK,0.66,Emin,Emin,cKz! DiMELO Emin 90 bpm @crushed_keyz
+OK,0.61,C#min,C#min,cKz! El Yunque C#min 90 bpm @crushed_keyz
+OK,0.84,Dmin,Dmin,cKz! FEDERALES Dmin 145 bpm @crushed_keyz
+OK,0.90,Bmin,Bmin,cKz! FlaMEnCO Bmin 125 bpm @crushed_keyz
+OK,0.59,Dmin,Dmin,cKz! Heat Dmin 150 bpm @crushed_keyz
+OK,0.92,F#min,F#min,cKz! LATE NiGHTs F#min 135 bpm @crushed_keyz1
+OK,0.88,C#min,C#min,cKz! Last Laugh C#min 150 bpm @crushed_keyz @justryda_ 2
+OK,0.70,Fmin,Fmin,cKz! MYKE TOWERS Fmin 125 bpm @crushed_keyz
+OK,0.54,C#min,C#min,cKz! Mars C#min 125 bpm @crushed_keyz
+OK,0.71,C#min,C#min,cKz! OPPS C#min 90 bpm @crushed_keyz
+OK,0.93,Dmin,Dmin,cKz! POWER Dmin 125 bpm @crushed_keyz @itsbynu
+OK,0.69,Dmin,Dmin,cKz! SPRAY Dmin 180 bpm @crushed_keyz
+OK,0.95,Emin,Emin,cKz! SUBiENDO Emin 90 bpm @crushed_keyz 1
+OK,0.88,Cmin,Cmin,cKz! Scenic Cmin 110 bpm @crushed_keyz
+OK,0.57,G#min,G#min,cKz! StarLight 95 G#min @crushed_keyz x @dudeclayy
+OK,0.93,Bmin,Bmin,cKz! TRiP Bmin 170 bpm @crushed_keyz
+OK,0.83,C#min,C#min,cKz! TWiSTED C#min 80 bpm @crushed_keyz
+OK,0.73,D#min,D#min,cKz! TrapSoul Dsharp min 90 bpm @crushed_keyz @itsbynu
+OK,0.78,Cmin,Cmin,cKz! bEAST ModE st Cmin 130 @crushed_key
+OK,0.49,Dmin,Dmin,cKz! dAYS OFF Dmin 150 bpm @crushed_keyz @officialnickystix
+OK,0.87,A#min,A#min,cKz! glock A#min 130 @crushed_key

@@ -13,6 +13,8 @@ STEPS="${STEPS:-2000}"
 DURATION="${DURATION:-30}"
 MAX_OFFSET="${MAX_OFFSET:-15}"
 RANK="${RANK:-16}"
+CKPT_EVERY="${CKPT_EVERY:-500}"
+DEMO_EVERY="${DEMO_EVERY:-500}"
 
 [[ -f "$FROM_CKPT" ]] || { echo "Missing $FROM_CKPT"; exit 1; }
 
@@ -29,8 +31,8 @@ uv run python scripts/train_lora.py \
   --exclude seconds_total \
   --steps "$STEPS" \
   --batch_size 1 \
-  --checkpoint_every 500 \
-  --demo_every 500 \
+  --checkpoint_every "$CKPT_EVERY" \
+  --demo_every "$DEMO_EVERY" \
   --demo_prompts_file ./data/demo_prompts_ckz_exact.txt \
   --demo_duration 12 \
   --num_inpaint_demos 0 \

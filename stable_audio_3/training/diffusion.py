@@ -650,6 +650,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
         inpaint_demo_config: tp.Optional[tp.Dict[str, int]] = None,
         num_demos: int = 0,
         demo_dl=None,
+        demo_dir: tp.Optional[str] = None,
     ):
         super().__init__()
         self.demo_every = demo_every
@@ -695,6 +696,12 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
             self.demo_dl = None
 
         self._teacher_demo_done = False
+
+        # When set, demo wavs are written here (e.g. <save_dir>/demos) instead of
+        # the cwd, so each run's demos — and their ratings — stay isolated.
+        self.demo_dir = demo_dir or ""
+        if self.demo_dir:
+            os.makedirs(self.demo_dir, exist_ok=True)
 
     def _generate_prompt_demos(self, module, trainer, is_rank_zero=True):
         """Generate full t2m demos from specified prompts (FULL_MASK)."""
@@ -932,7 +939,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
                     combined_audio = torch.cat(parts, dim=-1)
                     combined_mask = torch.cat(mask_parts, dim=-1) if mask_parts else None
 
-                    filename = f'demo_cfg_{cfg_scale}_{trainer.global_step:08}.wav'
+                    filename = os.path.join(self.demo_dir, f'demo_cfg_{cfg_scale}_{trainer.global_step:08}.wav')
                     combined_audio = combined_audio.to(torch.float32).div(torch.max(torch.abs(combined_audio))).mul(32767).to(torch.int16).cpu()
                     torchaudio.save(filename, combined_audio, self.sample_rate)
 
@@ -1120,7 +1127,7 @@ class DiffusionCondInpaintDemoCallback(pl.Callback):
                         if parts:
                             combined_audio = torch.cat(parts, dim=-1)
                             combined_mask = torch.cat(mask_parts, dim=-1) if mask_parts else None
-                            filename = f'demo_teacher_target_{trainer.global_step:08}.wav'
+                            filename = os.path.join(self.demo_dir, f'demo_teacher_target_{trainer.global_step:08}.wav')
                             combined_audio = combined_audio.to(torch.float32).div(torch.max(torch.abs(combined_audio))).mul(32767).to(torch.int16).cpu()
                             torchaudio.save(filename, combined_audio, self.sample_rate)
                             log_audio(trainer.logger, f'demo_teacher_target', filename, self.sample_rate)

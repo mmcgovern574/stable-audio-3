@@ -263,28 +263,31 @@ class Handler(BaseHTTPRequestHandler):
             return self._send_json({"error": "path required"}, status=400)
 
         ratings = load_ratings()
+        prev = ratings.get(key, {})
 
         def _valid(x):
             return x is None or (isinstance(x, int) and 0 <= x <= 5)
 
         timbre = payload.get("timbre")
         melody = payload.get("melody")
+        novelty = payload.get("novelty", prev.get("novelty"))
         # Back-compat: a bare "rating" still works (applies to both dims).
         if "timbre" not in payload and "melody" not in payload and "rating" in payload:
             timbre = melody = payload.get("rating")
 
-        if not (_valid(timbre) and _valid(melody)):
+        if not (_valid(timbre) and _valid(melody) and _valid(novelty)):
             return self._send_json(
-                {"error": "timbre/melody must be int 0..5 or null"}, status=400)
+                {"error": "timbre/melody/novelty must be int 0..5 or null"}, status=400)
 
-        if timbre is None and melody is None:
-            ratings.pop(key, None)
+        notes_val = payload.get("notes") if payload.get("notes") is not None else prev.get("notes", "")
+        if timbre is None and melody is None and novelty is None and not (notes_val or "").strip():
+            ratings.pop(key, None)   # truly empty (e.g. clear) -> remove
         else:
-            prev = ratings.get(key, {})
             ratings[key] = {
                 "timbre": timbre,
                 "melody": melody,
-                "notes":  payload.get("notes") if payload.get("notes") is not None else prev.get("notes", ""),
+                "novelty": novelty,
+                "notes":  notes_val,
                 "ts":     datetime.now().isoformat(timespec="seconds"),
             }
         save_ratings(ratings)

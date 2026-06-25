@@ -348,6 +348,7 @@ def train(args):
         demo_cfg_scales=args.demo_cfg_scales,
         demo_dl=demo_dl,
         demo_conditioning=t2m_conditioning,
+        demo_dir=os.path.join(args.save_dir, "demos") if args.save_dir else None,
     )
 
     callbacks = [ckpt_callback, exc_callback, demo_callback]
