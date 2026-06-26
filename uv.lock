@@ -2893,6 +2893,11 @@ dependencies = [
 ]
 
 [package.optional-dependencies]
+app = [
+    { name = "fastapi" },
+    { name = "soundfile" },
+    { name = "uvicorn" },
+]
 lora = [
     { name = "dill" },
     { name = "matplotlib" },
@@ -2916,6 +2921,7 @@ requires-dist = [
     { name = "dill", marker = "extra == 'lora'", specifier = ">=0.4.1" },
     { name = "einops", specifier = ">=0.8.2" },
     { name = "einops-exts", specifier = ">=0.0.4" },
+    { name = "fastapi", marker = "extra == 'app'", specifier = ">=0.115" },
     { name = "gradio", marker = "extra == 'ui'", specifier = "==6.3.0" },
     { name = "huggingface-hub", specifier = ">=1.7.1" },
     { name = "matplotlib", marker = "extra == 'lora'", specifier = ">=3.10.8" },
@@ -2925,14 +2931,16 @@ requires-dist = [
     { name = "pytorch-lightning", marker = "extra == 'lora'", specifier = "==2.5.5" },
     { name = "safetensors", specifier = ">=0.7.0" },
     { name = "soundfile", specifier = ">=0.13.1" },
+    { name = "soundfile", marker = "extra == 'app'", specifier = ">=0.13.1" },
     { name = "torch", marker = "platform_machine != 'x86_64' or sys_platform != 'linux'", specifier = "==2.7.1" },
     { name = "torch", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'", specifier = "==2.7.1", index = "https://download.pytorch.org/whl/cu126" },
     { name = "torchaudio", marker = "platform_machine != 'x86_64' or sys_platform != 'linux'", specifier = "==2.7.1" },
     { name = "torchaudio", marker = "platform_machine == 'x86_64' and sys_platform == 'linux'", specifier = "==2.7.1", index = "https://download.pytorch.org/whl/cu126" },
     { name = "tqdm", specifier = ">=4.67.3" },
     { name = "transformers", specifier = ">=5.8.0" },
+    { name = "uvicorn", marker = "extra == 'app'", specifier = ">=0.30" },
 ]
-provides-extras = ["ui", "lora"]
+provides-extras = ["ui", "app", "lora"]
 
 [package.metadata.requires-dev]
 dev = [

@@ -10189,6 +10189,97 @@
     "timbre": 2,
     "ts": "2026-06-25T12:54:04"
   },
+  "sweep_rater/campaigns/discover_library/00_Mirage_Dmin_m__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-26T07:44:44"
+  },
+  "sweep_rater/campaigns/discover_library/00_Mirage_Dmin_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-26T07:44:55"
+  },
+  "sweep_rater/campaigns/discover_library/00_Mirage_G#min_t__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-26T07:45:13"
+  },
+  "sweep_rater/campaigns/discover_library/00_Mirage_G#min_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-26T07:45:30"
+  },
+  "sweep_rater/campaigns/discover_library/01_Obsidian_Bmin_m__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-26T07:45:43"
+  },
+  "sweep_rater/campaigns/discover_library/01_Obsidian_Bmin_m__s75__seed7.wav": {
+    "melody": 1,
+    "notes": "horrible screeching",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-26T07:45:55"
+  },
+  "sweep_rater/campaigns/discover_library/01_Obsidian_Fmin_t__s75__seed123.wav": {
+    "melody": 1,
+    "notes": "screeching jingle",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-26T07:46:08"
+  },
+  "sweep_rater/campaigns/discover_library/01_Obsidian_Fmin_t__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-26T07:46:21"
+  },
+  "sweep_rater/campaigns/discover_library/11_Wraith_Dmin_t__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-26T09:01:49"
+  },
+  "sweep_rater/campaigns/discover_library/16_Mirage_Gmin_m__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-26T09:00:42"
+  },
+  "sweep_rater/campaigns/discover_library/30_Solaris_Gmin_t__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-26T09:02:03"
+  },
+  "sweep_rater/campaigns/discover_library/42_Cascade_A#min_t__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-26T09:01:28"
+  },
+  "sweep_rater/campaigns/discover_library/53_Voltage_C#min_m__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-26T09:01:08"
+  },
   "sweep_rater/campaigns/eff2500_medium/medium__2_cKz_ICE_Dmin_135_b__seed123.wav": {
     "melody": 1,
     "notes": "",

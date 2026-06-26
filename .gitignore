@@ -206,3 +206,8 @@ data/*.zip
 
 # editor/backup
 *.bak
+
+# ── cKz UI backend (app/) — generated/local only ─────────────────────────
+app/gen/
+app/kept/
+app/loops_manifest.json

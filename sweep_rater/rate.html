@@ -27,6 +27,12 @@
                           color:var(--fg-dim); border-radius:6px; padding:.3rem .7rem;
                           cursor:pointer; font-size:.85rem; }
     header .refresh-btn:hover { color:var(--fg); }
+    header .tab-nav { display:flex; gap:.3rem; }
+    header .tab-nav button { background:transparent; border:1px solid var(--border);
+                             color:var(--fg-dim); border-radius:6px; padding:.3rem .85rem;
+                             cursor:pointer; font-size:.85rem; }
+    header .tab-nav button.active { color:var(--fg); border-color:var(--accent); background:var(--panel-2); }
+    header .tab-nav button:hover { color:var(--fg); }
 
     main { flex:1; display:flex; flex-direction:column; gap:1rem; padding:1rem;
            max-width:920px; width:100%; margin:0 auto; }
@@ -43,6 +49,35 @@
                      border:0; border-radius:6px; padding:.25rem .8rem; cursor:pointer;
                      font-size:1.1rem; line-height:1; min-width:44px; }
     .player button:disabled { opacity:.5; cursor:default; }
+    /* transport — typical music-player row under the waveform:
+       time (left) · centered [shuffle · prev · play · next] · clip counter (right) */
+    .player { display:grid; grid-template-columns:1fr auto 1fr; align-items:center; gap:.6rem; margin-top:.9rem; }
+    .player .t-time { color:var(--fg-dim); font-size:.85rem; font-variant-numeric:tabular-nums; justify-self:start; }
+    .player .t-pos  { color:var(--fg-dim); font-size:.85rem; justify-self:end; }
+    .player .transport { display:flex; align-items:center; gap:.45rem; justify-self:center; }
+    .player .t-btn { background:transparent; border:1px solid var(--border); color:var(--fg-dim);
+                     border-radius:8px; padding:.34rem .52rem; min-width:auto; cursor:pointer; line-height:0; }
+    .player .t-btn:hover { color:var(--fg); border-color:var(--fg-dim); }
+    .player .t-btn.active { color:var(--accent); border-color:var(--accent); box-shadow:0 0 0 1px var(--accent) inset; }
+    .player .t-btn svg { width:18px; height:18px; display:block; }
+    .player .t-play { display:flex; align-items:center; justify-content:center; width:48px; height:48px;
+                      background:var(--accent); color:#0e1014; border:0; border-radius:50%; min-width:48px;
+                      font-size:1.2rem; line-height:1; font-weight:700; cursor:pointer; padding-left:2px; }
+    .player .t-play:disabled { opacity:.5; cursor:default; }
+
+    /* user-facing product surface */
+    .track-title { font-size:1.2rem; font-weight:600; color:var(--fg); margin:.1rem 0 .7rem;
+                   font-variant-numeric:tabular-nums; letter-spacing:.2px; }
+
+    /* collapsible admin · rating & details dropdown */
+    .admin-toggle { display:flex; align-items:center; gap:.5rem; width:100%; margin-top:1.1rem;
+                    background:var(--panel-2); border:1px solid var(--border); color:var(--fg-dim);
+                    border-radius:8px; padding:.5rem .8rem; cursor:pointer; font-size:.85rem; text-align:left; }
+    .admin-toggle:hover { color:var(--fg); border-color:var(--fg-dim); }
+    .admin-toggle .caret { transition:transform .15s ease; display:inline-block; }
+    .admin-toggle[aria-expanded="true"] .caret { transform:rotate(90deg); }
+    .admin-panel { margin-top:.9rem; }
+    .admin-panel[hidden] { display:none; }
 
     .filename { font-family:ui-monospace,Menlo,monospace; font-size:.95rem;
                 color:var(--fg); word-break:break-all; }
@@ -89,6 +124,7 @@
     nav.btn-row button { background:var(--panel-2); color:var(--fg); border:1px solid var(--border);
                          border-radius:8px; padding:.5rem .9rem; cursor:pointer; font-size:.95rem; }
     nav.btn-row button:hover { border-color:var(--fg-dim); }
+    nav.btn-row button.active { border-color:var(--accent); color:var(--fg); background:var(--panel-2); }
 
     footer { text-align:center; color:var(--fg-dim); font-size:.8rem; padding:1rem;
              border-top:1px solid var(--border); }
@@ -159,6 +195,10 @@
 
 <header>
   <div class="folder" id="folder">…</div>
+  <div class="tab-nav">
+    <button id="tab-btn-rate" class="active">rate</button>
+    <button id="tab-btn-rated">rated <span id="tab-rated-count"></span></button>
+  </div>
   <div class="spacer"></div>
   <label class="filter-toggle">
     <input type="checkbox" id="unrated-only"> only unrated (current)
@@ -168,63 +208,82 @@
 </header>
 
 <main>
-  <!-- ============ Main player (current folder) ============ -->
+  <!-- ============ Tab: rate (current folder) ============ -->
+  <section id="tab-rate">
   <div class="card" id="player-card">
-    <h2 class="section-title" style="margin-bottom:.4rem">current folder</h2>
-    <div class="filename" id="filename">…</div>
-    <div class="chips" id="chips"></div>
+    <!-- ===== user-facing product (always visible) ===== -->
+    <div class="track-title" id="track-title">…</div>
     <div id="waveform"></div>
     <div class="player">
-      <button id="play-btn" aria-label="play / pause" title="play / pause">▶</button>
-      <span id="time">00:00 / 00:00</span>
-      <span class="spacer" style="flex:1"></span>
-      <span style="font-size:.85rem;">clip <strong id="pos">1 / 1</strong></span>
+      <span id="time" class="t-time">00:00 / 00:00</span>
+      <div class="transport">
+        <button id="shuffle-btn" class="t-btn" aria-label="shuffle" aria-pressed="false" title="Shuffle: off (sequential)">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+        </button>
+        <button id="prev-btn" class="t-btn" aria-label="previous" title="previous">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20" fill="currentColor" stroke="none"/><line x1="5" y1="19" x2="5" y2="5"/></svg>
+        </button>
+        <button id="play-btn" class="t-play" aria-label="play / pause" title="play / pause">▶</button>
+        <button id="next-btn" class="t-btn" aria-label="next" title="next">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4" fill="currentColor" stroke="none"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
+        </button>
+      </div>
+      <span class="t-pos">clip <strong id="pos">1 / 1</strong></span>
     </div>
 
-    <div id="init-ref" style="margin:.55rem 0;padding:.5rem .65rem;border:1px solid #2a3146;border-radius:8px;background:rgba(255,255,255,.02);display:none">
-      <div style="font-size:.72rem;color:var(--fg-dim);margin-bottom:.2rem">prompt</div>
-      <div id="init-prompt" style="font-size:.9rem;margin-bottom:.45rem;font-family:monospace">…</div>
-      <div style="font-size:.72rem;color:var(--fg-dim);margin-bottom:.25rem">init audio (reference) · <span id="init-name" style="color:var(--fg)"></span></div>
-      <audio id="init-audio" controls preload="none" style="width:100%;height:32px"></audio>
-    </div>
+    <!-- ===== admin · rating & details (collapsible; remembered) ===== -->
+    <button class="admin-toggle" id="admin-toggle" aria-expanded="false" aria-controls="admin-panel">
+      <span class="caret">▸</span> admin · rating &amp; details
+    </button>
+    <div class="admin-panel" id="admin-panel" hidden>
+      <div class="filename" id="filename">…</div>
+      <div class="chips" id="chips"></div>
 
-    <div class="segments" id="segments"></div>
-    <div id="seg-rating-label" style="display:none;font-size:.85rem;color:var(--accent);margin:.5rem 0 .1rem;font-family:ui-monospace,Menlo,monospace"></div>
+      <nav class="btn-row" style="margin-top:.6rem">
+        <button id="random-btn">random</button>
+        <button id="unrated-btn">next unrated</button>
+      </nav>
 
-    <div class="rating-row">
-      <strong style="min-width:3.6rem">timbre</strong>
-      <span class="stars" id="stars-timbre"></span>
-    </div>
-    <div class="rating-row">
-      <strong style="min-width:3.6rem">melody</strong>
-      <span class="stars" id="stars-melody"></span>
-    </div>
-    <div class="rating-row">
-      <strong style="min-width:3.6rem">novelty</strong>
-      <span class="stars" id="stars-novelty"></span>
-      <button class="clear-btn" id="clear-btn">clear</button>
-      <span class="saved-indicator" id="saved-indicator">saved ✓</span>
-    </div>
-    <textarea class="notes" id="notes" placeholder="optional notes…"></textarea>
-    <div style="display:flex;gap:2.4rem;flex-wrap:wrap;margin-top:.4rem">
-      <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">timbre</div><div class="hist" id="hist-timbre"></div></div>
-      <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">melody</div><div class="hist" id="hist-melody"></div></div>
-      <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">novelty</div><div class="hist" id="hist-novelty"></div></div>
-    </div>
+      <div id="init-ref" style="margin:.7rem 0;padding:.5rem .65rem;border:1px solid #2a3146;border-radius:8px;background:rgba(255,255,255,.02);display:none">
+        <div style="font-size:.72rem;color:var(--fg-dim);margin-bottom:.2rem">prompt</div>
+        <div id="init-prompt" style="font-size:.9rem;margin-bottom:.45rem;font-family:monospace">…</div>
+        <div style="font-size:.72rem;color:var(--fg-dim);margin-bottom:.25rem">init audio (reference) · <span id="init-name" style="color:var(--fg)"></span></div>
+        <audio id="init-audio" controls preload="none" style="width:100%;height:32px"></audio>
+      </div>
 
-    <nav class="btn-row">
-      <button id="prev-btn">← prev</button>
-      <button id="next-btn">next →</button>
-      <button id="random-btn">random</button>
-      <button id="unrated-btn">next unrated</button>
-    </nav>
+      <div class="segments" id="segments"></div>
+      <div id="seg-rating-label" style="display:none;font-size:.85rem;color:var(--accent);margin:.5rem 0 .1rem;font-family:ui-monospace,Menlo,monospace"></div>
+
+      <div class="rating-row">
+        <strong style="min-width:3.6rem">timbre</strong>
+        <span class="stars" id="stars-timbre"></span>
+      </div>
+      <div class="rating-row">
+        <strong style="min-width:3.6rem">melody</strong>
+        <span class="stars" id="stars-melody"></span>
+      </div>
+      <div class="rating-row">
+        <strong style="min-width:3.6rem">novelty</strong>
+        <span class="stars" id="stars-novelty"></span>
+        <button class="clear-btn" id="clear-btn">clear</button>
+        <span class="saved-indicator" id="saved-indicator">saved ✓</span>
+      </div>
+      <textarea class="notes" id="notes" placeholder="optional notes…"></textarea>
+      <div style="display:flex;gap:2.4rem;flex-wrap:wrap;margin-top:.4rem">
+        <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">timbre</div><div class="hist" id="hist-timbre"></div></div>
+        <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">melody</div><div class="hist" id="hist-melody"></div></div>
+        <div><div style="font-size:.72rem;color:var(--fg-dim);margin:.2rem 0">novelty</div><div class="hist" id="hist-novelty"></div></div>
+      </div>
+    </div>
   </div>
 
   <div class="card" id="empty-card" style="display:none">
     <div class="empty">No clips for the current filter.</div>
   </div>
+  </section>
 
-  <!-- ============ All previously rated, across folders ============ -->
+  <!-- ============ Tab: rated (all previously rated, across folders) ============ -->
+  <section id="tab-rated" style="display:none">
   <div class="card" id="rated-card">
     <h2 class="section-title">
       all previously rated <span style="color:var(--fg-dim);font-weight:400" id="rated-count"></span>
@@ -245,6 +304,7 @@
     </h2>
     <div id="rated-list"></div>
   </div>
+  </section>
 </main>
 
 <footer>
@@ -267,6 +327,8 @@ const state = {
   pos:          0,
   ws:           null,
   unratedOnly:  false,
+  shuffle:      false,   // randomize play order (great for rating the newest unrated batch)
+  adminOpen:    false,   // admin/rating dropdown open? (remembered in localStorage)
   sortMode:     "rating-desc",
   showAllRated: false,  // cap rated list to top N until user opts in
   segments:     {prompts: [], seconds: 0},  // demo prompt timeline (optional)
@@ -363,6 +425,13 @@ function recomputeOrder() {
   state.order = state.unratedOnly
     ? all.filter(i => !isFullyRated(joinPath(state.relFolder, state.files[i].filename)))
     : all;
+  if (state.shuffle) {
+    // Fisher–Yates: walk prev/next through clips in random order.
+    for (let i = state.order.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [state.order[i], state.order[j]] = [state.order[j], state.order[i]];
+    }
+  }
   if (state.pos >= state.order.length) state.pos = Math.max(0, state.order.length - 1);
 }
 
@@ -391,6 +460,25 @@ function highlightCurrentInRatedList() {
   });
 }
 
+// Friendly, user-facing title for a clip: "Solaris · A min · 140 bpm".
+// Prefers the prompt from library_index.csv; falls back to parsing the filename;
+// last resort is the raw filename.
+function trackTitle(f) {
+  let title = "", key = "", bpm = "";
+  const p = (f.init && f.init.prompt) ? f.init.prompt : "";
+  let m = p.match(/cKz!\s+(\S+)\s+([A-G]#?)\s*(min|maj)\s+(\d+)\s*bpm/i);
+  if (m) { title = m[1]; key = `${m[2]} ${m[3].toLowerCase()}`; bpm = m[4]; }
+  else {
+    m = f.filename.match(/(?:^|_)([A-Za-z]+)_([A-G]#?)(min|maj)/);
+    if (m) { title = m[1]; key = `${m[2]} ${m[3].toLowerCase()}`; }
+  }
+  if (!title) return f.filename;
+  const parts = [title];
+  if (key) parts.push(key);
+  if (bpm) parts.push(`${bpm} bpm`);
+  return parts.join("  ·  ");
+}
+
 function renderMain() {
   const f = currentFile();
   if (!f) {
@@ -401,6 +489,7 @@ function renderMain() {
   $("player-card").style.display = "block";
   $("empty-card").style.display = "none";
 
+  $("track-title").textContent = trackTitle(f);
   $("filename").textContent = f.filename;
 
   const chips = $("chips");
@@ -632,6 +721,7 @@ const RATED_LIST_DEFAULT_LIMIT = 20;
 function renderRated() {
   const allRows = Object.entries(state.ratings).map(([key, r]) => ({key, ...r}));
   $("rated-count").textContent = `(${allRows.length})`;
+  const tc = $("tab-rated-count"); if (tc) tc.textContent = allRows.length ? `(${allRows.length})` : "";
 
   const sortMode = state.sortMode;
   allRows.sort((a, b) => {
@@ -733,6 +823,24 @@ function renderRated() {
     });
     list.appendChild(more);
   }
+}
+
+// ─── Admin · rating dropdown (remembered across reloads) ────────────────
+function setAdmin(open) {
+  state.adminOpen = open;
+  $("admin-panel").hidden = !open;
+  $("admin-toggle").setAttribute("aria-expanded", open ? "true" : "false");
+  try { localStorage.setItem("rater.adminOpen", open ? "1" : "0"); } catch (_) {}
+}
+
+// ─── Tabs (rate / rated) ───────────────────────────────────────────────
+function setTab(name) {
+  const rate = name !== "rated";
+  $("tab-rate").style.display  = rate ? "" : "none";
+  $("tab-rated").style.display = rate ? "none" : "";
+  $("tab-btn-rate").classList.toggle("active", rate);
+  $("tab-btn-rated").classList.toggle("active", !rate);
+  if (!rate) renderRated();   // refresh the list when opening the tab
 }
 
 function escapeHtml(s) {
@@ -877,6 +985,9 @@ function bindControls() {
   $("play-btn").onclick    = togglePlay;
   $("clear-btn").onclick   = clearRating;
   $("refresh-btn").onclick = refresh;
+  $("tab-btn-rate").onclick  = () => setTab("rate");
+  $("tab-btn-rated").onclick = () => setTab("rated");
+  $("admin-toggle").onclick  = () => setAdmin(!state.adminOpen);
 
   // Mutual exclusion: when the init reference plays, pause the main waveform.
   // (Two concurrent media elements can freeze playback in Safari.)
@@ -898,6 +1009,19 @@ function bindControls() {
     recomputeOrder();
     render();
   });
+  // Shuffle/sequential toggle (music-player style): one button, lit when shuffle
+  // is on, dim when sequential. Ratings are untouched — this only reorders the queue.
+  function setShuffle(on) {
+    state.shuffle = on;
+    const btn = $("shuffle-btn");
+    btn.classList.toggle("active", on);
+    btn.title = on ? "Shuffle: on" : "Shuffle: off (sequential)";
+    btn.setAttribute("aria-pressed", on ? "true" : "false");
+    state.pos = 0;          // restart at the top of the new order
+    recomputeOrder();       // shuffles when on; sequential when off
+    render();
+  }
+  $("shuffle-btn").onclick = () => setShuffle(!state.shuffle);
   $("sort-mode").addEventListener("change", e => {
     state.sortMode = e.target.value;
     renderRated();
@@ -920,7 +1044,11 @@ function bindControls() {
 async function boot() {
   await loadData();
   bindControls();
+  let adminOpen = false;
+  try { adminOpen = localStorage.getItem("rater.adminOpen") === "1"; } catch (_) {}
+  setAdmin(adminOpen);   // restore last dropdown state (default collapsed)
   render();
+  renderRated();   // populate the rated tab + its count on load
 }
 boot().catch(err => {
   document.body.innerHTML = `<pre style="color:#ff7a7a;padding:2rem">${err.stack || err}</pre>`;

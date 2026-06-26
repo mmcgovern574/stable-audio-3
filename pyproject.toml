@@ -25,6 +25,13 @@ ui = [
   "accelerate>=1.13.0",
 ]
 
+# cKz Loop Generator UI backend (app/) — /discover + /refine service + frontend.
+app = [
+  "fastapi>=0.115",
+  "uvicorn>=0.30",
+  "soundfile>=0.13.1",
+]
+
 lora = [
   "pytorch_lightning==2.5.5",
   "dill>=0.4.1",

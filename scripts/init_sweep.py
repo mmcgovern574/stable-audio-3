@@ -51,13 +51,18 @@ def parse_cy(name):
     return note + qual, bpm
 
 
-def select_loops(dirs, n, root=LOOPS_ROOT, minor_only=False, dense=False, max_silence=0.12):
+def select_loops(dirs, n, root=LOOPS_ROOT, minor_only=False, dense=False, max_silence=0.12,
+                 shuffle=False, loop_seed=None):
     """Pick n foreign loops, round-robin across keys for spread (minor preferred).
     Allows MULTIPLE loops per key (harvest mode) so n can exceed the 12 minor keys.
     minor_only: skip major-key loops (they clash with the minor cKz model -> 0 keepers).
     dense: skip loops whose own silence-fraction > max_silence (a sparse init seeds a
-    sparse output — sparseness is the #1 floor killer). Checked lazily (only on picked)."""
+    sparse output — sparseness is the #1 floor killer). Checked lazily (only on picked).
+    shuffle: randomize each key's bucket + the key order so repeated runs draw a
+    DIFFERENT diverse subset instead of always the alphabetically-first loops. Pass
+    loop_seed for a reproducible shuffle (same seed -> same selection)."""
     from collections import defaultdict
+    import random as _random
     sil_of = None
     if dense:
         import sys as _s; _s.path.insert(0, str(REPO / "sweep_rater/scorer"))
@@ -74,7 +79,14 @@ def select_loops(dirs, n, root=LOOPS_ROOT, minor_only=False, dense=False, max_si
             kb = parse_cy(f.name)
             if kb and not (minor_only and kb[0].endswith("maj")):
                 bykey[kb[0]].append((kb[0], kb[1], f))
-    keys = [k for k in bykey if k.endswith("min")] + [k for k in bykey if k.endswith("maj")]
+    minkeys = [k for k in bykey if k.endswith("min")]
+    majkeys = [k for k in bykey if k.endswith("maj")]
+    if shuffle:
+        rng = _random.Random(loop_seed)        # loop_seed=None -> fresh each run
+        for v in bykey.values():
+            rng.shuffle(v)                       # different loop wins each key bucket
+        rng.shuffle(minkeys); rng.shuffle(majkeys)  # vary which keys lead the round-robin
+    keys = minkeys + majkeys
     picked, skipped, i = [], 0, 0
     while len(picked) < n and any(bykey[k] for k in keys):
         k = keys[i % len(keys)]; i += 1
@@ -107,13 +119,16 @@ def main():
     ap.add_argument("--dense-init", action="store_true", help="skip sparse foreign loops (silence>0.12) — raises the floor")
     ap.add_argument("--max-init-silence", type=float, default=0.12)
     ap.add_argument("--tritone", action="store_true", help="also generate each loop with prompt key a TRITONE off (2x melodies/loop)")
+    ap.add_argument("--shuffle", action="store_true", help="randomize loop selection so each run draws a DIFFERENT diverse subset (not the same alphabetical front-runners)")
+    ap.add_argument("--loop-seed", type=int, default=None, help="seed the --shuffle for a reproducible selection (default: fresh each run)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     sigmas = [float(s) for s in args.sigmas.split(",") if s.strip()]
     seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
     loops = select_loops(args.init_dirs, args.n_loops, args.loops_root, args.minor_only,
-                         args.dense_init, args.max_init_silence)
+                         args.dense_init, args.max_init_silence,
+                         shuffle=args.shuffle, loop_seed=args.loop_seed)
     if not loops:
         raise SystemExit("no foreign loops found — check --init-dirs")
 
