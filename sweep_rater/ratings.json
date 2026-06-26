@@ -160,6 +160,13 @@
     "rating": 3,
     "ts": "2026-05-27T14:00:26"
   },
+  "favorites/2_cKz!_FlaMEnCO_Amin_160_bpm_@crushed_keyz_cfg7_steps50_dur30s.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-26T13:41:44"
+  },
   "lora_out/ckz_aug_cum23k/demos/demo_cfg_3_00000001.wav#s0": {
     "melody": 3,
     "notes": "",
