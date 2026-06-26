@@ -202,6 +202,12 @@ class Handler(BaseHTTPRequestHandler):
                 return self._send_404("rate.html missing")
             return self._send(200, "text/html; charset=utf-8", HTML_PATH.read_bytes())
 
+        if path == "/viz.js":
+            vp = SCRIPT_DIR / "viz.js"
+            if not vp.exists():
+                return self._send_404("viz.js missing")
+            return self._send(200, "application/javascript; charset=utf-8", vp.read_bytes())
+
         if path == "/api/files":
             files = list_wavs(self.folder)
             for f in files:

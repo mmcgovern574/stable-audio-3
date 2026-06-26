@@ -40,8 +40,15 @@
     .card { background:var(--panel); border:1px solid var(--border); border-radius:12px;
             padding:1rem 1.2rem; }
 
-    #waveform { background:var(--panel-2); border-radius:8px; min-height:128px;
-                cursor:pointer; padding:.25rem; }
+    #waveform { background:#070707; border-radius:8px; min-height:240px;
+                overflow:hidden; flex:1; cursor:pointer; }
+
+    /* player stage: ‹ arrow · graphic (click to play/pause) · arrow › */
+    .stage { display:flex; align-items:center; gap:.4rem; }
+    .nav-arrow { background:transparent; border:0; color:var(--fg-dim); cursor:pointer;
+                 padding:.4rem .2rem; border-radius:8px; line-height:0; }
+    .nav-arrow:hover { color:var(--fg); }
+    .nav-arrow svg { width:30px; height:30px; display:block; }
 
     .player { display:flex; align-items:center; gap:1rem; margin-top:.8rem; color:var(--fg-dim);
               font-variant-numeric:tabular-nums; }
@@ -213,22 +220,22 @@
   <div class="card" id="player-card">
     <!-- ===== user-facing product (always visible) ===== -->
     <div class="track-title" id="track-title">…</div>
-    <div id="waveform"></div>
+    <div class="stage">
+      <button id="prev-btn" class="nav-arrow" aria-label="previous" title="previous (←)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div id="waveform" title="click to play / pause"></div>
+      <button id="next-btn" class="nav-arrow" aria-label="next" title="next (→)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
+      </button>
+    </div>
     <div class="player">
       <span id="time" class="t-time">00:00 / 00:00</span>
-      <div class="transport">
-        <button id="shuffle-btn" class="t-btn" aria-label="shuffle" aria-pressed="false" title="Shuffle: off (sequential)">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
-        </button>
-        <button id="prev-btn" class="t-btn" aria-label="previous" title="previous">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="19 20 9 12 19 4 19 20" fill="currentColor" stroke="none"/><line x1="5" y1="19" x2="5" y2="5"/></svg>
-        </button>
-        <button id="play-btn" class="t-play" aria-label="play / pause" title="play / pause">▶</button>
-        <button id="next-btn" class="t-btn" aria-label="next" title="next">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="5 4 15 12 5 20 5 4" fill="currentColor" stroke="none"/><line x1="19" y1="5" x2="19" y2="19"/></svg>
-        </button>
-      </div>
+      <button id="shuffle-btn" class="t-btn" aria-label="shuffle" aria-pressed="false" title="Shuffle: off (sequential)">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
+      </button>
       <span class="t-pos">clip <strong id="pos">1 / 1</strong></span>
+      <button id="play-btn" style="display:none"></button>
     </div>
 
     <!-- ===== admin · rating & details (collapsible; remembered) ===== -->
@@ -314,7 +321,7 @@
   <kbd>c</kbd> clear · <kbd>r</kbd> random · <kbd>u</kbd> next unrated
 </footer>
 
-<script src="https://unpkg.com/wavesurfer.js@7.8.6/dist/wavesurfer.min.js"></script>
+<script src="/viz.js"></script>
 <script>
 "use strict";
 
@@ -479,6 +486,16 @@ function trackTitle(f) {
   return parts.join("  ·  ");
 }
 
+// Pull the musical key (note + major/minor) from a clip's prompt or filename,
+// for the visualizer's key→form selection. Returns {name, mode} or null.
+function parseKeyInfo(f) {
+  const p = (f.init && f.init.prompt) ? f.init.prompt : "";
+  let m = p.match(/cKz!\s+\S+\s+([A-G]#?)\s*(min|maj)/i);
+  if (!m) m = f.filename.match(/(?:^|_)[A-Za-z]+_([A-G]#?)(min|maj)/);
+  if (!m) return null;
+  return { name: m[1].toUpperCase(), mode: /min/i.test(m[2]) ? "minor" : "major" };
+}
+
 function renderMain() {
   const f = currentFile();
   if (!f) {
@@ -515,7 +532,14 @@ function renderMain() {
   // new audio into the existing renderer.
   ensureWaveSurfer();
   $("play-btn").disabled = true;
-  try { state.ws.load(`/audio/${encodeURIComponent(f.filename)}`); }
+  try {
+    state.ws.load(`/audio/${encodeURIComponent(f.filename)}`);
+    // The visualizer picks its form from the musical key. If the prompt/filename
+    // already names the key, hand it over (skips audio key-detection); otherwise
+    // the visualizer detects it from the audio itself.
+    const ki = parseKeyInfo(f);
+    if (ki && state.ws.setKey) state.ws.setKey(ki.name, ki.mode);
+  }
   catch (_) { $("play-btn").disabled = false; }
   // Watchdog: if "ready" never fires (partial/corrupt clip while generating live),
   // re-enable controls after a few seconds so the player never hard-freezes.
@@ -551,11 +575,9 @@ let _lastPlaybackT = 0;
 
 function ensureWaveSurfer() {
   if (state.ws) return;
-  state.ws = WaveSurfer.create({
-    container: "#waveform",
-    waveColor:"#3a4159", progressColor:"#7aa2ff", cursorColor:"#e6e9f2",
-    height:110, barWidth:2, barRadius:1, barGap:1, normalize:true,
-  });
+  // Generative visualizer (drop-in for WaveSurfer): the clip's musical key elects
+  // one of 16 forms; the live audio FFT drives the motion. Same shim API as WS.
+  state.ws = createAudioViz($("waveform"), { height: 240 });
   state.ws.on("ready", () => {
     $("time").textContent = `00:00 / ${fmtTime(state.ws.getDuration())}`;
     $("play-btn").disabled = false;
@@ -940,6 +962,9 @@ function togglePlay() {
   if (!state.ws) return;
   // Stop the init reference player so the two never contend (Safari freeze).
   try { $("init-audio").pause(); } catch (_) {}
+  // First click on a clip that auto-started while muted (suspended AudioContext)
+  // should make it audible, not pause it.
+  if (state.ws.ensureAudible && state.ws.ensureAudible()) return;
   // Use explicit play/pause (not playPause()) + catch the play() promise so a
   // rejected/interrupted play after media contention can't leave us stuck.
   try {
@@ -983,6 +1008,7 @@ function bindControls() {
   $("random-btn").onclick  = goRandom;
   $("unrated-btn").onclick = goNextUnrated;
   $("play-btn").onclick    = togglePlay;
+  $("waveform").addEventListener("click", togglePlay);  // click graphic = play/pause
   $("clear-btn").onclick   = clearRating;
   $("refresh-btn").onclick = refresh;
   $("tab-btn-rate").onclick  = () => setTab("rate");
