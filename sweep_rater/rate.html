@@ -40,8 +40,9 @@
     .card { background:var(--panel); border:1px solid var(--border); border-radius:12px;
             padding:1rem 1.2rem; }
 
-    #waveform { background:#070707; border-radius:8px; min-height:240px;
-                overflow:hidden; flex:1; cursor:pointer; }
+    /* The player blends into the page: no card, graphic bg == page bg. */
+    #player-card { background:transparent; border:0; padding:0; }
+    #waveform { background:transparent; min-height:480px; flex:1; cursor:pointer; }
 
     /* player stage: ‹ arrow · graphic (click to play/pause) · arrow › */
     .stage { display:flex; align-items:center; gap:.4rem; }
@@ -49,6 +50,20 @@
                  padding:.4rem .2rem; border-radius:8px; line-height:0; }
     .nav-arrow:hover { color:var(--fg); }
     .nav-arrow svg { width:30px; height:30px; display:block; }
+
+    /* title centered under the graphic, shuffle centered under the title */
+    #player-card .track-title { text-align:center; margin:.7rem 0 .35rem; }
+    .title-tools { display:flex; justify-content:center; margin-bottom:.4rem; }
+    .title-tools .t-btn { background:transparent; border:1px solid var(--border); color:var(--fg-dim);
+                          border-radius:8px; padding:.34rem .52rem; cursor:pointer; line-height:0; }
+    .title-tools .t-btn:hover { color:var(--fg); border-color:var(--fg-dim); }
+    .title-tools .t-btn.active { color:var(--accent); border-color:var(--accent);
+                                 box-shadow:0 0 0 1px var(--accent) inset; }
+    .title-tools .t-btn svg { width:18px; height:18px; display:block; }
+    /* time + clip counter, now inside the admin panel */
+    .player-meta { display:flex; justify-content:space-between; align-items:center;
+                   color:var(--fg-dim); font-size:.85rem; font-variant-numeric:tabular-nums;
+                   margin-bottom:.8rem; }
 
     .player { display:flex; align-items:center; gap:1rem; margin-top:.8rem; color:var(--fg-dim);
               font-variant-numeric:tabular-nums; }
@@ -219,7 +234,6 @@
   <section id="tab-rate">
   <div class="card" id="player-card">
     <!-- ===== user-facing product (always visible) ===== -->
-    <div class="track-title" id="track-title">…</div>
     <div class="stage">
       <button id="prev-btn" class="nav-arrow" aria-label="previous" title="previous (←)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
@@ -229,20 +243,23 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 6 15 12 9 18"/></svg>
       </button>
     </div>
-    <div class="player">
-      <span id="time" class="t-time">00:00 / 00:00</span>
+    <div class="track-title" id="track-title">…</div>
+    <div class="title-tools">
       <button id="shuffle-btn" class="t-btn" aria-label="shuffle" aria-pressed="false" title="Shuffle: off (sequential)">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/><line x1="4" y1="4" x2="9" y2="9"/></svg>
       </button>
-      <span class="t-pos">clip <strong id="pos">1 / 1</strong></span>
-      <button id="play-btn" style="display:none"></button>
     </div>
+    <button id="play-btn" style="display:none"></button>
 
     <!-- ===== admin · rating & details (collapsible; remembered) ===== -->
     <button class="admin-toggle" id="admin-toggle" aria-expanded="false" aria-controls="admin-panel">
       <span class="caret">▸</span> admin · rating &amp; details
     </button>
     <div class="admin-panel" id="admin-panel" hidden>
+      <div class="player-meta">
+        <span id="time" class="t-time">00:00 / 00:00</span>
+        <span class="t-pos">clip <strong id="pos">1 / 1</strong></span>
+      </div>
       <div class="filename" id="filename">…</div>
       <div class="chips" id="chips"></div>
 
@@ -575,9 +592,10 @@ let _lastPlaybackT = 0;
 
 function ensureWaveSurfer() {
   if (state.ws) return;
-  // Generative visualizer (drop-in for WaveSurfer): the clip's musical key elects
-  // one of 16 forms; the live audio FFT drives the motion. Same shim API as WS.
-  state.ws = createAudioViz($("waveform"), { height: 240 });
+  // Generative visualizer (drop-in for WaveSurfer). bg matches the page so the
+  // graphic blends in with no visible container.
+  const pageBg = getComputedStyle(document.documentElement).getPropertyValue("--bg").trim() || "#0e1014";
+  state.ws = createAudioViz($("waveform"), { height: 480, bg: pageBg });
   state.ws.on("ready", () => {
     $("time").textContent = `00:00 / ${fmtTime(state.ws.getDuration())}`;
     $("play-btn").disabled = false;

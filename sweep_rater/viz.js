@@ -46,14 +46,22 @@
     return Math.sqrt(Math.max(0, s1 * s1 + s2 * s2 - coeff * s1 * s2)) / M;
   }
 
+  function toRGB(s) {
+    s = (s || "").trim();
+    if (s[0] === "#") { let h = s.slice(1); if (h.length === 3) h = h.split("").map(c => c + c).join(""); const n = parseInt(h, 16); return [(n >> 16) & 255, (n >> 8) & 255, n & 255]; }
+    const m = s.match(/(\d+)[ ,]+(\d+)[ ,]+(\d+)/); return m ? [+m[1], +m[2], +m[3]] : [7, 7, 7];
+  }
+
   function createAudioViz(container, opts) {
     opts = opts || {};
     const cssH = opts.height || 240;
+    const bg = toRGB(opts.bg || "#0e1014");
+    const BG_SOLID = "rgb(" + bg[0] + "," + bg[1] + "," + bg[2] + ")";
 
     container.style.position = "relative";
     container.innerHTML = "";
     const canvas = document.createElement("canvas");
-    canvas.style.cssText = "width:100%;height:" + cssH + "px;display:block;border-radius:8px";
+    canvas.style.cssText = "width:100%;height:" + cssH + "px;display:block";
     container.appendChild(canvas);
     const g = canvas.getContext("2d");
 
@@ -64,10 +72,11 @@
       WD = Math.min(Math.round(cssW * dpr), 1600); HD = Math.round(cssH * dpr);
       canvas.width = WD; canvas.height = HD;
       CX = WD / 2; CY = HD / 2; FS = (HD / 540);
-      g.fillStyle = "#070707"; g.fillRect(0, 0, WD, HD);
+      g.fillStyle = BG_SOLID; g.fillRect(0, 0, WD, HD);
     }
 
     let zoom = 1.05, tt = 0;
+    let speedMul = 0.5, lastT = (global.performance ? performance.now() : Date.now());
     let bass = 0, mid = 0, high = 0, beat = 0, bassAvg = 0, lastBeat = -9;
     let peakB = 1e-4, peakM = 1e-4, peakH = 1e-4;
     let particles = [];
@@ -75,7 +84,7 @@
 
     // ── audio element (plays straight to speakers) ───────────────────────
     const audio = new Audio();
-    audio.preload = "auto"; audio.style.display = "none";
+    audio.preload = "auto"; audio.loop = true; audio.style.display = "none";
     container.appendChild(audio);
 
     const listeners = {};
@@ -116,6 +125,13 @@
     let running = true;
     function frame() {
       if (running) {
+        // Smoothly ease motion between full speed (playing) and half speed
+        // (paused) over ~0.5s, using a frame-rate-independent lerp.
+        const nowMs = performance.now();
+        let dt = (nowMs - lastT) / 1000; lastT = nowMs; if (dt > 0.05) dt = 0.05;
+        const spTarget = audio.paused ? 0.5 : 1.0;
+        speedMul += (spTarget - speedMul) * Math.min(1, dt / 0.18);
+
         const playing = aBuf && !audio.paused;
         if (playing) {
           let start = Math.floor(audio.currentTime * aSR) - (WIN >> 1);
@@ -134,8 +150,8 @@
         } else { bass *= 0.94; mid *= 0.94; high *= 0.94; beat *= 0.9; }
         const idle = !playing;
 
-        // trails
-        g.fillStyle = "rgba(5,5,7," + FADE + ")"; g.fillRect(0, 0, WD, HD);
+        // trails — fade toward the page background so the graphic blends in
+        g.fillStyle = "rgba(" + bg[0] + "," + bg[1] + "," + bg[2] + "," + FADE + ")"; g.fillRect(0, 0, WD, HD);
 
         // spawn (steady stream + beat burst)
         const nsp = SPAWN + Math.round(beat * 36);
@@ -143,8 +159,8 @@
         if (particles.length > CAP) particles = particles.slice(-CAP);
 
         // update + draw — original XOR flow, white particles, brightness modulated by band×radius
-        tt += (1 + mid) * SLOW;
-        const sp = (1 + bass * 1.2 + beat) * SLOW;
+        tt += (1 + mid) * SLOW * speedMul;
+        const sp = (1 + bass * 1.2 + beat) * SLOW * speedMul;
         const sz = Math.max(1, Math.round(HD / 200 * zoom));
         for (let j = 0; j < particles.length; j++) {
           const v = particles[j];
