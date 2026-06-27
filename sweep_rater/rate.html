@@ -444,18 +444,58 @@ function updateSegStatus() {
   });
 }
 
-function recomputeOrder() {
-  const all = state.files.map((_, i) => i);
-  state.order = state.unratedOnly
-    ? all.filter(i => !isFullyRated(joinPath(state.relFolder, state.files[i].filename)))
-    : all;
-  if (state.shuffle) {
-    // Fisher–Yates: walk prev/next through clips in random order.
-    for (let i = state.order.length - 1; i > 0; i--) {
-      const j = Math.floor(Math.random() * (i + 1));
-      [state.order[i], state.order[j]] = [state.order[j], state.order[i]];
-    }
+// Key + bpm for a clip, parsed from its prompt (fallback: filename). Used to
+// order the play queue: shuffle-off keeps key+bpm steady, shuffle-on spreads it.
+function clipKB(f) {
+  let key = "", bpm = "";
+  const p = (f.init && f.init.prompt) ? f.init.prompt : "";
+  let m = p.match(/cKz!\s+\S+\s+([A-G]#?)\s*(min|maj)\s+(\d+)\s*bpm/i);
+  if (m) { key = (m[1] + m[2]).toLowerCase(); bpm = m[3]; }
+  else {
+    m = f.filename.match(/(?:^|_)([A-G]#?)(min|maj)/i);
+    if (m) key = (m[1] + m[2]).toLowerCase();
+    const mb = f.filename.match(/(\d{2,3})\s*_?bpm/i);
+    if (mb) bpm = mb[1];
   }
+  return (key || "?") + "@" + (bpm || "?");
+}
+function shuffleInPlace(a) {
+  for (let i = a.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [a[i], a[j]] = [a[j], a[i]]; }
+}
+
+function recomputeOrder() {
+  // Remember the clip playing now so a re-plan (e.g. toggling shuffle) doesn't jump.
+  const curIdx = state.order.length ? state.order[state.pos] : null;
+
+  let pool = state.files.map((_, i) => i);
+  if (state.unratedOnly) pool = pool.filter(i => !isFullyRated(joinPath(state.relFolder, state.files[i].filename)));
+
+  if (!state.shuffle) {
+    // Cohesion: same key+bpm contiguous → advancing keeps key & bpm, varies the rest.
+    pool.sort((a, b) => {
+      const ka = clipKB(state.files[a]), kb = clipKB(state.files[b]);
+      if (ka !== kb) return ka < kb ? -1 : 1;
+      return state.files[a].filename < state.files[b].filename ? -1 : 1;
+    });
+    state.order = pool;
+  } else {
+    // Diversity: bucket by key+bpm, round-robin across buckets so each next clip
+    // differs in key+bpm as much as possible.
+    const buckets = new Map();
+    for (const i of pool) { const kb = clipKB(state.files[i]); if (!buckets.has(kb)) buckets.set(kb, []); buckets.get(kb).push(i); }
+    const arrs = Array.from(buckets.values());
+    for (const arr of arrs) shuffleInPlace(arr);   // variety within a key+bpm
+    shuffleInPlace(arrs);                          // and randomize bucket order
+    const out = [];
+    for (let r = 0, added = true; added; r++) {
+      added = false;
+      for (const arr of arrs) if (r < arr.length) { out.push(arr[r]); added = true; }
+    }
+    state.order = out;
+  }
+
+  // Keep the currently-playing clip as the current position (don't jump).
+  if (curIdx != null) { const np = state.order.indexOf(curIdx); state.pos = np >= 0 ? np : 0; }
   if (state.pos >= state.order.length) state.pos = Math.max(0, state.order.length - 1);
 }
 
@@ -1059,11 +1099,12 @@ function bindControls() {
     state.shuffle = on;
     const btn = $("shuffle-btn");
     btn.classList.toggle("active", on);
-    btn.title = on ? "Shuffle: on" : "Shuffle: off (sequential)";
+    btn.title = on ? "Shuffle: on — maximize diversity" : "Shuffle: off — keep key & bpm";
     btn.setAttribute("aria-pressed", on ? "true" : "false");
-    state.pos = 0;          // restart at the top of the new order
-    recomputeOrder();       // shuffles when on; sequential when off
-    render();
+    // Only re-plan the UPCOMING queue; the current clip keeps playing (no reload).
+    recomputeOrder();
+    $("pos").textContent = `${state.pos + 1} / ${state.order.length}`;
+    highlightCurrentInRatedList();
   }
   $("shuffle-btn").onclick = () => setShuffle(!state.shuffle);
   $("sort-mode").addEventListener("change", e => {
