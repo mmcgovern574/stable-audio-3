@@ -1,0 +1,73 @@
+69 loops | 8 keep their word | 61 duplicates renamed
+
+  Cascade  (kept once, 12 duplicates renamed):
+      Cascade · A#min · 146bpm   ->   Pulsar · A#min · 146bpm
+      Cascade · A#min · 146bpm   ->   Dune · A#min · 146bpm
+      Cascade · A#min · 160bpm   ->   Indigo · A#min · 160bpm
+      Cascade · A#min · 160bpm   ->   Talisman · A#min · 160bpm
+      Cascade · Amin · 130bpm   ->   Crystal · Amin · 130bpm
+      Cascade · Amin · 130bpm   ->   Amber · Amin · 130bpm
+      Cascade · Amin · 150bpm   ->   Phantom · Amin · 150bpm
+      Cascade · Amin · 150bpm   ->   Marble · Amin · 150bpm
+      Cascade · C#min · 140bpm   ->   Aura · C#min · 140bpm
+      Cascade · D#min · 130bpm   ->   Nebula · D#min · 130bpm
+      Cascade · D#min · 130bpm   ->   Scorch · D#min · 130bpm
+      Cascade · Emin · 160bpm   ->   Satin · Emin · 160bpm
+  Mirage  (kept once, 6 duplicates renamed):
+      Mirage · Bmin · 130bpm   ->   Crimson · Bmin · 130bpm
+      Mirage · C#min · 165bpm   ->   Prism · C#min · 165bpm
+      Mirage · Cmin · 140bpm   ->   Comet · Cmin · 140bpm
+      Mirage · Cmin · 152bpm   ->   Spectrum · Cmin · 152bpm
+      Mirage · Cmin · 152bpm   ->   Oasis · Cmin · 152bpm
+      Mirage · Gmin · 165bpm   ->   Shadow · Gmin · 165bpm
+  Nocturne  (kept once, 4 duplicates renamed):
+      Nocturne · Bmin · 120bpm   ->   Banshee · Bmin · 120bpm
+      Nocturne · Bmin · 145bpm   ->   Lunar · Bmin · 145bpm
+      Nocturne · C#min · 160bpm   ->   Quasar · C#min · 160bpm
+      Nocturne · Cmin · 112bpm   ->   Scarlet · Cmin · 112bpm
+  Obsidian  (kept once, 9 duplicates renamed):
+      Obsidian · A#min · 141bpm   ->   Astral · A#min · 141bpm
+      Obsidian · Amin · 130bpm   ->   Hollow · Amin · 130bpm
+      Obsidian · Amin · 130bpm   ->   Meteor · Amin · 130bpm
+      Obsidian · Amin · 130bpm   ->   Umbra · Amin · 130bpm
+      Obsidian · Amin · 130bpm   ->   Oracle · Amin · 130bpm
+      Obsidian · C#min · 95bpm   ->   Chasm · C#min · 95bpm
+      Obsidian · Cmin · 141bpm   ->   Magma · Cmin · 141bpm
+      Obsidian · Cmin · 141bpm   ->   Seraph · Cmin · 141bpm
+      Obsidian · F#min · 141bpm   ->   Topaz · F#min · 141bpm
+  Solaris  (kept once, 10 duplicates renamed):
+      Solaris · A#min · 143bpm   ->   Eclipse · A#min · 143bpm
+      Solaris · A#min · 143bpm   ->   Venom · A#min · 143bpm
+      Solaris · Amin · 66bpm   ->   Tremor · Amin · 66bpm
+      Solaris · Amin · 152bpm   ->   Void · Amin · 152bpm
+      Solaris · Amin · 152bpm   ->   Shatter · Amin · 152bpm
+      Solaris · C#min · 120bpm   ->   Reaper · C#min · 120bpm
+      Solaris · C#min · 120bpm   ->   Ashen · C#min · 120bpm
+      Solaris · C#min · 130bpm   ->   Vortex · C#min · 130bpm
+      Solaris · C#min · 130bpm   ->   Rift · C#min · 130bpm
+      Solaris · Gmin · 130bpm   ->   Twilight · Gmin · 130bpm
+  Velvet  (kept once, 4 duplicates renamed):
+      Velvet · Amin · 141bpm   ->   Sable · Amin · 141bpm
+      Velvet · Bmin · 70bpm   ->   Seismic · Bmin · 70bpm
+      Velvet · Bmin · 70bpm   ->   Ivory · Bmin · 70bpm
+      Velvet · Bmin · 155bpm   ->   Cinder · Bmin · 155bpm
+  Voltage  (kept once, 8 duplicates renamed):
+      Voltage · A#min · 147bpm   ->   Raven · A#min · 147bpm
+      Voltage · Amin · 140bpm   ->   Cosmos · Amin · 140bpm
+      Voltage · Amin · 140bpm   ->   Sphinx · Amin · 140bpm
+      Voltage · Bmin · 130bpm   ->   Violet · Bmin · 130bpm
+      Voltage · Cmin · 65bpm   ->   Saffron · Cmin · 65bpm
+      Voltage · Cmin · 145bpm   ->   Rune · Cmin · 145bpm
+      Voltage · D#min · 140bpm   ->   Echo · D#min · 140bpm
+      Voltage · D#min · 140bpm   ->   Fracture · D#min · 140bpm
+  Wraith  (kept once, 8 duplicates renamed):
+      Wraith · A#min · 128bpm   ->   Gloom · A#min · 128bpm
+      Wraith · A#min · 128bpm   ->   Sigil · A#min · 128bpm
+      Wraith · Amin · 69bpm   ->   Cobra · Amin · 69bpm
+      Wraith · Amin · 69bpm   ->   Suede · Amin · 69bpm
+      Wraith · Bmin · 130bpm   ->   Velour · Bmin · 130bpm
+      Wraith · Bmin · 130bpm   ->   Mystic · Bmin · 130bpm
+      Wraith · Dmin · 84bpm   ->   Dusk · Dmin · 84bpm
+      Wraith · Emin · 128bpm   ->   Phoenix · Emin · 128bpm
+
+Dry run — nothing changed. Re-run with SUPABASE_URL + SUPABASE_SERVICE_KEY to apply.

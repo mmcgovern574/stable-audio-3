@@ -211,3 +211,15 @@ data/*.zip
 app/gen/
 app/kept/
 app/loops_manifest.json
+
+# ── large local artifacts (regenerate; don't ship) ──────────────────────
+PDMX.tar.gz
+*.tar.gz
+pipeline/harvest_*/
+catalog_build/*.mp3
+data/pdmx_*/
+
+# large local datasets / generated audio (regenerate; don't ship)
+PDMX/
+sweep_rater/campaigns/*/*.wav
+sweep_rater/campaigns/*/*.mp3

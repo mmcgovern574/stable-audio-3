@@ -32,6 +32,22 @@ from http.server import BaseHTTPRequestHandler, ThreadingHTTPServer
 from pathlib import Path
 from urllib.parse import unquote, urlparse, parse_qs
 
+# Reversed-init arms fed the model a TIME-REVERSED loop, but the file on disk is forward.
+# Reverse on the fly (ffmpeg areverse) so the reference player matches what seeded the clip.
+_REV_CACHE: dict = {}
+def reversed_wav(path):
+    key = str(path)
+    if key in _REV_CACHE:
+        return _REV_CACHE[key]
+    import shutil, subprocess
+    if not shutil.which("ffmpeg"):
+        return None
+    out = subprocess.run(["ffmpeg", "-v", "error", "-i", str(path), "-af", "areverse", "-f", "wav", "-"],
+                         capture_output=True)
+    data = out.stdout if (out.returncode == 0 and out.stdout) else None
+    _REV_CACHE[key] = data
+    return data
+
 SCRIPT_DIR = Path(__file__).resolve().parent
 REPO_ROOT  = SCRIPT_DIR.parent
 HTML_PATH  = SCRIPT_DIR / "rate.html"
@@ -250,6 +266,12 @@ class Handler(BaseHTTPRequestHandler):
             ip = Path(info["init_path"])
             if not ip.is_file() or ip.suffix.lower() != ".wav":
                 return self._send_404("init file missing")
+            # r-arm clips (filename __r<nn>__ or init_loop marked "(reversed)") seeded the
+            # model with a reversed loop — serve the reversed audio so the preview matches.
+            if re.search(r"__r\d", fn) or "(reversed)" in (info.get("init_loop") or ""):
+                rev = reversed_wav(ip)
+                if rev is not None:
+                    return self._send(200, "audio/wav", rev)
             return self._send(200, "audio/wav", ip.read_bytes())
 
         return self._send_404()
