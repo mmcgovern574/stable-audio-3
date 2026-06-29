@@ -51,8 +51,42 @@ def parse_cy(name):
     return note + qual, bpm
 
 
+# cKz loop filenames put KEY *before* BPM, e.g. "cKz! JUNGLE C#min 140 bpm @crushed_keyz",
+# "... Fsharpmin 105 bpm ...", "... Bmin 160 @crushed_key" (no 'bpm' word). The accidental
+# may be '#', 'sharp', 'b', or 'flat'. This is the in-distribution init path.
+CKZ = re.compile(r"\b([A-Ga-g])\s*(#|sharp|b|flat)?\s*(min|maj)\b[^0-9]*?(\d{2,3})", re.I)
+
+
+def parse_ckz(name):
+    m = CKZ.search(name)
+    if not m:
+        return None
+    note = m.group(1).upper()
+    acc = (m.group(2) or "").lower()
+    if acc in ("#", "sharp"):
+        note += "#"
+    elif acc in ("b", "flat"):
+        note = FLAT2SHARP.get(note + "b", note)  # flat -> sharp spelling
+    qual = "min" if m.group(3).lower() == "min" else "maj"
+    bpm = int(m.group(4))
+    return note + qual, bpm
+
+
+def name_pool():
+    """Big on-brand single-word title pool. Reuses the catalog's namegen list so the many
+    titles stay in the cKz dark/cosmic/luxe aesthetic and don't collide with the 8 defaults.
+    Falls back to the 8 TITLES if pipeline/namegen isn't importable."""
+    try:
+        import sys as _s
+        _s.path.insert(0, str(REPO / "pipeline"))
+        from namegen import POOL
+        return list(dict.fromkeys(list(TITLES) + list(POOL)))  # de-duped, defaults first
+    except Exception:
+        return list(TITLES)
+
+
 def select_loops(dirs, n, root=LOOPS_ROOT, minor_only=False, dense=False, max_silence=0.12,
-                 shuffle=False, loop_seed=None):
+                 shuffle=False, loop_seed=None, parser=parse_cy, include=None):
     """Pick n foreign loops, round-robin across keys for spread (minor preferred).
     Allows MULTIPLE loops per key (harvest mode) so n can exceed the 12 minor keys.
     minor_only: skip major-key loops (they clash with the minor cKz model -> 0 keepers).
@@ -76,7 +110,9 @@ def select_loops(dirs, n, root=LOOPS_ROOT, minor_only=False, dense=False, max_si
         if not p.is_dir():
             continue
         for f in sorted(p.glob("*.wav")) + sorted(p.glob("*.mp3")):
-            kb = parse_cy(f.name)
+            if include and not any(s.lower() in f.name.lower() for s in include):
+                continue  # restrict to high-yield source loops (substring match)
+            kb = parser(f.name)
             if kb and not (minor_only and kb[0].endswith("maj")):
                 bykey[kb[0]].append((kb[0], kb[1], f))
     minkeys = [k for k in bykey if k.endswith("min")]
@@ -121,41 +157,127 @@ def main():
     ap.add_argument("--tritone", action="store_true", help="also generate each loop with prompt key a TRITONE off (2x melodies/loop)")
     ap.add_argument("--shuffle", action="store_true", help="randomize loop selection so each run draws a DIFFERENT diverse subset (not the same alphabetical front-runners)")
     ap.add_argument("--loop-seed", type=int, default=None, help="seed the --shuffle for a reproducible selection (default: fresh each run)")
+    ap.add_argument("--ckz-init", action="store_true",
+                    help="use the IN-DISTRIBUTION cKz training loops as init (data/ckz_aug) "
+                         "instead of foreign Cymatics packs. Parses the cKz 'KEY BPM' filename "
+                         "order. Variation comes from HIGH sigma + seeds + transposed prompt key.")
+    ap.add_argument("--reverse-init", action="store_true",
+                    help="time-reverse (retrograde) EVERY init loop before use (whole campaign "
+                         "reversed). For the pure forward-vs-reversed A/B. To MIX reversed arms "
+                         "into a normal run instead, use --reverse-sigmas.")
+    ap.add_argument("--reverse-sigmas", default="",
+                    help="comma sigmas that add EXTRA reverse-init arms ALONGSIDE the forward "
+                         "ones (tagged r<nn>), e.g. '0.8'. This is how you 'mix in some reverse "
+                         "init' in a variation harvest without reversing the whole run.")
+    ap.add_argument("--init-loops", nargs="*", default=None,
+                    help="restrict init selection to source loops whose FILENAME contains any of "
+                         "these substrings (case-insensitive), e.g. ICEBERG Bando CANOPY. Use to "
+                         "seed only from the high-yield loops the ratings found.")
+    ap.add_argument("--rand-titles", action="store_true",
+                    help="give every loop+key-variant its OWN unique evocative title drawn from "
+                         "the namegen pool (~140 words) instead of cycling the 8 defaults. The #1 "
+                         "lever for melodic variety — distinct title -> distinct melody.")
+    ap.add_argument("--rand-seeds", type=int, default=0,
+                    help="use N RANDOM seeds instead of --seeds. FRESH each run by default "
+                         "(system entropy) so every run is new variation. More seeds = more "
+                         "variation per title/arm; the seeds used are printed + saved in the index.")
+    ap.add_argument("--seed-base", type=int, default=None,
+                    help="optional: fix the RNG base for --rand-seeds so the SAME seeds are drawn "
+                         "every run (reproducible / resumable). Default None = fresh each run.")
+    ap.add_argument("--unique-seeds", action="store_true",
+                    help="give EVERY clip its own distinct random seed (no seed reused across "
+                         "loops/arms/seeds). Max variation. --rand-seeds N = N unique-seeded takes "
+                         "per loop+key+arm. Total clips = loops × keyvars × arms × N.")
+    ap.add_argument("--style-prefix", default="cKz!",
+                    help="producer style token that OPENS every prompt (must match the training captions, e.g. 'cKz!')")
+    ap.add_argument("--trigger", default="@crushed_keyz",
+                    help="producer trigger tag that CLOSES every prompt (must match the training captions, e.g. '@crushed_keyz')")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
+    # cKz in-distribution init: flip root/dirs/parser unless the user overrode them.
+    parser = parse_cy
+    if args.ckz_init:
+        parser = parse_ckz
+        if args.loops_root == str(LOOPS_ROOT):
+            args.loops_root = str(REPO)
+        if args.init_dirs == DEFAULT_DIRS:
+            args.init_dirs = ["data/ckz_aug"]
+        if args.out == str(REPO / "sweep_rater/campaigns/init_sweep_aug"):
+            args.out = str(REPO / ("sweep_rater/campaigns/ckz_init_reversed"
+                                   if args.reverse_init else "sweep_rater/campaigns/ckz_init_variation"))
+
     sigmas = [float(s) for s in args.sigmas.split(",") if s.strip()]
-    seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
+    rev_sigmas = [float(s) for s in args.reverse_sigmas.split(",") if s.strip()]
+    import random as _rs
+    seedrng = _rs.Random(args.seed_base)   # seed_base=None -> system entropy, fresh each run
+    _used_seeds = set()
+    def fresh_seed():
+        while True:
+            s = seedrng.randint(1, 9_999_999)
+            if s not in _used_seeds:
+                _used_seeds.add(s); return s
+    unique = args.unique_seeds and args.rand_seeds and args.rand_seeds > 0
+    n_per_combo = args.rand_seeds if (args.rand_seeds and args.rand_seeds > 0) else None
+    if unique:
+        seeds = None  # drawn fresh per clip in the plan loop below
+    elif n_per_combo:
+        seeds = sorted({fresh_seed() for _ in range(n_per_combo)})  # shared list, distinct
+    else:
+        seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
     loops = select_loops(args.init_dirs, args.n_loops, args.loops_root, args.minor_only,
                          args.dense_init, args.max_init_silence,
-                         shuffle=args.shuffle, loop_seed=args.loop_seed)
+                         shuffle=args.shuffle, loop_seed=args.loop_seed, parser=parser,
+                         include=args.init_loops)
     if not loops:
         raise SystemExit("no foreign loops found — check --init-dirs")
 
+    # title source: 8 defaults, or the big de-duped namegen pool (unique per loop+key-variant)
+    pool = name_pool() if args.rand_titles else list(TITLES)
+    if args.rand_titles:
+        import random as _rt
+        _rt.Random(args.loop_seed).shuffle(pool)
+    tcount = [0]
+    def next_title(i):
+        if not args.rand_titles:
+            return TITLES[i % len(TITLES)]
+        t = pool[tcount[0] % len(pool)]; tcount[0] += 1; return t
+
+    # arms = (cond_tag, sigma_or_None, reverse_bool). noinit baseline + forward s-arms + reverse r-arms.
+    base = ([] if args.no_baseline else [("noinit", None, False)])
+    fwd  = [(f"s{int(s*100):02d}", s, args.reverse_init) for s in sigmas]
+    rev  = [(f"r{int(s*100):02d}", s, True) for s in rev_sigmas]
+    arms = base + fwd + rev
+
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
-    plan = []  # (cond, sigma_or_None, title, key, bpm, loop_path, seed, prompt, filename)
+    plan = []  # (cond, sigma_or_None, rev, title, key, bpm, loop_path, seed, prompt, filename)
     for i, (key, bpm, f) in enumerate(loops):
-        title = TITLES[i % len(TITLES)]
-        # key variants: matched (prompt=init key) + optional tritone (proven equal-quality,
-        # DIFFERENT melody -> 2x melodies per loop). Init audio is the SAME loop either way.
+        # key variants: matched (prompt=init key) + optional tritone (DIFFERENT melody -> 2x/loop).
         kvariants = [("m", key)] + ([("t", transpose(key, 6))] if args.tritone else [])
-        arms = ([] if args.no_baseline else [("noinit", None)]) + [(f"s{int(s*100):02d}", s) for s in sigmas]
         for ktag, pkey in kvariants:
-            prompt = f"cKz! {title} {pkey} {bpm} bpm @crushed_keyz"
-            for cond, sig in arms:
-                for seed in seeds:
+            title = next_title(i)
+            prompt = f"{args.style_prefix} {title} {pkey} {bpm} bpm {args.trigger}"
+            for cond, sig, rv in arms:
+                combo_seeds = [fresh_seed() for _ in range(n_per_combo)] if unique else seeds
+                for seed in combo_seeds:
                     kt = f"_{ktag}" if args.tritone else ""
                     fn = f"{i:02d}_{title}_{pkey}{kt}__{cond}__seed{seed}.wav"
-                    plan.append((cond, sig, title, pkey, bpm, f, seed, prompt, fn))
+                    plan.append((cond, sig, rv, title, pkey, bpm, f, seed, prompt, fn))
 
     print(f"model: {args.ckpt}")
-    print(f"foreign init loops ({len(loops)}):")
+    print(f"init loops ({len(loops)}):")
     for key, bpm, f in loops:
         print(f"   [{key:6} {bpm:3}bpm]  {f.name[:54]}")
-    print(f"sigmas: {sigmas}  +noinit baseline   seeds: {seeds}")
+    armtags = [a[0] for a in arms]
+    print(f"arms: {armtags}   (fwd sigmas {sigmas}, reverse sigmas {rev_sigmas or 'none'})")
+    seedinfo = (f"{n_per_combo} UNIQUE per clip (all distinct, {len(_used_seeds)} total)"
+                if unique else f"{len(seeds)} shared: {seeds}")
+    print(f"titles: {'namegen pool (unique/loop)' if args.rand_titles else 'default 8'}   seeds: {seedinfo}")
     print(f"total clips: {len(plan)}  -> {out}\n")
     if args.dry_run:
-        print("arms per loop:", ([] if args.no_baseline else ["noinit"]) + [f"s{int(s*100)}" for s in sigmas])
+        print("sample filenames:")
+        for _,_,_,_,_,_,_,_,_,fn in plan[:8]:
+            print("   ", fn)
         print("\n--dry-run: no generation."); return
 
     write_index(out, plan)
@@ -177,7 +299,7 @@ def main():
         return (sr, wav[:, :n])
 
     t0 = time.time(); n = 0
-    for cond, sig, title, key, bpm, f, seed, prompt, fn in plan:
+    for cond, sig, rv, title, key, bpm, f, seed, prompt, fn in plan:
         path = out / fn
         if path.exists():
             n += 1; continue
@@ -189,6 +311,8 @@ def main():
                   cfg_scale=args.cfg, seed=seed, sampler_type="dpmpp")
         if sig is not None:
             sr_i, wav_i = load_init(f, gen_dur)
+            if rv:
+                wav_i = torch.flip(wav_i, dims=[-1])   # retrograde -> OOD init
             kw["init_audio"] = (int(sr_i), wav_i)
             kw["init_noise_level"] = sig
         try:
@@ -208,10 +332,10 @@ def write_index(out, plan):
         w = csv.DictWriter(fcsv, fieldnames=["file","key","bpm","mood","title","seed",
                                              "prompt","init_loop","init_path"])
         w.writeheader()
-        for cond, sig, title, key, bpm, f, seed, prompt, fn in plan:
+        for cond, sig, rv, title, key, bpm, f, seed, prompt, fn in plan:
             w.writerow({"file": fn, "key": key, "bpm": bpm, "mood": cond, "title": title,
                         "seed": seed, "prompt": prompt,
-                        "init_loop": (f.name if sig is not None else ""),
+                        "init_loop": ((f.name + (" (reversed)" if rv else "")) if sig is not None else ""),
                         "init_path": (str(f) if sig is not None else "")})
 
 

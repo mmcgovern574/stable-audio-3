@@ -31,12 +31,12 @@ KEYS = ["Cmin","C#min","Dmin","D#min","Emin","Fmin","F#min","Gmin","G#min","Amin
 BPMS = [90,100,110,120,125,130,135,140,145,150,155,160]
 
 
-def build(titles):
+def build(titles, style="cKz!", trigger="@crushed_keyz"):
     rows = []
     for i, t in enumerate(titles):
         key = KEYS[i % len(KEYS)]
         bpm = BPMS[(i * 5) % len(BPMS)]      # stride decorrelates key<->bpm
-        rows.append((t, key, bpm, f"cKz! {t} {key} {bpm} bpm @crushed_keyz"))
+        rows.append((t, key, bpm, f"{style} {t} {key} {bpm} bpm {trigger}"))
     return rows
 
 
@@ -50,12 +50,16 @@ def main():
     ap.add_argument("--duration", type=float, default=20.0)
     ap.add_argument("--model", default="medium-base")
     ap.add_argument("--titles-file", default=None, help="one title per line (default: built-in 36)")
+    ap.add_argument("--style-prefix", default="cKz!",
+                    help="producer style token that OPENS every prompt (must match training captions)")
+    ap.add_argument("--trigger", default="@crushed_keyz",
+                    help="producer trigger tag that CLOSES every prompt (must match training captions)")
     ap.add_argument("--dry-run", action="store_true")
     args = ap.parse_args()
 
     seeds = [int(s) for s in args.seeds.split(",") if s.strip()]
     titles = [l.strip() for l in open(args.titles_file) if l.strip()] if args.titles_file else TITLES
-    rows = build(titles)
+    rows = build(titles, args.style_prefix, args.trigger)
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     jobs = []  # (prompt, seed, title, key, bpm, path)
     for i, (t, key, bpm, p) in enumerate(rows):
