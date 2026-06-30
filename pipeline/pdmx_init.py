@@ -117,6 +117,16 @@ def pdmx_paths(args):
                 continue
             if args.best_only and str(row.get("is_best_arrangement", "")).lower() not in ("true", "1"):
                 continue
+            # quality gates from PDMX metadata: clear tonality + community-vetted transcriptions
+            try:
+                if float(row.get("scale_consistency") or 0) < args.min_scale:
+                    continue                                   # messy / atonal
+                if float(row.get("pitch_class_entropy") or 99) > args.max_pce:
+                    continue                                   # chromatic / key-ambiguous
+                if int(float(row.get("n_favorites") or 0)) < args.min_favorites:
+                    continue                                   # low-engagement = sloppy transcription
+            except ValueError:
+                continue
             rel = (row.get("path") or "").lstrip("./")
             if rel:
                 out.append(os.path.join(root, rel))
@@ -150,6 +160,23 @@ def estimate_key(pm):
     return KEYS[best[1]], best[2]
 
 
+def melodic_jumpiness(pm):
+    """Mean absolute semitone interval of the top-line (skyline). High = leapy/erratic lines
+    that cKz reproduces as 'jumpy/unstable' melodies; trap hooks are stepwise (low). """
+    import numpy as np
+    notes = sorted((round(n.start, 2), n.pitch) for inst in pm.instruments for n in inst.notes)
+    if len(notes) < 6:
+        return 99.0
+    sky = {}
+    for t, p in notes:                       # highest pitch per onset = the lead line
+        if t not in sky or p > sky[t]:
+            sky[t] = p
+    seq = [sky[t] for t in sorted(sky)]
+    if len(seq) < 6:
+        return 99.0
+    return float(np.mean([abs(seq[i + 1] - seq[i]) for i in range(len(seq) - 1)]))
+
+
 def pdmx_read(path):
     """PDMX MusPy-JSON -> pretty_midi (or None if too few notes)."""
     import muspy
@@ -179,14 +206,23 @@ def render_pm(pm, keyl, qual, bpm, idx, args):
     if seg.size < args.sr:
         seg = audio[:int(args.dur * args.sr)]
     if seg.size == 0:
-        os.remove(mid); return None
-    seg = seg / (np.max(np.abs(seg)) + 1e-9) * 0.9
-    raw = mid + ".wav"
-    sf.write(raw, seg, args.sr)
+        return None
+    # Consistent loudness WITHOUT clipping: RMS-normalize, then HARD peak-limit. (loudnorm was
+    # boosting quiet passages into the "horrible clipping/saturation" duds — dropped entirely.)
+    rms = float(np.sqrt(np.mean(seg ** 2))) + 1e-9
+    seg = seg * (0.12 / rms)
+    peak = float(np.max(np.abs(seg)))
+    if peak > 0.97:
+        seg = seg * (0.97 / peak)
     fn = os.path.join(args.out, f"PDMX {idx:02d} - {bpm} BPM {keyl} {qual}.wav")
-    af = "loudnorm" + (f",atempo={args.tempo}" if abs(args.tempo - 1.0) > 1e-3 else "")
-    subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", raw, "-af", af, fn], check=True)
-    os.remove(mid); os.remove(raw)
+    if abs(args.tempo - 1.0) > 1e-3:
+        with tempfile.NamedTemporaryFile(suffix=".wav", delete=False) as tf:
+            raw = tf.name
+        sf.write(raw, seg, args.sr)
+        subprocess.run(["ffmpeg", "-y", "-v", "error", "-i", raw, "-af", f"atempo={args.tempo}", fn], check=True)
+        os.remove(raw)
+    else:
+        sf.write(fn, seg, args.sr)
     return fn
 
 
@@ -208,6 +244,13 @@ def select(cands, args):
 
 
 def run_pdmx(args, bpms):
+    import importlib.util, sys
+    missing = [m for m in ("muspy", "pretty_midi", "soundfile", "numpy")
+               if importlib.util.find_spec(m) is None]
+    if missing:
+        sys.exit("Missing Python deps for PDMX mode — install them into THIS python:\n"
+                 f"  pip install {' '.join(missing)}\n"
+                 "(then re-run). These were silently skipped per-file before, yielding 0 loops.")
     print(f"PDMX: scanning PDMX.csv (genres={args.genres or 'all'}, {args.min_voices}-{args.max_voices} tracks"
           f"{', best-arrangement only' if args.best_only else ''}) ...")
     paths = pdmx_paths(args)
@@ -217,14 +260,22 @@ def run_pdmx(args, bpms):
         if len(made) >= args.n:
             break
         try:
-            pm, k = pdmx_read(p)
-            if pm is None or k is None or (args.minor_only and k.mode != 'minor'):
+            pm = pdmx_read(p)
+            if pm is None:
+                continue
+            tonic, mode = estimate_key(pm)
+            if tonic is None or (args.minor_only and mode != 'minor'):
                 continue
             nn = sum(len(i.notes) for i in pm.instruments)
             if not (args.min_notes <= nn <= args.max_notes):
                 continue
+            pitches = [n.pitch for inst in pm.instruments for n in inst.notes]
+            if pitches and (sum(pitches) / len(pitches)) < args.min_register:
+                continue                                        # bass-only / too-low: not a lead melody
+            if melodic_jumpiness(pm) > args.max_leap:
+                continue                                        # leapy/erratic -> 'jumpy/unstable' hook
             idx = len(made) + 1
-            srcname = sharpname(k.tonic.name)
+            srcname = sharpname(tonic)
             if args.key_spread and srcname in PC:
                 tgt = KEYS[(idx - 1) % 12]
                 d = (PC[tgt] - PC[srcname]) % 12
@@ -243,8 +294,8 @@ def run_pdmx(args, bpms):
             continue
     print(f"\nDone: {len(made)} PDMX init loops -> {args.out}")
     print("Feed init_sweep:\n  uv run python scripts/init_sweep.py --no-baseline "
-          f"--loops-root ~/stable-audio-3 --init-dirs {args.out} --sigmas 0.75 --dense-init "
-          "--rand-titles --loop-seed 1 --seeds 7,123 --out sweep_rater/campaigns/pdmx_real")
+          f"--loops-root ~/stable-audio-3 --init-dirs {args.out} --n-loops {len(made)} --sigmas 0.75 "
+          "--dense-init --rand-titles --loop-seed 1 --seeds 7,123 --out sweep_rater/campaigns/pdmx_real")
 
 
 def main():
@@ -256,6 +307,11 @@ def main():
     ap.add_argument("--genres", default="soundtrack,electronic,hiphop,pop,classical-soundtrack,pop-electronic",
                     help="PDMX genre substrings to keep (dark/cinematic/modern); empty = all")
     ap.add_argument("--best-only", action="store_true", help="PDMX: keep only is_best_arrangement scores")
+    ap.add_argument("--min-scale", type=float, default=0.92, help="PDMX: min scale_consistency (clear key)")
+    ap.add_argument("--max-pce", type=float, default=3.0, help="PDMX: max pitch_class_entropy (less chromatic)")
+    ap.add_argument("--min-favorites", type=int, default=10, help="PDMX: min n_favorites (vetted transcription)")
+    ap.add_argument("--min-register", type=float, default=54.0, help="min mean MIDI pitch (drop bass-only tracks)")
+    ap.add_argument("--max-leap", type=float, default=99.0, help="max mean top-line semitone leap; OFF by default — leap-filtering selected sustained/overlapping lines that the synth smears (regressed 42%->26%). Set ~6 to gently trim only the wildest leapers.")
     ap.add_argument("--out", default="data/pdmx_init")
     ap.add_argument("--n", type=int, default=16)
     ap.add_argument("--min-notes", type=int, default=60, help="density floor (reject too-sparse / ambiguous)")

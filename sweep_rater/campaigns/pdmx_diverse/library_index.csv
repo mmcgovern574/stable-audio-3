@@ -1,0 +1,25 @@
+file,key,bpm,mood,title,seed,prompt,init_loop,init_path
+00_Ifrit_Cmin__s75__seed7.wav,Cmin,130,s75,Ifrit,7,cKz! Ifrit Cmin 130 bpm @crushed_keyz,PDMX 01 - 130 BPM C Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 01 - 130 BPM C Min.wav
+00_Ifrit_Cmin__s75__seed123.wav,Cmin,130,s75,Ifrit,123,cKz! Ifrit Cmin 130 bpm @crushed_keyz,PDMX 01 - 130 BPM C Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 01 - 130 BPM C Min.wav
+01_Serac_C#min__s75__seed7.wav,C#min,138,s75,Serac,7,cKz! Serac C#min 138 bpm @crushed_keyz,PDMX 02 - 138 BPM C# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 02 - 138 BPM C# Min.wav
+01_Serac_C#min__s75__seed123.wav,C#min,138,s75,Serac,123,cKz! Serac C#min 138 bpm @crushed_keyz,PDMX 02 - 138 BPM C# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 02 - 138 BPM C# Min.wav
+02_Violet_Dmin__s75__seed7.wav,Dmin,140,s75,Violet,7,cKz! Violet Dmin 140 bpm @crushed_keyz,PDMX 03 - 140 BPM D Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 03 - 140 BPM D Min.wav
+02_Violet_Dmin__s75__seed123.wav,Dmin,140,s75,Violet,123,cKz! Violet Dmin 140 bpm @crushed_keyz,PDMX 03 - 140 BPM D Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 03 - 140 BPM D Min.wav
+03_Cloister_D#min__s75__seed7.wav,D#min,145,s75,Cloister,7,cKz! Cloister D#min 145 bpm @crushed_keyz,PDMX 04 - 145 BPM D# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 04 - 145 BPM D# Min.wav
+03_Cloister_D#min__s75__seed123.wav,D#min,145,s75,Cloister,123,cKz! Cloister D#min 145 bpm @crushed_keyz,PDMX 04 - 145 BPM D# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 04 - 145 BPM D# Min.wav
+04_Reactor_Emin__s75__seed7.wav,Emin,150,s75,Reactor,7,cKz! Reactor Emin 150 bpm @crushed_keyz,PDMX 05 - 150 BPM E Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 05 - 150 BPM E Min.wav
+04_Reactor_Emin__s75__seed123.wav,Emin,150,s75,Reactor,123,cKz! Reactor Emin 150 bpm @crushed_keyz,PDMX 05 - 150 BPM E Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 05 - 150 BPM E Min.wav
+05_Gale_F#min__s75__seed7.wav,F#min,138,s75,Gale,7,cKz! Gale F#min 138 bpm @crushed_keyz,PDMX 07 - 138 BPM F# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 07 - 138 BPM F# Min.wav
+05_Gale_F#min__s75__seed123.wav,F#min,138,s75,Gale,123,cKz! Gale F#min 138 bpm @crushed_keyz,PDMX 07 - 138 BPM F# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 07 - 138 BPM F# Min.wav
+06_Scarlet_Gmin__s75__seed7.wav,Gmin,140,s75,Scarlet,7,cKz! Scarlet Gmin 140 bpm @crushed_keyz,PDMX 08 - 140 BPM G Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 08 - 140 BPM G Min.wav
+06_Scarlet_Gmin__s75__seed123.wav,Gmin,140,s75,Scarlet,123,cKz! Scarlet Gmin 140 bpm @crushed_keyz,PDMX 08 - 140 BPM G Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 08 - 140 BPM G Min.wav
+07_Porphyry_G#min__s75__seed7.wav,G#min,145,s75,Porphyry,7,cKz! Porphyry G#min 145 bpm @crushed_keyz,PDMX 09 - 145 BPM G# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 09 - 145 BPM G# Min.wav
+07_Porphyry_G#min__s75__seed123.wav,G#min,145,s75,Porphyry,123,cKz! Porphyry G#min 145 bpm @crushed_keyz,PDMX 09 - 145 BPM G# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 09 - 145 BPM G# Min.wav
+08_Crest_Amin__s75__seed7.wav,Amin,150,s75,Crest,7,cKz! Crest Amin 150 bpm @crushed_keyz,PDMX 10 - 150 BPM A Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 10 - 150 BPM A Min.wav
+08_Crest_Amin__s75__seed123.wav,Amin,150,s75,Crest,123,cKz! Crest Amin 150 bpm @crushed_keyz,PDMX 10 - 150 BPM A Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 10 - 150 BPM A Min.wav
+09_Zenith_Bmin__s75__seed7.wav,Bmin,138,s75,Zenith,7,cKz! Zenith Bmin 138 bpm @crushed_keyz,PDMX 12 - 138 BPM B Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 12 - 138 BPM B Min.wav
+09_Zenith_Bmin__s75__seed123.wav,Bmin,138,s75,Zenith,123,cKz! Zenith Bmin 138 bpm @crushed_keyz,PDMX 12 - 138 BPM B Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 12 - 138 BPM B Min.wav
+10_Cyclone_Cmin__s75__seed7.wav,Cmin,140,s75,Cyclone,7,cKz! Cyclone Cmin 140 bpm @crushed_keyz,PDMX 13 - 140 BPM C Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 13 - 140 BPM C Min.wav
+10_Cyclone_Cmin__s75__seed123.wav,Cmin,140,s75,Cyclone,123,cKz! Cyclone Cmin 140 bpm @crushed_keyz,PDMX 13 - 140 BPM C Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 13 - 140 BPM C Min.wav
+11_Raven_C#min__s75__seed7.wav,C#min,145,s75,Raven,7,cKz! Raven C#min 145 bpm @crushed_keyz,PDMX 14 - 145 BPM C# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 14 - 145 BPM C# Min.wav
+11_Raven_C#min__s75__seed123.wav,C#min,145,s75,Raven,123,cKz! Raven C#min 145 bpm @crushed_keyz,PDMX 14 - 145 BPM C# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_diverse/PDMX 14 - 145 BPM C# Min.wav

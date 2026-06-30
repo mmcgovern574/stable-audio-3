@@ -1,0 +1,11 @@
+file,key,bpm,mood,title,seed,prompt,init_loop,init_path
+00_Banshee_Gmin__s75__seed7.wav,Gmin,140,s75,Banshee,7,cKz! Banshee Gmin 140 bpm @crushed_keyz,PDMX-preview 01 - 140 BPM G Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 01 - 140 BPM G Min.wav
+00_Banshee_Gmin__s75__seed123.wav,Gmin,140,s75,Banshee,123,cKz! Banshee Gmin 140 bpm @crushed_keyz,PDMX-preview 01 - 140 BPM G Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 01 - 140 BPM G Min.wav
+01_Noir_Emin__s75__seed7.wav,Emin,150,s75,Noir,7,cKz! Noir Emin 150 bpm @crushed_keyz,PDMX-preview 02 - 150 BPM E Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 02 - 150 BPM E Min.wav
+01_Noir_Emin__s75__seed123.wav,Emin,150,s75,Noir,123,cKz! Noir Emin 150 bpm @crushed_keyz,PDMX-preview 02 - 150 BPM E Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 02 - 150 BPM E Min.wav
+02_Coal_F#min__s75__seed7.wav,F#min,130,s75,Coal,7,cKz! Coal F#min 130 bpm @crushed_keyz,PDMX-preview 03 - 130 BPM F# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 03 - 130 BPM F# Min.wav
+02_Coal_F#min__s75__seed123.wav,F#min,130,s75,Coal,123,cKz! Coal F#min 130 bpm @crushed_keyz,PDMX-preview 03 - 130 BPM F# Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 03 - 130 BPM F# Min.wav
+03_Summit_Dmin__s75__seed7.wav,Dmin,145,s75,Summit,7,cKz! Summit Dmin 145 bpm @crushed_keyz,PDMX-preview 04 - 145 BPM D Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 04 - 145 BPM D Min.wav
+03_Summit_Dmin__s75__seed123.wav,Dmin,145,s75,Summit,123,cKz! Summit Dmin 145 bpm @crushed_keyz,PDMX-preview 04 - 145 BPM D Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 04 - 145 BPM D Min.wav
+04_Angora_Fmin__s75__seed7.wav,Fmin,135,s75,Angora,7,cKz! Angora Fmin 135 bpm @crushed_keyz,PDMX-preview 05 - 135 BPM F Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 05 - 135 BPM F Min.wav
+04_Angora_Fmin__s75__seed123.wav,Fmin,135,s75,Angora,123,cKz! Angora Fmin 135 bpm @crushed_keyz,PDMX-preview 05 - 135 BPM F Min.wav,/Users/mikemcgovern/stable-audio-3/data/pdmx_preview/PDMX-preview 05 - 135 BPM F Min.wav

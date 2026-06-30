@@ -23007,6 +23007,2029 @@
     "timbre": 5,
     "ts": "2026-06-29T13:42:21"
   },
+  "sweep_rater/campaigns/pdmx_q/00_Ifrit_Cmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "dopeeee",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:32:28"
+  },
+  "sweep_rater/campaigns/pdmx_q/00_Ifrit_Cmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:31:54"
+  },
+  "sweep_rater/campaigns/pdmx_q/00_Ifrit_Cmin__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:35:35"
+  },
+  "sweep_rater/campaigns/pdmx_q/01_Ember_C#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T18:34:58"
+  },
+  "sweep_rater/campaigns/pdmx_q/01_Ember_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:35:11"
+  },
+  "sweep_rater/campaigns/pdmx_q/01_Ember_C#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-29T18:35:25"
+  },
+  "sweep_rater/campaigns/pdmx_q/02_Sepulcher_Dmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:35:57"
+  },
+  "sweep_rater/campaigns/pdmx_q/02_Sepulcher_Dmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T18:36:07"
+  },
+  "sweep_rater/campaigns/pdmx_q/02_Sepulcher_Dmin__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T18:37:36"
+  },
+  "sweep_rater/campaigns/pdmx_q/03_Chrysoprase_D#min__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T18:37:09"
+  },
+  "sweep_rater/campaigns/pdmx_q/03_Chrysoprase_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T18:37:26"
+  },
+  "sweep_rater/campaigns/pdmx_q/03_Chrysoprase_D#min__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "melody not really there",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T18:37:59"
+  },
+  "sweep_rater/campaigns/pdmx_q/04_Photon_Emin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:43:42"
+  },
+  "sweep_rater/campaigns/pdmx_q/04_Photon_Emin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:38:14"
+  },
+  "sweep_rater/campaigns/pdmx_q/04_Photon_Emin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T18:44:04"
+  },
+  "sweep_rater/campaigns/pdmx_q/05_Umbra_Fmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-29T18:44:39"
+  },
+  "sweep_rater/campaigns/pdmx_q/05_Umbra_Fmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "dopeeee",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:44:48"
+  },
+  "sweep_rater/campaigns/pdmx_q/05_Umbra_Fmin__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "dope textures and flutes, ethnic",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:45:02"
+  },
+  "sweep_rater/campaigns/pdmx_q/06_Naga_F#min__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T18:44:14"
+  },
+  "sweep_rater/campaigns/pdmx_q/06_Naga_F#min__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 5,
+    "ts": "2026-06-29T18:44:23"
+  },
+  "sweep_rater/campaigns/pdmx_q/06_Naga_F#min__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:44:31"
+  },
+  "sweep_rater/campaigns/pdmx_q/07_Feldspar_Gmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "dope!!!",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:45:11"
+  },
+  "sweep_rater/campaigns/pdmx_q/07_Feldspar_Gmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:45:18"
+  },
+  "sweep_rater/campaigns/pdmx_q/07_Feldspar_Gmin__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "fire",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T18:46:16"
+  },
+  "sweep_rater/campaigns/pdmx_q/08_Seraph_G#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T18:45:40"
+  },
+  "sweep_rater/campaigns/pdmx_q/08_Seraph_G#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T18:45:52"
+  },
+  "sweep_rater/campaigns/pdmx_q/08_Seraph_G#min__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "unstable",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T18:46:09"
+  },
+  "sweep_rater/campaigns/pdmx_q/09_Basilisk_Amin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T18:50:25"
+  },
+  "sweep_rater/campaigns/pdmx_q/09_Basilisk_Amin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "fire",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T18:46:33"
+  },
+  "sweep_rater/campaigns/pdmx_q/09_Basilisk_Amin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T18:50:38"
+  },
+  "sweep_rater/campaigns/pdmx_q/10_Osmium_A#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T18:49:58"
+  },
+  "sweep_rater/campaigns/pdmx_q/10_Osmium_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:50:06"
+  },
+  "sweep_rater/campaigns/pdmx_q/10_Osmium_A#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T18:50:13"
+  },
+  "sweep_rater/campaigns/pdmx_q/11_Opal_Bmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "dope! different vibe",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:51:04"
+  },
+  "sweep_rater/campaigns/pdmx_q/11_Opal_Bmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "hard!!",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T18:51:19"
+  },
+  "sweep_rater/campaigns/pdmx_q/11_Opal_Bmin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T18:51:53"
+  },
+  "sweep_rater/campaigns/pdmx_q/12_Crevasse_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T18:52:04"
+  },
+  "sweep_rater/campaigns/pdmx_q/12_Crevasse_Cmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T18:52:12"
+  },
+  "sweep_rater/campaigns/pdmx_q/12_Crevasse_Cmin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T18:52:21"
+  },
+  "sweep_rater/campaigns/pdmx_q/13_Fresco_C#min__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "lame melody",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T18:52:44"
+  },
+  "sweep_rater/campaigns/pdmx_q/13_Fresco_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T18:52:57"
+  },
+  "sweep_rater/campaigns/pdmx_q/13_Fresco_C#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:32:11"
+  },
+  "sweep_rater/campaigns/pdmx_q/14_Belfry_Dmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:36:30"
+  },
+  "sweep_rater/campaigns/pdmx_q/14_Belfry_Dmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:37:35"
+  },
+  "sweep_rater/campaigns/pdmx_q/14_Belfry_Dmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:37:48"
+  },
+  "sweep_rater/campaigns/pdmx_q/15_Nave_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T19:33:21"
+  },
+  "sweep_rater/campaigns/pdmx_q/15_Nave_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T19:33:28"
+  },
+  "sweep_rater/campaigns/pdmx_q/15_Nave_D#min__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T19:33:36"
+  },
+  "sweep_rater/campaigns/pdmx_q/16_Regalia_Emin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:38:01"
+  },
+  "sweep_rater/campaigns/pdmx_q/16_Regalia_Emin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:38:08"
+  },
+  "sweep_rater/campaigns/pdmx_q/16_Regalia_Emin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:38:16"
+  },
+  "sweep_rater/campaigns/pdmx_q/17_Minaret_Fmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "off key, dope timbre though",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:40:45"
+  },
+  "sweep_rater/campaigns/pdmx_q/17_Minaret_Fmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:40:55"
+  },
+  "sweep_rater/campaigns/pdmx_q/17_Minaret_Fmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T07:21:19"
+  },
+  "sweep_rater/campaigns/pdmx_q/18_Surge_F#min__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:39:24"
+  },
+  "sweep_rater/campaigns/pdmx_q/18_Surge_F#min__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T19:40:11"
+  },
+  "sweep_rater/campaigns/pdmx_q/18_Surge_F#min__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:40:27"
+  },
+  "sweep_rater/campaigns/pdmx_q/19_Alexandrite_G#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 3,
+    "ts": "2026-06-30T08:09:09"
+  },
+  "sweep_rater/campaigns/pdmx_q/19_Alexandrite_G#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:09:16"
+  },
+  "sweep_rater/campaigns/pdmx_q/19_Alexandrite_G#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:09:32"
+  },
+  "sweep_rater/campaigns/pdmx_q/20_Coal_Amin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:17:48"
+  },
+  "sweep_rater/campaigns/pdmx_q/20_Coal_Amin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:17:57"
+  },
+  "sweep_rater/campaigns/pdmx_q/20_Coal_Amin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:18:05"
+  },
+  "sweep_rater/campaigns/pdmx_q/21_Reliquary_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:32:45"
+  },
+  "sweep_rater/campaigns/pdmx_q/21_Reliquary_Cmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:33:00"
+  },
+  "sweep_rater/campaigns/pdmx_q/21_Reliquary_Cmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:33:08"
+  },
+  "sweep_rater/campaigns/pdmx_q/22_Nova_C#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:31:12"
+  },
+  "sweep_rater/campaigns/pdmx_q/22_Nova_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:31:20"
+  },
+  "sweep_rater/campaigns/pdmx_q/22_Nova_C#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:31:27"
+  },
+  "sweep_rater/campaigns/pdmx_q/23_Crypt_Dmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:35:20"
+  },
+  "sweep_rater/campaigns/pdmx_q/23_Crypt_Dmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:35:28"
+  },
+  "sweep_rater/campaigns/pdmx_q/23_Crypt_Dmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:35:40"
+  },
+  "sweep_rater/campaigns/pdmx_q/24_Efreet_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:33:51"
+  },
+  "sweep_rater/campaigns/pdmx_q/24_Efreet_D#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:34:02"
+  },
+  "sweep_rater/campaigns/pdmx_q/24_Efreet_D#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:34:11"
+  },
+  "sweep_rater/campaigns/pdmx_q/25_Glacier_Emin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T19:38:27"
+  },
+  "sweep_rater/campaigns/pdmx_q/25_Glacier_Emin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:38:39"
+  },
+  "sweep_rater/campaigns/pdmx_q/25_Glacier_Emin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:38:49"
+  },
+  "sweep_rater/campaigns/pdmx_q/26_Citadel_Fmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-30T08:08:25"
+  },
+  "sweep_rater/campaigns/pdmx_q/26_Citadel_Fmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "melody unstable",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:08:43"
+  },
+  "sweep_rater/campaigns/pdmx_q/26_Citadel_Fmin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T08:08:53"
+  },
+  "sweep_rater/campaigns/pdmx_q/27_Spinel_F#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:38:55"
+  },
+  "sweep_rater/campaigns/pdmx_q/27_Spinel_F#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:39:01"
+  },
+  "sweep_rater/campaigns/pdmx_q/27_Spinel_F#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T19:39:12"
+  },
+  "sweep_rater/campaigns/pdmx_q/28_Quasar_Gmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-30T08:10:26"
+  },
+  "sweep_rater/campaigns/pdmx_q/28_Quasar_Gmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "FIREEE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-30T08:10:40"
+  },
+  "sweep_rater/campaigns/pdmx_q/28_Quasar_Gmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:10:52"
+  },
+  "sweep_rater/campaigns/pdmx_q/29_Kraken_G#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:09:45"
+  },
+  "sweep_rater/campaigns/pdmx_q/29_Kraken_G#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:09:54"
+  },
+  "sweep_rater/campaigns/pdmx_q/29_Kraken_G#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:10:10"
+  },
+  "sweep_rater/campaigns/pdmx_q/30_Travertine_Amin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T19:29:54"
+  },
+  "sweep_rater/campaigns/pdmx_q/30_Travertine_Amin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:30:04"
+  },
+  "sweep_rater/campaigns/pdmx_q/30_Travertine_Amin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "violin heavy, not really crushed Keyz",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:30:27"
+  },
+  "sweep_rater/campaigns/pdmx_q/31_Gneiss_A#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:29:28"
+  },
+  "sweep_rater/campaigns/pdmx_q/31_Gneiss_A#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:17:33"
+  },
+  "sweep_rater/campaigns/pdmx_q/31_Gneiss_A#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:29:43"
+  },
+  "sweep_rater/campaigns/pdmx_q/32_Palladium_Bmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:30:35"
+  },
+  "sweep_rater/campaigns/pdmx_q/32_Palladium_Bmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:30:43"
+  },
+  "sweep_rater/campaigns/pdmx_q/32_Palladium_Bmin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "moody a bit jumbled",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:31:01"
+  },
+  "sweep_rater/campaigns/pdmx_q/33_Coronet_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:32:19"
+  },
+  "sweep_rater/campaigns/pdmx_q/33_Coronet_Cmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T19:32:28"
+  },
+  "sweep_rater/campaigns/pdmx_q/33_Coronet_Cmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:32:37"
+  },
+  "sweep_rater/campaigns/pdmx_q/34_Nadir_C#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:31:36"
+  },
+  "sweep_rater/campaigns/pdmx_q/34_Nadir_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T19:31:52"
+  },
+  "sweep_rater/campaigns/pdmx_q/34_Nadir_C#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:32:00"
+  },
+  "sweep_rater/campaigns/pdmx_q/35_Tigereye_Dmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T19:35:51"
+  },
+  "sweep_rater/campaigns/pdmx_q/35_Tigereye_Dmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T19:36:00"
+  },
+  "sweep_rater/campaigns/pdmx_q/35_Tigereye_Dmin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "melody too jumpy",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T19:36:13"
+  },
+  "sweep_rater/campaigns/pdmx_q/36_Cornice_D#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:34:19"
+  },
+  "sweep_rater/campaigns/pdmx_q/36_Cornice_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T19:35:05"
+  },
+  "sweep_rater/campaigns/pdmx_q/36_Cornice_D#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T19:35:12"
+  },
+  "sweep_rater/campaigns/pdmx_real/00_Ifrit_Cmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T15:45:59"
+  },
+  "sweep_rater/campaigns/pdmx_real/00_Ifrit_Cmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "FIREEEEE",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T15:45:39"
+  },
+  "sweep_rater/campaigns/pdmx_real/01_Ember_C#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:50:11"
+  },
+  "sweep_rater/campaigns/pdmx_real/01_Ember_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:46:27"
+  },
+  "sweep_rater/campaigns/pdmx_real/02_Sepulcher_Dmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T15:50:49"
+  },
+  "sweep_rater/campaigns/pdmx_real/02_Sepulcher_Dmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "fire",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T15:50:58"
+  },
+  "sweep_rater/campaigns/pdmx_real/03_Chrysoprase_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:50:24"
+  },
+  "sweep_rater/campaigns/pdmx_real/03_Chrysoprase_D#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T15:50:37"
+  },
+  "sweep_rater/campaigns/pdmx_real/04_Photon_Emin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:51:20"
+  },
+  "sweep_rater/campaigns/pdmx_real/04_Photon_Emin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T15:51:09"
+  },
+  "sweep_rater/campaigns/pdmx_real/05_Umbra_Fmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T15:51:52"
+  },
+  "sweep_rater/campaigns/pdmx_real/05_Umbra_Fmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T15:51:37"
+  },
+  "sweep_rater/campaigns/pdmx_real/06_Naga_F#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T15:55:52"
+  },
+  "sweep_rater/campaigns/pdmx_real/06_Naga_F#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T15:56:02"
+  },
+  "sweep_rater/campaigns/pdmx_real/07_Feldspar_G#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:56:16"
+  },
+  "sweep_rater/campaigns/pdmx_real/07_Feldspar_G#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T15:56:26"
+  },
+  "sweep_rater/campaigns/pdmx_real/08_Seraph_Amin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:55:31"
+  },
+  "sweep_rater/campaigns/pdmx_real/08_Seraph_Amin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T15:55:40"
+  },
+  "sweep_rater/campaigns/pdmx_real/09_Basilisk_A#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T15:56:38"
+  },
+  "sweep_rater/campaigns/pdmx_real/09_Basilisk_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T15:56:47"
+  },
+  "sweep_rater/campaigns/pdmx_real/10_Osmium_Bmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:13:46"
+  },
+  "sweep_rater/campaigns/pdmx_real/10_Osmium_Bmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:13:54"
+  },
+  "sweep_rater/campaigns/pdmx_real/11_Opal_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:16:25"
+  },
+  "sweep_rater/campaigns/pdmx_real/11_Opal_Cmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:16:34"
+  },
+  "sweep_rater/campaigns/pdmx_real/12_Crevasse_C#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:15:50"
+  },
+  "sweep_rater/campaigns/pdmx_real/12_Crevasse_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "melody not so clear, a bit muffled",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:16:17"
+  },
+  "sweep_rater/campaigns/pdmx_real/13_Fresco_Dmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T17:18:36"
+  },
+  "sweep_rater/campaigns/pdmx_real/13_Fresco_Dmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:18:48"
+  },
+  "sweep_rater/campaigns/pdmx_real/14_Belfry_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:17:06"
+  },
+  "sweep_rater/campaigns/pdmx_real/14_Belfry_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:17:14"
+  },
+  "sweep_rater/campaigns/pdmx_real/15_Nave_Emin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:18:56"
+  },
+  "sweep_rater/campaigns/pdmx_real/15_Nave_Emin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:19:06"
+  },
+  "sweep_rater/campaigns/pdmx_real/16_Regalia_Fmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "not clear melody or key",
+    "novelty": 1,
+    "timbre": 3,
+    "ts": "2026-06-29T17:20:16"
+  },
+  "sweep_rater/campaigns/pdmx_real/16_Regalia_Fmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "sloppy, too much",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:20:34"
+  },
+  "sweep_rater/campaigns/pdmx_real/17_Minaret_F#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:19:38"
+  },
+  "sweep_rater/campaigns/pdmx_real/17_Minaret_F#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 2,
+    "ts": "2026-06-29T17:20:00"
+  },
+  "sweep_rater/campaigns/pdmx_real/18_Surge_Gmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:22:41"
+  },
+  "sweep_rater/campaigns/pdmx_real/18_Surge_Gmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:22:52"
+  },
+  "sweep_rater/campaigns/pdmx_real/19_Alexandrite_G#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "trippy",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T17:21:32"
+  },
+  "sweep_rater/campaigns/pdmx_real/19_Alexandrite_G#min__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T17:21:48"
+  },
+  "sweep_rater/campaigns/pdmx_real/20_Coal_Amin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:12:50"
+  },
+  "sweep_rater/campaigns/pdmx_real/20_Coal_Amin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:13:07"
+  },
+  "sweep_rater/campaigns/pdmx_real/21_Reliquary_A#min__s75__seed123.wav": {
+    "melody": 1,
+    "notes": "horrible clipping and saturation loud",
+    "novelty": 1,
+    "timbre": 1,
+    "ts": "2026-06-29T17:11:48"
+  },
+  "sweep_rater/campaigns/pdmx_real/21_Reliquary_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-29T17:12:05"
+  },
+  "sweep_rater/campaigns/pdmx_real/22_Nova_Bmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:14:09"
+  },
+  "sweep_rater/campaigns/pdmx_real/22_Nova_Bmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "too many different string instruments no pauses",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:14:43"
+  },
+  "sweep_rater/campaigns/pdmx_real/23_Crypt_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:16:43"
+  },
+  "sweep_rater/campaigns/pdmx_real/23_Crypt_Cmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:16:54"
+  },
+  "sweep_rater/campaigns/pdmx_real/24_Efreet_C#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T17:14:57"
+  },
+  "sweep_rater/campaigns/pdmx_real/24_Efreet_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:15:08"
+  },
+  "sweep_rater/campaigns/pdmx_real/25_Glacier_Dmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-29T17:17:53"
+  },
+  "sweep_rater/campaigns/pdmx_real/25_Glacier_Dmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:18:02"
+  },
+  "sweep_rater/campaigns/pdmx_real/26_Citadel_Fmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "not clear melody",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T17:21:05"
+  },
+  "sweep_rater/campaigns/pdmx_real/26_Citadel_Fmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "not clear melody or timbre",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-29T17:21:20"
+  },
+  "sweep_rater/campaigns/pdmx_real/27_Spinel_F#min__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-29T17:19:16"
+  },
+  "sweep_rater/campaigns/pdmx_real/27_Spinel_F#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T17:19:25"
+  },
+  "sweep_rater/campaigns/pdmx_real/28_Quasar_Gmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:22:22"
+  },
+  "sweep_rater/campaigns/pdmx_real/28_Quasar_Gmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:22:28"
+  },
+  "sweep_rater/campaigns/pdmx_real/29_Kraken_G#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:22:02"
+  },
+  "sweep_rater/campaigns/pdmx_real/29_Kraken_G#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:22:11"
+  },
+  "sweep_rater/campaigns/pdmx_real/30_Travertine_Amin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T17:13:19"
+  },
+  "sweep_rater/campaigns/pdmx_real/30_Travertine_Amin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "mostly bass, that's it",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-29T17:13:34"
+  },
+  "sweep_rater/campaigns/pdmx_real/31_Gneiss_A#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:12:19"
+  },
+  "sweep_rater/campaigns/pdmx_real/31_Gneiss_A#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:12:29"
+  },
+  "sweep_rater/campaigns/pdmx_real/32_Palladium_C#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:15:20"
+  },
+  "sweep_rater/campaigns/pdmx_real/32_Palladium_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:15:28"
+  },
+  "sweep_rater/campaigns/pdmx_real/33_Coronet_Dmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:18:11"
+  },
+  "sweep_rater/campaigns/pdmx_real/33_Coronet_Dmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-29T17:18:18"
+  },
+  "sweep_rater/campaigns/pdmx_real/34_Nadir_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-29T17:17:24"
+  },
+  "sweep_rater/campaigns/pdmx_real/34_Nadir_D#min__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-29T17:17:38"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/00_Ifrit_Cmin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "fireeeee!!!! one of the best",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-30T08:20:44"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/00_Ifrit_Cmin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T08:19:18"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/00_Ifrit_Cmin__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "fireeeeeeeeee",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-30T08:20:56"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/01_Ember_C#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:21:08"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/01_Ember_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:20:26"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/01_Ember_C#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:21:23"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/02_Sepulcher_Dmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:22:11"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/02_Sepulcher_Dmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:21:37"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/02_Sepulcher_Dmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:22:50"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/03_Chrysoprase_D#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:23:37"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/03_Chrysoprase_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:22:40"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/03_Chrysoprase_D#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:25:36"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/04_Photon_Emin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:25:49"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/04_Photon_Emin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:26:03"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/04_Photon_Emin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-30T08:26:18"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/05_Umbra_F#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:26:31"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/05_Umbra_F#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:27:56"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/05_Umbra_F#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:28:13"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/06_Naga_Gmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:28:53"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/06_Naga_Gmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "too much going on",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:29:10"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/06_Naga_Gmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:29:23"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/07_Feldspar_G#min__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "melody not clear",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:31:02"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/07_Feldspar_G#min__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "not a clear melody, unstructured",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-30T08:28:29"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/07_Feldspar_G#min__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:31:15"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/08_Seraph_Amin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:35:48"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/08_Seraph_Amin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:30:44"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/08_Seraph_Amin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "dope melody",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:36:13"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/09_Basilisk_A#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:31:35"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/09_Basilisk_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T08:35:35"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/09_Basilisk_A#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "dope clean timbre",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:36:28"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/10_Osmium_Bmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:36:38"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/10_Osmium_Bmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:37:10"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/10_Osmium_Bmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:38:18"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/11_Opal_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:40:26"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/11_Opal_Cmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "dopeeee",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:40:35"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/11_Opal_Cmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "melody not clear",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:40:52"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/12_Crevasse_C#min__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "notes off key",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-30T08:38:34"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/12_Crevasse_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "timbre a bit muffled",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-30T08:38:55"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/12_Crevasse_C#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "muffled timbre",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T08:39:22"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/13_Fresco_Dmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:42:51"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/13_Fresco_Dmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "melody not that clear",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:43:09"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/13_Fresco_Dmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:43:22"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/14_Belfry_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:41:16"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/14_Belfry_D#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "almost too much going on--a few violins/flutes playing at same time clashing",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:42:11"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/14_Belfry_D#min__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "dope!!!",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T08:42:23"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/15_Nave_Emin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:43:30"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/15_Nave_Emin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:43:38"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/15_Nave_Emin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:44:01"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/16_Regalia_Fmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "slight distortion, some off key notes",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:44:45"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/16_Regalia_Fmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:44:10"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/16_Regalia_Fmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:45:19"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/17_Minaret_Gmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:46:12"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/17_Minaret_Gmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:46:27"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/17_Minaret_Gmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:46:36"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/18_Surge_G#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:47:29"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/18_Surge_G#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T08:45:33"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/18_Surge_G#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T08:47:37"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/19_Alexandrite_Amin__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "dope melody!!!!",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:46:58"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/19_Alexandrite_Amin__s75__seed7.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T08:47:08"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/19_Alexandrite_Amin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:47:18"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/20_Coal_A#min__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:48:04"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/20_Coal_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T08:48:19"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/20_Coal_A#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "fireeeeeee",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-30T08:48:35"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/21_Reliquary_Bmin__s75__seed123.wav": {
+    "melody": 2,
+    "notes": "melody off",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-30T08:58:05"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/21_Reliquary_Bmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:58:20"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/21_Reliquary_Bmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "timbre jumpy",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T08:58:43"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/22_Nova_Cmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:59:23"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/22_Nova_Cmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:59:32"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/22_Nova_Cmin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-30T08:59:39"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/23_Crypt_C#min__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "dope",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T08:58:51"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/23_Crypt_C#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T08:58:57"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/23_Crypt_C#min__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "dopeeee",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T08:59:08"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/24_Efreet_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T08:59:52"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/24_Efreet_D#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 4,
+    "ts": "2026-06-30T09:00:43"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/24_Efreet_D#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:00:54"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/25_Glacier_Emin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-30T09:12:21"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/25_Glacier_Emin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:12:35"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/25_Glacier_Emin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:12:41"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/26_Citadel_Fmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:13:39"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/26_Citadel_Fmin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "melody unclear",
+    "novelty": 2,
+    "timbre": 3,
+    "ts": "2026-06-30T09:13:56"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/26_Citadel_Fmin__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T09:14:10"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/27_Spinel_F#min__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "dope!! ",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T09:12:57"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/27_Spinel_F#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T09:13:14"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/27_Spinel_F#min__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "fireeeeeeeeee",
+    "novelty": 5,
+    "timbre": 5,
+    "ts": "2026-06-30T09:13:26"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/28_Quasar_Gmin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:14:55"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/28_Quasar_Gmin__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:15:05"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/28_Quasar_Gmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:15:14"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/29_Kraken_G#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:14:23"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/29_Kraken_G#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:14:32"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/29_Kraken_G#min__s75__seed777.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:14:42"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/30_Travertine_Amin__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:09:01"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/30_Travertine_Amin__s75__seed7.wav": {
+    "melody": 2,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:09:14"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/30_Travertine_Amin__s75__seed777.wav": {
+    "melody": 2,
+    "notes": "distorting strings overlapping causing muffling",
+    "novelty": 2,
+    "timbre": 2,
+    "ts": "2026-06-30T09:09:41"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/31_Gneiss_A#min__s75__seed123.wav": {
+    "melody": 3,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:04:46"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/31_Gneiss_A#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:06:08"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/31_Gneiss_A#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:08:50"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/32_Palladium_Bmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "dopeeee",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:09:51"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/32_Palladium_Bmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T09:10:06"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/32_Palladium_Bmin__s75__seed777.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:10:16"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/33_Coronet_Cmin__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:11:25"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/33_Coronet_Cmin__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 5,
+    "timbre": 4,
+    "ts": "2026-06-30T09:11:43"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/33_Coronet_Cmin__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 3,
+    "ts": "2026-06-30T09:11:53"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/34_Nadir_C#min__s75__seed123.wav": {
+    "melody": 5,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:10:26"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/34_Nadir_C#min__s75__seed7.wav": {
+    "melody": 3,
+    "notes": "some parts off key",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:11:01"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/34_Nadir_C#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:11:14"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/35_Tigereye_D#min__s75__seed123.wav": {
+    "melody": 4,
+    "notes": "dope",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:15:40"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/35_Tigereye_D#min__s75__seed7.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 3,
+    "timbre": 3,
+    "ts": "2026-06-30T09:12:06"
+  },
+  "sweep_rater/campaigns/pdmx_smooth/35_Tigereye_D#min__s75__seed777.wav": {
+    "melody": 4,
+    "notes": "",
+    "novelty": 4,
+    "timbre": 4,
+    "ts": "2026-06-30T09:15:48"
+  },
   "sweep_rater/campaigns/seed_variety/0001__cfg3_strength1.0_steps50_seed7__cKz!_Midnight_Bmin_110_bpm_@crushed_keyz.wav": {
     "notes": "",
     "rating": 3,
